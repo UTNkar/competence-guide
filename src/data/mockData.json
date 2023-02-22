@@ -1,0 +1,44 @@
+{
+  "description":"This is mock development file that mimicks the structure of the final JSON file that will contain all programs and the associated information",
+  "bachelor-biology": {
+    "id": 1,
+    "type": "Bachelor",
+    "length": "3 years",
+    "specializations": ["Bioinformatics", "Computational Biological Finance"],
+    "keywords": ["Biology", "IT", "Bioinformatics"],
+    "short-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "long-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short  Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "credits": "180hp",
+    "occupational-group": ["Biomedicin", "Programming"],
+    "field": ["Academia", "IT"], 
+    "links": ["https://website.com", "https://otherwebsite.com"]
+  },
+  
+  "master-biology": {
+    "id": 2,
+    "type": "Master",
+    "length": "2 years",
+    "specializations": ["Bioinformatics", "Computational Biological Finance"],
+    "keywords": ["Biology", "IT", "Bioinformatics"],
+    "short-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "long-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short  Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "credits": "120hp",
+    "occupational-group": ["Biomedicin", "Programming"],
+    "field": ["Academia", "IT"], 
+    "links": ["https://website.com", "https://otherwebsite.com"]
+  },
+
+  "master-applied-physics": {
+    "id": 3,
+    "type": "Master",
+    "length": "2 years",
+    "specializations": ["Physics", "Particle physics"],
+    "keywords": ["Physics", "Research"],
+    "short-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "long-description": "Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short  Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short Lorem ipsum short",
+    "credits": "120hp",
+    "occupational-group": ["Reserchers", "Programming"],
+    "field": ["Academia", "Space exploration"], 
+    "links": ["https://website.com", "https://otherwebsite.com"]
+  }
+}
