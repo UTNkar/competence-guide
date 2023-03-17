@@ -3,6 +3,8 @@ import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 
 // Component for the 4 colums of programs on the homescreen
+// Columns are rendered differently depending on page width
+
 const HomeProgramsList = () => {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -85,38 +87,87 @@ const HomeProgramsList = () => {
     </ListItem>
   );
   const ListHeader = (heading, center) => (
-    <Typography style={{ textAlign: center ? "center" : "start" }} variant="h6">
+    <Typography style={{ textAlign: center ? "center" : "start", marginBottom: "20px" }} variant="h6">
       {heading}
     </Typography>
   );
 
   // Create 4 columns of programs
-  var programColumnWidth = 3;
+  var programColumnWidth = 2.93;
   var oneColumn = false;
 
   if (windowSize[0] < 869 && 640 < windowSize[0]) {
-    programColumnWidth = 6;
+    programColumnWidth = 5.95;
   } else if (640 > windowSize[0]) {
-    programColumnWidth = 12;
+    programColumnWidth = 11.95;
     oneColumn = true;
   }
 
-  const programsList = listContent.map((column) => (
-    <Grid
-      item
-      xs={programColumnWidth}
-      container
-      justifyContent={oneColumn ? "center" : "start"}
-    >
-      <List>
-        {ListHeader(column.header, oneColumn)}
-        {column.listItems.map((item) => ListText(item, oneColumn))}
-      </List>
-    </Grid>
-  ));
+  const programsList = listContent.map((column) => {
+    var verticalBar;
+    if (programColumnWidth < 3) {
+      if (column.header !== "Master") {
+        verticalBar = (
+          <div
+            style={{
+              width: "1px",
+              backgroundColor: "white",
+              height: "550px",
+              marginTop: "20px",
+            }}
+          ></div>
+        );
+      }
+    } else if (programColumnWidth > 3 && programColumnWidth < 6) {
+      if (column.header !== "Master" && column.header !== "Högskoleingenjör") {
+        verticalBar = (
+          <div
+            style={{
+              width: "1px",
+              backgroundColor: "white",
+              height: "500px",
+              marginTop: "25px",
+            }}
+          ></div>
+        );
+      }
+    } else if (programColumnWidth > 11) {
+      verticalBar = (
+        <div
+          style={{
+            height: "1px",
+            margin: "auto",
+            backgroundColor: "white",
+            width: "80%",
+            marginTop: "25px",
+          }}
+        ></div>
+      );
+    }
+    return (
+      <>
+        <Grid
+          item
+          xs={programColumnWidth}
+          container
+          style={{ padding: "10px 30px" }}
+          justifyContent={oneColumn ? "center" : "start"}
+        >
+          <List>
+            {ListHeader(column.header, oneColumn)}
+            {column.listItems.map((item) => ListText(item, oneColumn))}
+          </List>
+        </Grid>
+        {verticalBar}
+      </>
+    );
+  });
 
   return (
-    <Grid style={{ margin: "auto" }} container>
+    <Grid
+      style={{ color: "white", margin: "auto", backgroundColor: "#00459A" }}
+      container
+    >
       {programsList}
     </Grid>
   );

@@ -27,7 +27,7 @@ const HeroSection = () => {
             pr: { md: 0 },
           }}
         >
-          <Button variant="contained" color="primary" href="/programs">
+          <Button variant="contained" style={{backgroundColor:"#00459A"}} href="/programs">
             Search Courses
           </Button>
         </Box>
@@ -39,15 +39,15 @@ const HeroSection = () => {
           backgroundColor: "#A7A9AB",
         }}
       >
-        <Grid container direction="row" spacing={2}>
+        <Grid container direction="row" style={{padding: "20px 0", color: "white"}}>
           <Grid item xs>
-            <Circle text="92%" />
+            <Circle text="92%" label="Get a job after graduation"/>
           </Grid>
           <Grid item xs>
-            <Circle text="97%" />
+            <Circle text="97%" label="Get a job after graduation"/>
           </Grid>
           <Grid item xs>
-            <Circle text="92%" />
+            <Circle text="92%" label="Get a job after graduation"/>
           </Grid>
         </Grid>
       </Paper>

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HomeInfo() {
   return (
-    <Box>
+    <Box style={{margin: "20px 0"}}>
       <Typography style={{fontWeight:"bold"}}>
         Competence guide Lorem ipsum dolor sit amet consectetur adipisicing elit. At fuga quidem
         ea odit tempore recusandae dolores iusto eos. Eveniet officiis commodi
