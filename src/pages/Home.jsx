@@ -1,11 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import HeroSection from "../components/HomeComponents/HeroSection";
+import HomeInfo from "../components/HomeComponents/HomeInfo";
+import HomeProgramsList from "../components/HomeComponents/HomeProgramsList";
+
+//MUI
+import { Container } from "@mui/material";
 
 function Home() {
   return (
-    <div>
-      <Link to="/programs">Search Courses</Link>
-    </div>
+    <Container>
+      <HeroSection />
+      <HomeInfo />
+      <HomeProgramsList />
+    </Container>
   );
 }
 
