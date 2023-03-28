@@ -1,38 +1,57 @@
-import { Grid, Typography } from "@mui/material";
-import { useState } from "react";
+import { Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 
 import CheckboxDropdown from "./CheckboxDropdown";
 
-export default function FilterArea() {
-  const [checkedItems, setCheckedItems] = useState({
-    programs: [],
-    professions: [],
+// Section where the two dropdown menus are kept
+
+export default function FilterArea(props) {
+  // Keep track of window size
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
   });
 
-  const handleProgramCheck = (programsChecked) => {
-    setCheckedItems({
-      ...checkedItems, // Copy the old fields
-      programs: programsChecked, // But override this one
+  const handleTypeCheck = (typesChecked) => {
+    props.setCheckedItems({
+      ...props.checkedItems, // Copy the old fields
+      types: typesChecked, // But override this one
     });
   };
 
   const handleProfessionChecked = (professionsChecked) => {
-    setCheckedItems({
-      ...checkedItems, // Copy the old fields
+    props.setCheckedItems({
+      ...props.checkedItems, // Copy the old fields
       professions: professionsChecked, // But override this one
     });
   };
 
+  // Adjust layout based on screen width
+  var dropdownWidth = 6;
+  if (windowSize[0] < 880) {
+    dropdownWidth = 12;
+  }
+
   return (
-    <Grid container>
-      <Grid item xs={6} style={{ textAlign: "center" }}>
+    <Grid container style={{ margin: "50px 0" }}>
+      <Grid item xs={dropdownWidth} style={{ textAlign: "center" }}>
         <CheckboxDropdown
-          onItemChecked={handleProgramCheck}
+          onItemChecked={handleTypeCheck}
           label="Typ av program"
           items={["Civilingenjör", "Kandidat", "Högskoleingenjör", "Master"]}
         />
       </Grid>
-      <Grid item xs={6} style={{ textAlign: "center" }}>
+      <Grid item xs={dropdownWidth} style={{ textAlign: "center" }}>
         <CheckboxDropdown
           onItemChecked={handleProfessionChecked}
           label="Yrkesgrupp"
@@ -51,10 +70,6 @@ export default function FilterArea() {
           ]}
         />
       </Grid>
-      <Typography>
-        This is inside DropdownSection.jsx, you have checked programs:
-        {checkedItems.programs} and professions: {checkedItems.professions}
-      </Typography>
     </Grid>
   );
 }

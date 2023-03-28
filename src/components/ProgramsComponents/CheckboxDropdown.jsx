@@ -1,52 +1,80 @@
-import * as React from 'react';
-import {Checkbox, Select, ListItemText, FormControl, MenuItem } from "@mui/material"
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import {
+  MenuItem,
+  InputLabel,
+  FormControl,
+  Select,
+  Chip,
+  Box,
+} from "@mui/material";
 
-const ITEM_HEIGHT = 38;
+// This is the the two dropdown menues for the program filtering page
+
+const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 6.5 + ITEM_PADDING_TOP,
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 250,
     },
   },
 };
 
+function getStyles(name, items, theme) {
+  return {
+    fontWeight:
+      items.indexOf(name) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
+}
 
-const CheckboxDropdown = (props) => {
-  const [checkedItems, setCheckedItems] = React.useState([]);
-  
-  const names = props.items
+export default function MultipleSelectChip(props) {
+  const theme = useTheme();
+  const [selectedItems, setSelectedItems] = React.useState([]);
 
+  const names = props.items;
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
-    setCheckedItems(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
 
     props.onItemChecked(value)
+
+    setSelectedItems(
+      // On autofill we get a stringified value.
+      typeof value === "string" ? value.split(",") : value
+    );
   };
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
+      <InputLabel>{props.label}</InputLabel>
+      <FormControl variant="standard" sx={{ m: 1, width: 300 }}>
         <Select
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
           multiple
-          value={checkedItems}
+          value={selectedItems}
+          label={props.label}
           onChange={handleChange}
-          renderValue={(selected) => selected.join(', ')}
+          renderValue={(selected) => (
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+              {selected.map((value) => (
+                <Chip key={value} label={value} />
+              ))}
+            </Box>
+          )}
           MenuProps={MenuProps}
         >
           {names.map((name) => (
-            <MenuItem key={name} value={name}>
-              <Checkbox checked={checkedItems.indexOf(name) > -1} />
-              <ListItemText primary={name} />
+            <MenuItem
+              key={name}
+              value={name}
+              style={getStyles(name, selectedItems, theme)}
+            >
+              {name}
             </MenuItem>
           ))}
         </Select>
@@ -54,5 +82,3 @@ const CheckboxDropdown = (props) => {
     </div>
   );
 }
-
-export default CheckboxDropdown

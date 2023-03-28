@@ -86,8 +86,12 @@ const HomeProgramsList = () => {
       <ListItemText primary={text} />
     </ListItem>
   );
+
   const ListHeader = (heading, center) => (
-    <Typography style={{ textAlign: center ? "center" : "start", marginBottom: "20px" }} variant="h6">
+    <Typography
+      style={{ textAlign: center ? "center" : "start", marginBottom: "20px" }}
+      variant="h6"
+    >
       {heading}
     </Typography>
   );
@@ -144,6 +148,7 @@ const HomeProgramsList = () => {
         ></div>
       );
     }
+
     return (
       <>
         <Grid
