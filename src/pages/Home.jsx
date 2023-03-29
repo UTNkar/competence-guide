@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 
 function Home() {
   return (
-    <Container>
+    <Container style={{ padding: "0 50px", fontFamily: "roboto" }}>
       <HeroSection />
       <HomeInfo />
       <HomeProgramsList />

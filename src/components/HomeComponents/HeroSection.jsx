@@ -1,5 +1,5 @@
 // Material UI components
-import { Grid, Button, Box, Paper, Typography } from "@mui/material";
+import { Grid, Button, Box, Typography } from "@mui/material";
 
 //Components
 import Circle from "./Circle";
@@ -7,10 +7,10 @@ import Circle from "./Circle";
 const HeroSection = () => {
   return (
     <Box component="div" sx={{ margin: "10px 0" }}>
-      <Typography variant="h5" color="inherit" gutterBottom>
+      <Typography variant="h6" color="inherit" gutterBottom>
         Competence Guide
       </Typography>
-      <Paper
+      <Grid
         sx={{
           margin: "0 0 30px",
           position: "relative",
@@ -31,8 +31,8 @@ const HeroSection = () => {
             Search Courses
           </Button>
         </Box>
-      </Paper>
-      <Paper
+      </Grid>
+      <Grid
         sx={{
           position: "relative",
           textAlign: "center",
@@ -50,7 +50,7 @@ const HeroSection = () => {
             <Circle text="92%" label="Get a job after graduation"/>
           </Grid>
         </Grid>
-      </Paper>
+      </Grid>
     </Box>
   );
 };

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Grid, Typography } from "@mui/material";
 
 function Footer() {
   return (
-    <div>This is the Footer, it always stays down here</div>
-  )
+    <Grid>
+      <Typography>FOOTER</Typography>
+    </Grid>
+  );
 }
 
-export default Footer
+export default Footer;
