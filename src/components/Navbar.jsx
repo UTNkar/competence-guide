@@ -184,29 +184,28 @@
 
 // export default Navbar;
 import React, { useState } from "react";
-import BlueNavbar from "./BlueNavbar.jsx"
+import BlueNavbar from "./BlueNavbar.jsx";
 
 import { Link, Typography, Toolbar, AppBar } from "@mui/material";
 
 import { ReactComponent as UTNLogo } from "../assets/utn_logo_blue.svg";
 
-
-
 const Navbar = () => {
+  //   const [renderSections, setRenderSections] = useState(false);
 
-  const [renderSections, setRenderSections] = useState(false);
-
-const handleChange = () => {
-  setRenderSections(!renderSections)
-}
+  // const handleChange = () => {
+  //   setRenderSections(!renderSections)
+  // }
 
   return (
     <>
-    <BlueNavbar />
-    <AppBar position="relative"
-        style={{ backgroundColor: "white", fontFamily: "roboto" }}>
+      {/* {bredd < 500px ? <BlueNavbar /> : } */}
+      <BlueNavbar />
+      <AppBar
+        position="relative"
+        style={{ backgroundColor: "white", fontFamily: "roboto" }}
+      >
         <Toolbar>
-          {/* <Box></Box> */}
           <Link href="https://utn.se">
             <UTNLogo style={{ height: "53.648px", padding: "5px" }} />
           </Link>
