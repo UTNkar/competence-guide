@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { React } from "react";
-=======
 import React, { useEffect, useState } from "react";
 import BlueNavbar from "./BlueNavbar.jsx";
->>>>>>> origin/marcus_navbar
 
 import { Link, Typography, Toolbar, AppBar } from "@mui/material";
 
@@ -25,12 +21,6 @@ const Navbar = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <AppBar
-      position="relative"
-      style={{ backgroundColor: "white", fontFamily: "roboto" }}
-    >
-=======
     <>
       {/* The code within the following "{}" brackets does the following: 
           check if "screenIsSmall" variable is true or false, renders 
@@ -41,7 +31,6 @@ const Navbar = () => {
         position="relative"
         style={{ backgroundColor: "white", fontFamily: "roboto" }}
       >
->>>>>>> origin/marcus_navbar
         <Toolbar>
           <Link href="https://utn.se">
             <UTNLogo style={{ height: "53.648px", padding: "5px" }} />
@@ -60,12 +49,8 @@ const Navbar = () => {
             </Typography>
           </Link>
         </Toolbar>
-<<<<<<< HEAD
-    </AppBar>
-=======
       </AppBar>
     </>
->>>>>>> origin/marcus_navbar
   );
 };
 
