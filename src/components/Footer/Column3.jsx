@@ -1,40 +1,48 @@
-import React from 'react'
-import { Grid, Link, Typography } from '@mui/material';
+import React from "react";
+import { Grid, Typography } from "@mui/material";
 
 export default function Column3(props) {
+  const style = props.styling;
+
+  const listText = [
+    "Cafe Bocken",
+    "Måndag: 9-16.15",
+    "Tisdag: 9-15.15",
+    "Onsdag: 9-15.15",
+    "Torsdag: 10-15.15",
+    "Fredag: 9-15.15",
+  ];
+
+  const listEntries = listText.map((text, index) => {
+    return (
+      <Grid item>
+        <Typography
+          key={index}
+          style={style}
+          fontWeight={text === "Cafe Bocken" ? "bold" : "regular"}
+        >
+          {text}
+        </Typography>
+      </Grid>
+    );
+  });
+
   return (
-    <Grid Container>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" fontWeight = "bold">
-          Cafe Bocken
-        </Typography>
+    <Grid container>
+      <Grid item style={{ padding: "15px 0" }} xs={10}>
+        {listEntries}
       </Grid>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" >
-          Måndag: 9-16.15
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" >
-          Tisdag: 9-15.15
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" >
-          Onsdag: 9-15.15
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" >
-          Torsdag: 10-15.15
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography color= "#FFFFFF" fontSize= "12px" >
-          Fredag: 9-15.15
-        </Typography>
+      <Grid item xs={2}>
+        <div
+          style={{
+            width: "1px",
+            marginLeft: "auto",
+            marginRight: "0",
+            backgroundColor: "rgba(255,255,255,.05)",
+            height: "150px",
+          }}
+        ></div>
       </Grid>
     </Grid>
-    
-  )
+  );
 }

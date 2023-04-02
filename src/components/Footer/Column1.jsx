@@ -1,42 +1,67 @@
-import { Grid, Link, Typography } from '@mui/material';
-import {Facebook, Instagram, Twitter} from "@mui/icons-material"
+import { Grid, Link, Typography } from "@mui/material";
+import { Facebook, Instagram, LocationSearchingTwoTone, Twitter } from "@mui/icons-material";
 
-import React from 'react'
+import React from "react";
 
 function Column1(props) {
+
+  const style = props.styling;
+
+  const rowStyling = {marginBottom: "12px"}
+
   return (
-    <Grid container >
-      <Grid item xs={12}>
-        <Link href= "https://www.utn.se/contact-us/" color = "#fff" underline='hover'>{props.first_line}
-          <Typography>
-            Kontakta oss
-          </Typography>
-        </Link>
-      </Grid>
-      <br/>
+    <Grid container>
+      <Grid item xs={10} style={{padding:"15px 0"}}>
+        <Grid item xs={12} style={rowStyling}>
+          <Link
+            href="https://www.utn.se/contact-us/"
+            color="#fff"
+            underline="hover"
+          >
+            {props.first_line}
+            <Typography style={style} fontWeight="bold">Kontakta oss</Typography>
+          </Link>
+        </Grid>
 
-      <Grid item xs = {12}>
-        <Link href="https://uppsalastudent.com/kar/uppsala-teknolog-och-naturvetarkar"color = "#fff" underline='hover'>{props.second_line}
-          <Typography>
-            Bli medlem
-            <br/>
-          </Typography>
-        </Link>
+        <Grid item xs={12} style={rowStyling}>
+          <Link
+            href="https://uppsalastudent.com/kar/uppsala-teknolog-och-naturvetarkar"
+            color="#fff"
+            underline="hover"
+          >
+            {props.second_line}
+            <Typography style={style} fontWeight="bold">
+              Bli medlem
+              <br />
+            </Typography>
+          </Link>
+        </Grid>
+
+        <Grid item xs={12} style={rowStyling}>
+          <Link
+            href="https://www.utn.se/social/new-student/"
+            color="#fff"
+            underline="hover"
+          >
+            {props.third_line}
+            <Typography style={style} fontWeight="bold">Ny student</Typography>
+          </Link>
+        </Grid>
       </Grid>
-      
-      <Grid item xs = {12}>
-        <Link href="https://www.utn.se/social/new-student/" color="#fff" underline='hover'>{props.third_line}
-          <Typography>
-              Ny student
-          </Typography>
-        </Link>
+      <Grid item xs={2}>
+        <div
+          style={{
+            display: "flex",
+            width: "1px",
+            marginLeft: "auto",
+            marginRight: "0",
+            backgroundColor: "rgba(255,255,255,.05)",
+            height: "150px",
+          }}
+        ></div>
       </Grid>
-      <br/>
     </Grid>
-    
-  )
+  );
 }
-
-
 
 export default Column1;
