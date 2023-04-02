@@ -1,5 +1,5 @@
-import { Container } from "@mui/material";
-import React from "react";
+import { Container, Typography } from "@mui/material";
+import { useState } from "react";
 
 import GenerateAccordion from "./GenerateAccordion";
 
@@ -66,14 +66,24 @@ export default function ProgramAccordion() {
   ];
 
   // State handler function used by Accordions
-  const [expanded, setExpanded] = React.useState("");
+  const [expanded, setExpanded] = useState("");
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
   return (
-    <Container>
+    <Container
+      style={{
+        margin: "55px 0",
+        position: "sticky",
+        top: "30px",
+        borderRadius: "10px",
+      }}
+    >
+      <Typography variant="h6" style={{margin: "auto"}}>
+        Program
+      </Typography>
       {allPrograms.map((item, index) => {
         return (
           <GenerateAccordion

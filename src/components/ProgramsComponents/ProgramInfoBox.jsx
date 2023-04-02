@@ -43,7 +43,7 @@ function ProgramInfoBox(props) {
   return (
     <Paper
       style={{
-        margin: "0 20px 20px 0",
+        margin: "10px",
         backgroundColor: "#CFE3F9",
         maxWidth: "400px",
         padding: "20px",
@@ -70,14 +70,13 @@ function ProgramInfoBox(props) {
         <Grid item xs={12}>
           {extendedDescription ? (
             <Typography>
-              {description}{" "}
-              <br />
+              {description} <br />
               <Link target="_blank" href={url}>
                 Besök kursens hemsida
               </Link>
             </Typography>
           ) : (
-            <Typography>{description.slice(0, 160) + " . . ."}</Typography>
+            <Typography>{description.slice(0, 90) + " . . ."}</Typography>
           )}
         </Grid>
         <Grid item xs={12}>

@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 
 import mockData from "../../assets/newMock.json";
 import FilteredProgramBoxes from "./FilteredProgramBoxes";
+import ProgramAccordion from "./ProgramAccordion";
+import DropdownSection from "./DropdownSection";
+
+import { Grid } from "@mui/material";
 
 var allPrograms = [];
 
@@ -15,13 +19,35 @@ for (const [key, value] of Object.entries(mockData)) {
 }
 
 const FilterArea = (props) => {
+  // windowsize
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
+  const [checkedItems, setCheckedItems] = useState({
+    types: [],
+    professions: [],
+  });
 
   useEffect(() => {
     // Filter shown programs based on filters
     const filteredPrograms = allPrograms.filter((program) => {
-      const typesSelected = props.checkedItems.types;
-      const professionsSelected = props.checkedItems.professions;
+      const typesSelected = checkedItems.types;
+      const professionsSelected = checkedItems.professions;
       const keywords = program.info.keywords;
       const type = program.info.type;
 
@@ -45,20 +71,34 @@ const FilterArea = (props) => {
     });
 
     setRenderedProgramBoxes(filteredPrograms);
-  }, [props.checkedItems]);
+  }, [checkedItems]);
 
   const programBoxes = renderedProgramBoxes.map((elem) => {
     return <ProgramInfoBox name={elem.name} data={elem.info} />;
   });
 
-  // Convenient for the two columns
-  const firstRow = programBoxes.filter((e, i) => i % 2 !== 0);
-  const secondRow = programBoxes.filter((e, i) => i % 2 === 0);
+  var firstColWidth = 3;
+  var secondColWidth = 9;
 
-  console.log("I FilterArea");
-  console.log(firstRow);
+  if (windowSize[0] < 995) {
+    firstColWidth = 12;
+    secondColWidth = 12;
+  }
 
-  return <FilteredProgramBoxes firstRow={firstRow} secondRow={secondRow} />;
+  return (
+    <Grid container>
+      <Grid item xs={firstColWidth}>
+        <ProgramAccordion/>
+      </Grid>
+      <Grid item xs={secondColWidth}>
+        <DropdownSection
+          checkedItems={checkedItems}
+          setCheckedItems={setCheckedItems}
+        />
+        <FilteredProgramBoxes propgramBoxes={programBoxes} />
+      </Grid>
+    </Grid>
+  );
 };
 
 export default FilterArea;

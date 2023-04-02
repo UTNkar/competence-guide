@@ -1,57 +1,68 @@
 // Material UI components
-import { Grid, Button, Box, Typography } from "@mui/material";
+import { Grid, Button, Link, Typography } from "@mui/material";
 
 //Components
 import Circle from "./Circle";
 
 const HeroSection = () => {
   return (
-    <Box component="div" sx={{ margin: "10px 0" }}>
-      <Typography variant="h6" color="inherit" gutterBottom>
-        Competence Guide
-      </Typography>
-      <Grid
-        sx={{
-          margin: "0 0 30px",
-          position: "relative",
-          textAlign: "center",
-          backgroundColor: "#A7A9AB",
-        }}
-      >
-        {/* Increase the priority of the hero background image */}
-        <Box
-          sx={{
-            justiifyContent: "center",
-            position: "relative",
-            p: { xs: 3, md: 6 },
-            pr: { md: 0 },
-          }}
-        >
-          <Button variant="contained" style={{backgroundColor:"#00459A"}} href="/programs">
-            Search Courses
-          </Button>
-        </Box>
-      </Grid>
-      <Grid
-        sx={{
-          position: "relative",
-          textAlign: "center",
-          backgroundColor: "#A7A9AB",
-        }}
-      >
-        <Grid container direction="row" style={{padding: "20px 0", color: "white"}}>
-          <Grid item xs>
-            <Circle text="92%" label="Get a job after graduation"/>
-          </Grid>
-          <Grid item xs>
-            <Circle text="97%" label="Get a job after graduation"/>
-          </Grid>
-          <Grid item xs>
-            <Circle text="92%" label="Get a job after graduation"/>
-          </Grid>
+    <Grid container>
+      <Grid container xs={12} style={{ paddingTop: "10px" }}>
+        <Grid item xs={6}>
+          <Typography variant="body1" color="inherit" gutterBottom>
+            Kompetensguiden
+          </Typography>
+        </Grid>
+        <Grid item xs={6} style={{ textAlign: "right" }}>
+          <Typography
+            variant="body1"
+            style={{ marginTop: "5px", fontSize: "12px" }}
+            color="inherit"
+          >
+            <Link href="https://utn.se">Hem</Link> {">"} Kompetensguiden
+          </Typography>
         </Grid>
       </Grid>
-    </Box>
+      <Grid
+        item
+        xs={12}
+        style={{
+          backgroundColor: "#A7A9AB",
+          justifyContent: "center",
+          textAlign: "center",
+          height: "200px",
+          marginBottom: "40px",
+        }}
+      >
+        <Button
+          variant="contained"
+          style={{ backgroundColor: "#00459A", marginTop: "87.75px" }}
+          href="/programs"
+        >
+          Hitta kompetens
+        </Button>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        xs={12}
+        style={{
+          position: "relative",
+          textAlign: "center",
+          padding: "20px",
+        }}
+      >
+        <Grid item xs>
+          <Circle text="92%" label="Get a job after graduation" />
+        </Grid>
+        <Grid item xs>
+          <Circle text="97%" label="Get a job after graduation" />
+        </Grid>
+        <Grid item xs>
+          <Circle text="92%" label="Get a job after graduation" />
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 

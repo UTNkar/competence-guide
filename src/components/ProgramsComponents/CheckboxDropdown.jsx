@@ -35,6 +35,13 @@ export default function MultipleSelectChip(props) {
   const theme = useTheme();
   const [selectedItems, setSelectedItems] = React.useState([]);
 
+  const handleDelete = (i) => {
+    const newList = selectedItems.filter((e, index) => index !== i);
+
+    setSelectedItems(newList);
+    props.onItemChecked(newList);
+  };
+
   const names = props.items;
 
   const handleChange = (event) => {
@@ -42,7 +49,7 @@ export default function MultipleSelectChip(props) {
       target: { value },
     } = event;
 
-    props.onItemChecked(value)
+    props.onItemChecked(value);
 
     setSelectedItems(
       // On autofill we get a stringified value.
@@ -61,8 +68,15 @@ export default function MultipleSelectChip(props) {
           onChange={handleChange}
           renderValue={(selected) => (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-              {selected.map((value) => (
-                <Chip key={value} label={value} />
+              {selected.map((value, index) => (
+                <Chip
+                  key={value}
+                  label={value}
+                  onDelete={() => handleDelete(index)}
+                  onMouseDown={(event) => {
+                    event.stopPropagation();
+                  }}
+                />
               ))}
             </Box>
           )}

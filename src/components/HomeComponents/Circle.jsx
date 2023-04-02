@@ -10,18 +10,18 @@ const CircleWithText = (props) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "150px",
-          height: "150px",
+          width: "120px",
+          height: "120px",
           borderRadius: "50%",
+          color: "white",
           backgroundColor: "#00459A",
-          fontSize: "40px",
-          fontWeight: "bold",
+          fontSize: "30px",
           margin: "auto",
         }}
       >
         {props.text}
       </div>
-      <Typography variant="h5">{props.label}</Typography>
+      <Typography variant="h6">{props.label}</Typography>
     </>
   );
 };
