@@ -1,12 +1,13 @@
-import { Grid, Typography } from "@mui/material";
-import React from "react";
 
-export default function Column2(props) {
+//MUI
+import { Grid, Typography } from "@mui/material";
+
+export default function FooterCol2(props) {
   const style = props.styling;
 
   return (
     <Grid container>
-      <Grid item xs={10} style={{padding:"15px 0"}}>
+      <Grid item xs={10} style={{ padding: "15px 0" }}>
         <Grid item xs={12}>
           <Typography style={style} fontWeight="bold">
             Uppsala teknolog- och naturvetarkår Uthgård

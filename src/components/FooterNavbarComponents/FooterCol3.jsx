@@ -1,7 +1,8 @@
-import React from "react";
+
+// MUI
 import { Grid, Typography } from "@mui/material";
 
-export default function Column3(props) {
+export default function FooterCol3(props) {
   const style = props.styling;
 
   const listText = [
@@ -15,7 +16,7 @@ export default function Column3(props) {
 
   const listEntries = listText.map((text, index) => {
     return (
-      <Grid item>
+      <Grid item key={index}>
         <Typography
           key={index}
           style={style}

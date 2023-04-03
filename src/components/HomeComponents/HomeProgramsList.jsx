@@ -1,6 +1,7 @@
-import React from "react";
+import { useState, useEffect, Fragment } from "react";
+
+//MUI
 import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
-import { useState, useEffect } from "react";
 
 // Component for the 4 colums of programs on the homescreen
 // Columns are rendered differently depending on page width
@@ -81,8 +82,8 @@ const HomeProgramsList = () => {
     },
   ];
 
-  const ListText = (text, center) => (
-    <ListItem style={{ textAlign: center ? "center" : "start" }} disablePadding>
+  const ListText = (text, index, center) => (
+    <ListItem key={index} style={{ textAlign: center ? "center" : "start" }} disablePadding>
       <ListItemText primary={text} />
     </ListItem>
   );
@@ -107,50 +108,45 @@ const HomeProgramsList = () => {
     oneColumn = true;
   }
 
-  const programsList = listContent.map((column) => {
-    var verticalBar;
-    if (programColumnWidth < 3) {
-      if (column.header !== "Master") {
+  const programsList = listContent.map((column, index) => {
+    var verticalBar = (
+      <div
+        style={{
+          width: "1px",
+          backgroundColor: "white",
+          height: "510px",
+          marginTop: "45px",
+        }}
+      ></div>
+    );
+
+    // Cases when vericalBar should be horizontal or removed
+    if (column.header !== "Master") {
+      if (programColumnWidth > 11) {
         verticalBar = (
           <div
             style={{
-              width: "1px",
+              height: "1px",
+              margin: "auto",
               backgroundColor: "white",
-              height: "550px",
-              marginTop: "20px",
-            }}
-          ></div>
-        );
-      }
-    } else if (programColumnWidth > 3 && programColumnWidth < 6) {
-      if (column.header !== "Master" && column.header !== "Högskoleingenjör") {
-        verticalBar = (
-          <div
-            style={{
-              width: "1px",
-              backgroundColor: "white",
-              height: "500px",
+              width: "80%",
               marginTop: "25px",
             }}
           ></div>
         );
+      } else if (
+        column.header === "Högskoleingenjör" &&
+        programColumnWidth > 3 &&
+        programColumnWidth < 6
+      ) {
+        verticalBar = "";
       }
-    } else if (programColumnWidth > 11) {
-      verticalBar = (
-        <div
-          style={{
-            height: "1px",
-            margin: "auto",
-            backgroundColor: "white",
-            width: "80%",
-            marginTop: "25px",
-          }}
-        ></div>
-      );
+    } else {
+      verticalBar = "";
     }
 
     return (
-      <>
+      <Fragment key={index}>
         <Grid
           item
           xs={programColumnWidth}
@@ -160,17 +156,17 @@ const HomeProgramsList = () => {
         >
           <List>
             {ListHeader(column.header, oneColumn)}
-            {column.listItems.map((item) => ListText(item, oneColumn))}
+            {column.listItems.map((item, index) => ListText(item, index, oneColumn))}
           </List>
         </Grid>
         {verticalBar}
-      </>
+      </Fragment>
     );
   });
 
   return (
     <Grid
-      style={{ color: "white", margin: "auto", backgroundColor: "#00459A" }}
+      style={{ color: "white", margin: " 50px auto", backgroundColor: "#00459A" }}
       container
     >
       {programsList}

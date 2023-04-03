@@ -36,7 +36,7 @@ export default function GenerateAccordion(props) {
     return (
       <Grid key={index}>
         <Link target="_blank" href={item.url}>
-          {item.name}
+          {item.name}ƒ
         </Link>
       </Grid>
     );

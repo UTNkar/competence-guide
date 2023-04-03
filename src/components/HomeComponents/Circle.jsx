@@ -1,10 +1,11 @@
-import React from "react";
+import { Fragment } from "react";
 
+//MUI
 import { Typography } from "@mui/material";
 
 const CircleWithText = (props) => {
   return (
-    <>
+    <Fragment>
       <div
         style={{
           display: "flex",
@@ -22,9 +23,8 @@ const CircleWithText = (props) => {
         {props.text}
       </div>
       <Typography variant="h6">{props.label}</Typography>
-    </>
+    </Fragment>
   );
 };
-
 
 export default CircleWithText;

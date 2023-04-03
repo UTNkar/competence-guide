@@ -1,13 +1,15 @@
-// Material UI components
+
+
+// MUI
 import { Grid, Button, Link, Typography } from "@mui/material";
 
-//Components
+//Custom components
 import Circle from "./Circle";
 
 const HeroSection = () => {
   return (
     <Grid container>
-      <Grid container xs={12} style={{ paddingTop: "10px" }}>
+      <Grid container item xs={12} style={{ paddingTop: "10px" }}>
         <Grid item xs={6}>
           <Typography variant="body1" color="inherit" gutterBottom>
             Kompetensguiden
@@ -45,6 +47,7 @@ const HeroSection = () => {
       <Grid
         container
         direction="row"
+        item
         xs={12}
         style={{
           position: "relative",

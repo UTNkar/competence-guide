@@ -1,30 +1,32 @@
+
+//MUI
 import { Grid, Link, Typography } from "@mui/material";
-import { Facebook, Instagram, LocationSearchingTwoTone, Twitter } from "@mui/icons-material";
 
-import React from "react";
-
-function Column1(props) {
-
+function FooterCol1(props) {
   const style = props.styling;
 
-  const rowStyling = {marginBottom: "12px"}
+  const rowStyling = { marginBottom: "12px" };
 
   return (
     <Grid container>
-      <Grid item xs={10} style={{padding:"15px 0"}}>
+      <Grid item xs={10} style={{ padding: "15px 0" }}>
         <Grid item xs={12} style={rowStyling}>
           <Link
+            target="_blank"
             href="https://www.utn.se/contact-us/"
             color="#fff"
             underline="hover"
           >
             {props.first_line}
-            <Typography style={style} fontWeight="bold">Kontakta oss</Typography>
+            <Typography style={style} fontWeight="bold">
+              Kontakta oss
+            </Typography>
           </Link>
         </Grid>
 
         <Grid item xs={12} style={rowStyling}>
           <Link
+            target="_blank"
             href="https://uppsalastudent.com/kar/uppsala-teknolog-och-naturvetarkar"
             color="#fff"
             underline="hover"
@@ -39,12 +41,15 @@ function Column1(props) {
 
         <Grid item xs={12} style={rowStyling}>
           <Link
+            target="_blank"
             href="https://www.utn.se/social/new-student/"
             color="#fff"
             underline="hover"
           >
             {props.third_line}
-            <Typography style={style} fontWeight="bold">Ny student</Typography>
+            <Typography style={style} fontWeight="bold">
+              Ny student
+            </Typography>
           </Link>
         </Grid>
       </Grid>
@@ -64,4 +69,4 @@ function Column1(props) {
   );
 }
 
-export default Column1;
+export default FooterCol1;

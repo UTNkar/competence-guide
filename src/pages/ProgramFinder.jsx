@@ -1,5 +1,5 @@
-import {  React } from "react";
 
+// Custom components
 import HeroSection from "../components/ProgramsComponents/HeroSection";
 import FilterArea from "../components/ProgramsComponents/FilterArea";
 

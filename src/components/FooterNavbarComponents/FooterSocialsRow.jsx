@@ -1,7 +1,9 @@
+
+//MUI
 import { Grid, Link, Typography } from "@mui/material";
-import React from "react";
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 
+//Custom components
 import BackToTop from "./ScrollToTop";
 
 export default function SocialsRow(props) {
@@ -12,7 +14,7 @@ export default function SocialsRow(props) {
       <Grid item xs={12}>
         <div
           style={{
-            margin: "10px 0",
+            margin: "5px 0",
             backgroundColor: "rgba(255,255,255,.05)",
             height: "1px",
           }}
@@ -20,6 +22,7 @@ export default function SocialsRow(props) {
       </Grid>
       <Grid item display="flex">
         <Link
+          target="_blank"
           href="https://www.utn.se/contact-us/"
           color="#fff"
           underline="hover"
@@ -30,13 +33,13 @@ export default function SocialsRow(props) {
             Följ oss på social media
           </Typography>
         </Link>
-        <Link href="https://www.facebook.com/utnkar/?locale=sv_SE">
+        <Link target="_blank" href="https://www.facebook.com/utnkar/?locale=sv_SE">
           <Facebook style={socialStyle} />
         </Link>
-        <Link href="https://www.instagram.com/utnkar/">
+        <Link target="_blank" href="https://www.instagram.com/utnkar/">
           <Instagram style={socialStyle} />
         </Link>
-        <Link href="https://twitter.com/UTNkar">
+        <Link target="_blank" href="https://twitter.com/UTNkar">
           <Twitter style={socialStyle} />
         </Link>
       </Grid>

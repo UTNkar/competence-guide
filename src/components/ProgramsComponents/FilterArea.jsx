@@ -90,7 +90,7 @@ const FilterArea = (props) => {
       <Grid item xs={firstColWidth}>
         <ProgramAccordion/>
       </Grid>
-      <Grid item xs={secondColWidth}>
+      <Grid style={{marginBottom: "100px"}} item xs={secondColWidth}>
         <DropdownSection
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}

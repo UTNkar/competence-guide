@@ -1,56 +1,64 @@
-import React, { useEffect, useState } from "react";
-import BlueNavbar from "./BlueNavbar.jsx";
+import { useEffect, useState, Fragment } from "react";
 
+// MUI
 import { Link, Typography, Toolbar, AppBar } from "@mui/material";
 
+// Custom components
 import { ReactComponent as UTNLogo } from "../assets/utn_logo_blue.svg";
+import BlueNavbarSection from "../components/FooterNavbarComponents/BlueNavbarSection";
 
 const Navbar = () => {
-  // This value of this variable is changed between true/false depending on
-  // if the screen is big enough to show the BlueNavbar or not
   const [screenIsSmall, setScreenIsSmall] = useState(false);
 
-  // This code checks the width of the users browser window and activates the "setScreenIsSmall" if condition is met
   useEffect(() => {
     const handleResize = () => {
-      setScreenIsSmall(window.innerWidth < 1065); // Set screenIsSmall to true if the window width is less than 1065px
+      setScreenIsSmall(window.innerWidth < 1065); // Remove blue area at < 1065px
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call handleResize function on initial render
+    handleResize(); // Call on initial render
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <>
-      {/* The code within the following "{}" brackets does the following: 
-          check if "screenIsSmall" variable is true or false, renders 
-          nothing ("") if it's too small (screenIsSmall=true) and 
-          render BlueNavbar-code if it's big enough (screenIsSmall=false) */}
-      {screenIsSmall ? "" : <BlueNavbar />}
+    <Fragment>
+      {screenIsSmall ? "" : <BlueNavbarSection />}
       <AppBar
         position="relative"
-        style={{ backgroundColor: "white", fontFamily: "roboto" }}
+        style={{
+          backgroundColor: "white",
+          fontFamily: "roboto",
+          height: "85px",
+        }}
       >
-        <Toolbar>
+        <Toolbar style={{ marginTop: "13px", width: "30px" }}>
           <Link href="https://utn.se">
-            <UTNLogo style={{ height: "53.648px", padding: "5px" }} />
+            <UTNLogo style={{ height: "55.5px", padding: "0 0 0 1px" }} />
           </Link>
-          <Link href="https://utn.se" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="body1"
-              component="div"
+          <Typography
+            variant="body1"
+            component="div"
+            style={{
+              fontWeight: "bold",
+              fontSize: "15px",
+              marginBottom: "5px",
+              paddingLeft: "33.5px",
+            }}
+          >
+            <Link
+              href="https://utn.se"
               style={{
+                textDecoration: "none",
                 color: "rgba(66,66,66,.8)",
-                fontWeight: "bold",
-                paddingLeft: "20px",
+                width: "30px",
+                alignItems: "center",
               }}
             >
               HEM
-            </Typography>
-          </Link>
+            </Link>
+          </Typography>
         </Toolbar>
       </AppBar>
-    </>
+    </Fragment>
   );
 };
 

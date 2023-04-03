@@ -3,10 +3,10 @@ import { Grid, Typography, Link } from "@mui/material";
 
 const HeroSection = () => {
   return (
-    <Grid container xs={12} style={{ paddingTop: "10px" }}>
+    <Grid container item xs={12} style={{ paddingTop: "10px" }}>
       <Grid item xs={6}>
         <Typography variant="body1" color="inherit" gutterBottom>
-          Jämför kompetens
+          Hitta kompetens
         </Typography>
       </Grid>
       <Grid item xs={6} style={{ textAlign: "right" }}>
@@ -16,11 +16,12 @@ const HeroSection = () => {
           color="inherit"
         >
           <Link href="https://utn.se">Hem</Link> {" > "}{" "}
-          <Link href="/">Kompetensguiden</Link> {" > "} Jämför kompetens
+          <Link href="/">Kompetensguiden</Link> {" > "} Hitta kompetens
         </Typography>
       </Grid>
       <Grid item style={{ backgroundColor: "#A7A9AB" }}>
         <Grid
+          item
           xs={9}
           style={{
             color: "white",

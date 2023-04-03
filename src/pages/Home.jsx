@@ -1,3 +1,5 @@
+
+// Custom components
 import HeroSection from "../components/HomeComponents/HeroSection";
 import HomeInfo from "../components/HomeComponents/HomeInfo";
 import HomeProgramsList from "../components/HomeComponents/HomeProgramsList";
@@ -7,7 +9,7 @@ import { Container } from "@mui/material";
 
 function Home() {
   return (
-    <Container style={{ padding: "0 50px", fontFamily: "roboto" }}>
+    <Container style={{ fontFamily: "roboto" }}>
       <HeroSection />
       <HomeInfo />
       <HomeProgramsList />
