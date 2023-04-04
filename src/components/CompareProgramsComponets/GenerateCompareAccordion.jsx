@@ -5,7 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
-import { Link, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, List, ListItemButton, ListItemText } from "@mui/material";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -31,14 +31,16 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function GenerateAccordion(props) {
+export default function GenerateCompareAccordion(props) {
   const listOfLinks = props.content.map((item, index) => {
     return (
-      <Grid key={index}>
-        <Link target="_blank" href={item.url}>
-          {item.name}
-        </Link>
-      </Grid>
+      <ListItemButton
+        onClick={() => props.setSelectedComparingPrograms(item.name)}
+        style={{height: "19px"}}
+        key={index}
+      >
+        <ListItemText primary={item.name} />
+      </ListItemButton>
     );
   });
 
@@ -52,7 +54,10 @@ export default function GenerateAccordion(props) {
       <AccordionSummary>
         <Typography>{props.title}</Typography>
       </AccordionSummary>
-      <AccordionDetails >{listOfLinks}</AccordionDetails>
+      <AccordionDetails>
+        <List component="nav"></List>
+        {listOfLinks}
+      </AccordionDetails>
     </Accordion>
   );
 }

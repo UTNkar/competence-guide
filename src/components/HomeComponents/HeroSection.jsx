@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react";
 
 // MUI
 import { Grid, Button, Link, Typography } from "@mui/material";
@@ -7,6 +7,28 @@ import { Grid, Button, Link, Typography } from "@mui/material";
 import Circle from "./Circle";
 
 const HeroSection = () => {
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
+  var buttonColumnWidth = 6;
+  if (windowSize[0] < 520) {
+    buttonColumnWidth = 12;
+  }
+
   return (
     <Grid container>
       <Grid container item xs={12} style={{ paddingTop: "10px" }}>
@@ -36,13 +58,36 @@ const HeroSection = () => {
           marginBottom: "40px",
         }}
       >
-        <Button
-          variant="contained"
-          style={{ backgroundColor: "#00459A", marginTop: "87.75px" }}
-          href="/programs"
+        <Grid
+          container
+          xs={9}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "200px",
+            margin: "auto",
+          }}
         >
-          Hitta kompetens
-        </Button>
+          <Grid item xs={buttonColumnWidth}>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#00459A", margin: "auto" }}
+              href="/programs"
+            >
+              Hitta kompetens
+            </Button>
+          </Grid>
+          <Grid item xs={buttonColumnWidth}>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#00459A", margin: "auto" }}
+              href="/compare"
+            >
+              Jämför kompetens
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid
         container

@@ -3,6 +3,9 @@ import { useState, useEffect, Fragment } from "react";
 //MUI
 import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
 
+//Program data
+import mockData from "../../assets/newMock.json";
+
 // Component for the 4 colums of programs on the homescreen
 // Columns are rendered differently depending on page width
 
@@ -25,79 +28,31 @@ const HomeProgramsList = () => {
   });
 
   const listContent = [
-    {
-      header: "Civilingenjör",
-      listItems: [
-        "Elektroteknik",
-        "Energisystem",
-        "Industriell ekonomi",
-        "Informationsteknogi",
-        "Kemiteknik",
-        "Miljö- och vattenteknik",
-        "Molekylär bioteknik",
-        "System i teknik och samhälle",
-        "Teknisk Fysik",
-        "Teknisk fysik med materialvetenskap",
-      ],
-    },
-    {
-      header: "Högskoleingenjör",
-      listItems: [
-        "Byggteknik",
-        "Elektroteknik",
-        "Kärnkraftteknik",
-        "Maskinteknik",
-      ],
-    },
-    {
-      header: "Kandidat",
-      listItems: [
-        "Biologi/molekylärbiologi",
-        "Datavetenskap",
-        "Fysik",
-        "Geovetenskap",
-        "Kemi",
-        "Matematik",
-      ],
-    },
-    {
-      header: "Master",
-      listItems: [
-        "Bioinformatic",
-        "Biologi",
-        "Dataanlys(Data Science)",
-        "Datavetenskap",
-        "Förnybar elgenerering",
-        "Fysik",
-        "Geovetenskap",
-        "Hållbar utveckling",
-        "Inbyggda system",
-        "Industriell ledning & innovation",
-        "Kemi",
-        "Människa-datorinteraktion",
-        "Molekylär bioteknik",
-        "Tillämpad beräkningsvetenskap",
-        "Tillämpad bioteknik",
-      ],
-    },
+    { header: "Civilingenjör", listItems: [] },
+    { header: "Högskoleingenjör", listItems: [] },
+    { header: "Kandidat", listItems: [] },
+    { header: "Master", listItems: [] },
   ];
 
-  const ListText = (text, index, center) => (
-    <ListItem key={index} style={{ textAlign: center ? "center" : "start" }} disablePadding>
-      <ListItemText primary={text} />
-    </ListItem>
-  );
+  for (const [key, value] of Object.entries(mockData)) {
+    var index;
+    switch (value.type) {
+      case "Civilingenjör":
+        index = 0
+        break;
+      case "Högskoleingenjör":
+        index = 1
+        break;
+      case "Kandidat":
+        index = 2
+        break;
+      case "Master":
+        index = 3
+        break;
+    }
+    listContent[index].listItems.push(key);
+  }
 
-  const ListHeader = (heading, center) => (
-    <Typography
-      style={{ textAlign: center ? "center" : "start", marginBottom: "20px" }}
-      variant="h6"
-    >
-      {heading}
-    </Typography>
-  );
-
-  // Create 4 columns of programs
   var programColumnWidth = 2.93;
   var oneColumn = false;
 
@@ -108,6 +63,7 @@ const HomeProgramsList = () => {
     oneColumn = true;
   }
 
+  // Create 4 columns of programs
   const programsList = listContent.map((column, index) => {
     var verticalBar = (
       <div
@@ -155,8 +111,24 @@ const HomeProgramsList = () => {
           justifyContent={oneColumn ? "center" : "start"}
         >
           <List>
-            {ListHeader(column.header, oneColumn)}
-            {column.listItems.map((item, index) => ListText(item, index, oneColumn))}
+            <Typography
+              style={{
+                textAlign: oneColumn ? "center" : "start",
+                marginBottom: "20px",
+              }}
+              variant="h6"
+            >
+              {column.header}
+            </Typography>
+            {column.listItems.map((item, index) => (
+              <ListItem
+                key={index}
+                style={{ textAlign: oneColumn ? "center" : "start" }}
+                disablePadding
+              >
+                <ListItemText primary={item} />
+              </ListItem>
+            ))}
           </List>
         </Grid>
         {verticalBar}
@@ -166,7 +138,11 @@ const HomeProgramsList = () => {
 
   return (
     <Grid
-      style={{ color: "white", margin: " 50px auto", backgroundColor: "#00459A" }}
+      style={{
+        color: "white",
+        margin: " 50px auto",
+        backgroundColor: "#00459A",
+      }}
       container
     >
       {programsList}

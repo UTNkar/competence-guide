@@ -122,7 +122,7 @@
     "keywords": ["Produktion/Process/Tillverkning", "Forskning/Utveckling"],
     "url": "https://google.com"
   },
-  "Molekylär bioteknik": {
+  "Molekylär bioteknik (master)": {
     "id": 12,
     "type": "Master",
     "length": "2",
@@ -212,7 +212,7 @@
     "keywords": ["Bygg/Anläggning/Fastighet", "Biomedicin/Medicinteknik"],
     "url": "https://google.com"
   },
-  "Molekylär bioteknik (Master)": {
+  "Molekylär bioteknik": {
     "id": 21,
     "type": "Civilingenjör",
     "length": "5",
