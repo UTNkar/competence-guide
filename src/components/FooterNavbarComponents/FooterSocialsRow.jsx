@@ -29,7 +29,7 @@ export default function SocialsRow(props) {
           display="flex"
         >
           {props.first_line}
-          <Typography style={{ fontSize: "14px" }}>
+          <Typography style={{ fontSize: "14px", marginTop: "2px" }}>
             Följ oss på social media
           </Typography>
         </Link>

@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 
+//MUI
 import { Paper, Grid, Typography, Button, Link } from "@mui/material";
 
 function ProgramInfoBox(props) {
   const [extendedDescription, setExtendedDescription] = useState(false);
 
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  const [windowSize, setWindowSize] = useState([window.innerWidth]);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -42,6 +40,7 @@ function ProgramInfoBox(props) {
 
   return (
     <Paper
+      elevation={0}
       style={{
         margin: "10px",
         backgroundColor: "#CFE3F9",

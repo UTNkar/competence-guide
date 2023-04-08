@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// MUI
 import { Paper, Grid, Typography, Button, Link } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -111,7 +112,7 @@ function CompreProgramInfoBox(props) {
         </Grid>
       </Grid>
       {iframes !== undefined
-        ? iframes.map((frame) => {
+        ? iframes.map((frame, index) => {
             return frame;
           })
         : ""}

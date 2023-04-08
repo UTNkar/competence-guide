@@ -24,6 +24,7 @@ const Navbar = () => {
       {screenIsSmall ? "" : <BlueNavbarSection />}
       <AppBar
         position="relative"
+        id="back-to-top-anchor"
         style={{
           backgroundColor: "white",
           fontFamily: "roboto",

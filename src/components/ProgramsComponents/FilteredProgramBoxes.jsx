@@ -1,4 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+//MUI
 import { Grid } from "@mui/material";
 
 export default function FilteredProgramBoxes(props) {

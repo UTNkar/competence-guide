@@ -1,11 +1,11 @@
-import * as React from "react";
+
+// MUI
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-
-import { Button, Grid, Typography, List, ListItemButton, ListItemText } from "@mui/material";
+import { Typography, List, ListItemButton, ListItemText } from "@mui/material";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />

@@ -1,5 +1,6 @@
-// Material UI components
+// MUI
 import { Grid, Typography, Link } from "@mui/material";
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const HeroSection = () => {
   return (
@@ -9,14 +10,14 @@ const HeroSection = () => {
           Hitta kompetens
         </Typography>
       </Grid>
-      <Grid item xs={6} style={{ textAlign: "right" }}>
+      <Grid item xs={6} style={{ textAlign: "right", position: "relative", bottom: "12px" }}>
         <Typography
           variant="body1"
-          style={{ marginTop: "5px", fontSize: "12px" }}
+          style={{marginBottom: "3px", fontSize: "12px", color: "#9E9E9E" }}
           color="inherit"
         >
-          <Link href="https://utn.se">Hem</Link> {" > "}{" "}
-          <Link href="/">Kompetensguiden</Link> {" > "} Hitta kompetens
+          <Link href="https://utn.se">Hem</Link> <ArrowRightIcon style={{position: "relative", top: "8px"}}/>
+          <Link href="/">Kompetensguiden</Link> <ArrowRightIcon style={{position: "relative", top: "8px"}}/> Hitta kompetens
         </Typography>
       </Grid>
       <Grid item style={{ backgroundColor: "#A7A9AB" }}>

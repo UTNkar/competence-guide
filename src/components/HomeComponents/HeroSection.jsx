@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 // MUI
 import { Grid, Button, Link, Typography } from "@mui/material";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 //Custom components
 import Circle from "./Circle";
@@ -37,13 +38,19 @@ const HeroSection = () => {
             Kompetensguiden
           </Typography>
         </Grid>
-        <Grid item xs={6} style={{ textAlign: "right" }}>
+        <Grid
+          item
+          xs={6}
+          style={{ textAlign: "right", position: "relative", bottom: "12px" }}
+        >
           <Typography
             variant="body1"
-            style={{ marginTop: "5px", fontSize: "12px" }}
+            style={{ marginTop: "5px", fontSize: "12px", color: "#9E9E9E" }}
             color="inherit"
           >
-            <Link href="https://utn.se">Hem</Link> {">"} Kompetensguiden
+            <Link href="https://utn.se">Hem</Link>{" "}
+            <ArrowRightIcon style={{ position: "relative", top: "8px" }} />{" "}
+            Kompetensguiden
           </Typography>
         </Grid>
       </Grid>
@@ -60,6 +67,7 @@ const HeroSection = () => {
       >
         <Grid
           container
+          item
           xs={9}
           style={{
             display: "flex",

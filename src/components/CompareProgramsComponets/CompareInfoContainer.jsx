@@ -8,14 +8,13 @@ import { ReactComponent as AddIcon } from "../../assets/AddIcon.svg";
 import CompareAccordion from "./CompareAccordion";
 import CompareProgramInfoBox from "./CompareProgramInfoBox";
 
+// Program data
 import mockData from "../../assets/newMock.json";
 import iFrames from "../../assets/iFrames";
 
 export default function CompareInfoContainer() {
   const [displayAccordions, setDisplayAccordions] = useState([false, false]);
-  const [selectedComparingPrograms, setSelectedComparingPrograms] = useState([
-    ,
-  ]);
+  const [selectedComparingPrograms, setSelectedComparingPrograms] = useState([]);
 
   // Windowsize
   const [windowSize, setWindowSize] = useState([

@@ -1,5 +1,6 @@
 //MUI
 import { Grid, Typography, Link } from "@mui/material";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 export default function HeroSection() {
   return (
@@ -10,13 +11,21 @@ export default function HeroSection() {
             Jämför program
           </Typography>
         </Grid>
-        <Grid item xs={6} style={{ textAlign: "right" }}>
+        <Grid
+          item
+          xs={6}
+          style={{ textAlign: "right", position: "relative", bottom: "12px" }}
+        >
           <Typography
             variant="body1"
-            style={{ marginTop: "5px", fontSize: "12px" }}
+            style={{ marginBottom: "3px", fontSize: "12px", color: "#9E9E9E" }}
             color="inherit"
           >
-            <Link href="/">Kompetensguiden</Link> {">"} Jämför program
+            <Link href="https://utn.se">Hem</Link>{" "}
+            <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+            <Link href="/">Kompetensguiden</Link>{" "}
+            <ArrowRightIcon style={{ position: "relative", top: "8px" }} />{" "}
+            Jämför kompetens
           </Typography>
         </Grid>
       </Grid>

@@ -1,6 +1,9 @@
-import { Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
+//MUI
+import { Grid } from "@mui/material";
+
+//Custom components
 import CheckboxDropdown from "./CheckboxDropdown";
 
 // Section where the two dropdown menus are kept

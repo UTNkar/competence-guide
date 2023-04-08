@@ -1,8 +1,12 @@
-import { Container, Typography } from "@mui/material";
 import { useState } from "react";
 
+//MUI
+import { Container, Typography } from "@mui/material";
+
+//Custom components
 import GenerateAccordion from "./GenerateAccordion";
 
+//Program data
 import mockData from "../../assets/newMock.json"
 
 export default function ProgramAccordion() {
@@ -26,13 +30,13 @@ export default function ProgramAccordion() {
       case "Kandidat":
         index = 2
         break;
-      case "Master":
+      default:
+        //Master
         index = 3
         break;
     }
     allPrograms[index].listItems.push({ name: key, url: value.url});
   }
-  console.log(allPrograms);
 
   // State handler function used by Accordions
   const [expanded, setExpanded] = useState("");

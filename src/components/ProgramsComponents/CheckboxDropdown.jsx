@@ -1,13 +1,8 @@
-import * as React from "react";
+import { useState } from "react";
+
+//MUI
 import { useTheme } from "@mui/material/styles";
-import {
-  MenuItem,
-  InputLabel,
-  FormControl,
-  Select,
-  Chip,
-  Box,
-} from "@mui/material";
+import { MenuItem, InputLabel, FormControl, Select, Chip, Box } from "@mui/material";
 
 // This is the the two dropdown menues for the program filtering page
 
@@ -33,7 +28,7 @@ function getStyles(name, items, theme) {
 
 export default function MultipleSelectChip(props) {
   const theme = useTheme();
-  const [selectedItems, setSelectedItems] = React.useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const handleDelete = (i) => {
     const newList = selectedItems.filter((e, index) => index !== i);

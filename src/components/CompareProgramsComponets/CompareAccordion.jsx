@@ -1,10 +1,11 @@
 import { useState } from "react";
 
+//MUI
 import { Container, Typography, Grid, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
+// Custom components
 import GenerateCompareAccordion from "./GenerateCompareAccordion";
-
 import mockData from "../../assets/newMock.json";
 
 export default function CompareAccordion(props) {
@@ -27,7 +28,8 @@ export default function CompareAccordion(props) {
       case "Högskoleingenjör":
         index = 2;
         break;
-      case "Kandidat":
+      default:
+        //Kandidat
         index = 3;
         break;
     }

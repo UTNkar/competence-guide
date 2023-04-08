@@ -1,12 +1,14 @@
-import ProgramInfoBox from "./ProgramInfoBox";
-
 import { useState, useEffect } from "react";
 
-import mockData from "../../assets/newMock.json";
+//Custom components
+import ProgramInfoBox from "./ProgramInfoBox";
 import FilteredProgramBoxes from "./FilteredProgramBoxes";
 import ProgramAccordion from "./ProgramAccordion";
 import DropdownSection from "./DropdownSection";
 
+import mockData from "../../assets/newMock.json";
+
+//MUI
 import { Grid } from "@mui/material";
 
 var allPrograms = [];
