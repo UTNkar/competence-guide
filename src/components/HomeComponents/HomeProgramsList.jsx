@@ -46,9 +46,9 @@ const HomeProgramsList = () => {
       case "Kandidat":
         index = 2
         break;
-      case "Master":
+      default:
+        // "Master"
         index = 3
-        break;
     }
     listContent[index].listItems.push(key);
   }
