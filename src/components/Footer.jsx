@@ -8,7 +8,15 @@ import FooterCol4 from "./FooterNavbarComponents/FooterCol4";
 import FooterSocialsRow from "./FooterNavbarComponents/FooterSocialsRow";
 
 //MUI
-import { Box, Grid, Container, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Container,
+  Button,
+  ButtonGroup,
+  Typography,
+} from "@mui/material";
+import { Link } from 'react-router-dom';
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
@@ -92,21 +100,99 @@ const Footer = () => {
           }}
         >
           <Container>
-            <Button
+            <ButtonGroup
               variant="contained"
-              href="https://github.com/UTNkar/moore"
-              style={{ height: "16px" }}
+              sx={{ marginTop: "36px" }}
+              // href="https://github.com/UTNkar/moore"
+              // style={{
+              //   backgroundColor: "green",
+              //   height: "12px",
+              // }}
             >
-              <GitHubIcon />
-              <Typography style={{ fontSize: "12px" }}>
-                Find us on GitHub
-              </Typography>
-            </Button>
+              <Button
+                href="https://github.com/UTNkar/moore"
+                style={{
+                  backgroundColor: "#ebf0f4",
+                  height: "2em",
+                  width: "11em",
+                  borderRadius: ".25em 0 0 .25em",
+                  borderColor: "#ccd1d5",
+                  boxShadow: "none",
+                  // "&:hover": {
+                  //   backgroundColor: "#e9ebef",
+                  //   backgroundImage:
+                  //     "linear-gradient(180deg, #f3f4f6, #e9ebef 90%)",
+                  //   borderColor: "#c7cbcf",
+                  // },
+                }}
+              >
+                <GitHubIcon style={{ color: "black" }} />
+                <Typography
+                  style={{
+                    fontWeight: "bold",
+                    textTransform: "none",
+                    fontSize: "11px",
+                    color: "black",
+                    fontFamily:
+                      "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif",
+                  }}
+                >
+                  Find us on GitHub
+                </Typography>
+              </Button>
+              <Button
+                // variant="contained"
+                href="https://github.com/UTNkar/moore/stargazers"
+                style={{
+                  backgroundColor: "#ebf0f4",
+                  height: "2em",
+                  width: "2em",
+                  borderRadius: "0 .25em .25em 0",
+                  borderColor: "#ccd1d5",
+                  boxShadow: "none",
+                  "&:hover": {
+                    backgroundColor: "#e9ebef",
+                    backgroundImage:
+                      "linear-gradient(180deg, #f3f4f6, #e9ebef 90%)",
+                    borderColor: "#c7cbcf",
+                  },
+                }}
+              >
+                <Typography
+                  style={{
+                    fontWeight: "bold",
+                    textTransform: "none",
+                    fontSize: "12px",
+                    color: "blue",
+                    fontFamily:
+                      "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif",
+                  }}
+                >
+                  11
+                </Typography>
+              </Button>
+            </ButtonGroup>
           </Container>
         </Box>
       </Box>
     </Fragment>
   );
 };
+
+{
+  /* <Button
+              onClick={handleChangeComittesSections}
+              variant="contained"
+              style={{
+                backgroundColor: "#2e2e2e",
+                fontFamily: "roboto",
+
+                height: "2.15em",
+                width: "auto",
+                display: "flex",
+              }}
+              sx={{ padding: "0 .5em", margin: "0 .3em" }}
+            ></Button> */
+}
 
 export default Footer;
