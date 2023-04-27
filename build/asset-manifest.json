@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2e35888c.css",
+    "main.js": "/static/js/main.d769f773.js",
+    "static/media/utn_logo_blue.svg": "/static/media/utn_logo_blue.77420a7213e376ad86e7174f43291b81.svg",
+    "index.html": "/index.html",
+    "static/media/AddIcon.svg": "/static/media/AddIcon.05f20508c85da3917926304fbd431f2e.svg",
+    "main.d769f773.js.map": "/static/js/main.d769f773.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e35888c.css",
+    "static/js/main.d769f773.js"
+  ]
+}
