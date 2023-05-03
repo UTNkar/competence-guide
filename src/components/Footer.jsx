@@ -103,11 +103,6 @@ const Footer = () => {
             <ButtonGroup
               variant="contained"
               sx={{ marginTop: "36px" }}
-              // href="https://github.com/UTNkar/moore"
-              // style={{
-              //   backgroundColor: "green",
-              //   height: "12px",
-              // }}
             >
               <Button
                 href="https://github.com/UTNkar/moore"
@@ -118,12 +113,6 @@ const Footer = () => {
                   borderRadius: ".25em 0 0 .25em",
                   borderColor: "#ccd1d5",
                   boxShadow: "none",
-                  // "&:hover": {
-                  //   backgroundColor: "#e9ebef",
-                  //   backgroundImage:
-                  //     "linear-gradient(180deg, #f3f4f6, #e9ebef 90%)",
-                  //   borderColor: "#c7cbcf",
-                  // },
                 }}
               >
                 <GitHubIcon style={{ color: "black" }} />
@@ -178,21 +167,5 @@ const Footer = () => {
     </Fragment>
   );
 };
-
-{
-  /* <Button
-              onClick={handleChangeComittesSections}
-              variant="contained"
-              style={{
-                backgroundColor: "#2e2e2e",
-                fontFamily: "roboto",
-
-                height: "2.15em",
-                width: "auto",
-                display: "flex",
-              }}
-              sx={{ padding: "0 .5em", margin: "0 .3em" }}
-            ></Button> */
-}
 
 export default Footer;
