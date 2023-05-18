@@ -27,7 +27,7 @@ export default class ExamplePie extends PureComponent {
       <div>
         <h3>PIEEEE</h3>
       {/* <ResponsiveContainer width="100%" height="100%"> */}
-        <PieChart width={400} height={400}>
+        <PieChart width={700} height={700}>
           <Pie
             dataKey="value"
             isAnimationActive={false}

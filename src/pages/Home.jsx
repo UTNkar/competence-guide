@@ -4,6 +4,7 @@ import HeroSection from "../components/HomeComponents/HeroSection";
 import HomeInfo from "../components/HomeComponents/HomeInfo";
 import HomeProgramsList from "../components/HomeComponents/HomeProgramsList";
 import Slider from "../components/HomeComponents/Slider";
+import TestCarousel from "../components/HomeComponents/testCarousel";
 
 
 //MUI
@@ -13,7 +14,7 @@ function Home() {
   return (
     <Container style={{ fontFamily: "roboto" }}>
       <HeroSection />
-      <Slider/>
+      <TestCarousel/>
       <HomeInfo />
       <HomeProgramsList />
     </Container>

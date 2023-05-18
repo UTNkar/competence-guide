@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-
+import { Grid, Button, Link, Typography } from "@mui/material";
 //Carousel
 import Carousel from "react-bootstrap/Carousel";
 
@@ -16,6 +16,8 @@ import ExampleBar from "../CarouselComponents/ExampleBar";
 import SlideOne from "../CarouselComponents/SlideOne";
 import { MDBContainer } from "mdbreact";
 
+
+
 const Slider = () => {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -27,6 +29,7 @@ const Slider = () => {
   return (
     <div>
       <Carousel>
+
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -58,12 +61,14 @@ const Slider = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
+            src="https://www.macmillandictionary.com/external/slideshow/full/White_full.png"
             alt="First slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+          <Typography variant="body1" color="black" gutterBottom>
+            third slide
+          </Typography>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>

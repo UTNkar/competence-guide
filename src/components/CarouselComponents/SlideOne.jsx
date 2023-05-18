@@ -1,27 +1,20 @@
 //Carousel
 import Carousel from "react-bootstrap/Carousel";
+import React from "react";
 
-export default function SlideOne() {
-    return(
-    // <Carousel.Item>
-    //     <div style={{width: "500px"}}>Ja</div>
-    //     <Carousel.Caption>
-    //         <h3>hej </h3>
-    //     </Carousel.Caption>
-    // </Carousel.Item>
-    <Carousel.Item>
-    <img
-        className="d-block w-100"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
-        alt="First slide"
-      />
+import ExamplePie from "../CarouselComponents/ExamplePie";
+import ExampleBar from "../CarouselComponents/ExampleBar";
 
-      <Carousel.Caption>
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-    )
+const SlideOne = ({ imageSrc, title, description }) => {
+  return (
+    <div className="carousel-item">
+      <img src={imageSrc} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {<ExamplePie/>}
+    </div>
+  );
+};
 
-  }
+export default SlideOne;
 
