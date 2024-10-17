@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Paper, Grid, Typography, Button, Link } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-function CompreProgramInfoBox(props) {
+function CompareProgramInfoBox(props) {
   const [extendedDescription, setExtendedDescription] = useState(false);
 
   const [windowSize, setWindowSize] = useState([
@@ -120,4 +120,4 @@ function CompreProgramInfoBox(props) {
   );
 }
 
-export default CompreProgramInfoBox;
+export default CompareProgramInfoBox;
