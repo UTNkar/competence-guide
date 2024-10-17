@@ -73,7 +73,7 @@ export default function CompareAccordion(props) {
       {allPrograms.map((item, index) => {
         return (
           <GenerateCompareAccordion
-            setSelectedComparingPrograms={props.setSelectedComparingPrograms}
+            setSelectedComparingProgram={props.setSelectedComparingProgram}
             handleChange={handleChange}
             expanded={expanded}
             key={index}
