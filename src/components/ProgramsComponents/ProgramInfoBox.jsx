@@ -72,7 +72,9 @@ function ProgramInfoBox(props) {
         </Grid>
         <Grid item xs={12}>
           <Typography>
-            <Button onClick={handleExtendedDescription}>Visa mer</Button>
+            <Button onClick={handleExtendedDescription}>
+              {extendedDescription ? 'Visa mindre' : 'Visa mer'}
+            </Button>
           </Typography>
         </Grid>
       </Grid>
