@@ -1,0 +1,8 @@
+.container {
+    padding: 20vh 0;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}

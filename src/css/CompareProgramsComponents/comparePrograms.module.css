@@ -1,0 +1,67 @@
+/* AddProgramButton.jsx */
+
+.addProgramText {
+    position: relative;
+    top: -100px;
+}
+
+.addProgramIcon {
+    position: relative;
+    top: -80px;
+    height: 60px;
+}
+
+.containerContent {
+    width: 100%;
+}
+
+/* CompareAccordion.jsx */
+
+.compareAccordionContainer {
+    border-radius: 10px;
+    padding: 10px 15px;
+    max-height: 600px;
+    border: 1px solid #CFE3F9;
+}
+
+.headingContainer {
+    padding: 5px 0;
+    align-items: center;
+}
+
+.closeButton {
+    color: black;
+    float: right;
+}
+
+.accordionBox {
+    overflow: auto;
+    max-height: 500px;
+}
+
+/* CompareInfoContainer.jsx */
+
+.outerContainer {
+    height: 600px;
+    padding: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+
+/* CompareProgramInfoBox.jsx */
+
+.compareProgramInfoBoxPaper {
+    background-color: #CFE3F9;
+    padding: 20px;
+    height: 500px;
+    overflow: auto;
+
+}
+
+
+/* GenerateCompareAccordion.jsx */
+
+.listItemButton {
+    border-radius: 5px;
+}

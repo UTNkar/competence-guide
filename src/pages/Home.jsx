@@ -1,20 +1,19 @@
-
 // Custom components
-import HeroSection from "../components/HomeComponents/HeroSection";
-import HomeInfo from "../components/HomeComponents/HomeInfo";
-import HomeProgramsList from "../components/HomeComponents/HomeProgramsList";
+import HomeHeroSection from '../components/HomeComponents/HomeHeroSection'
+import HomeInfo from '../components/HomeComponents/HomeInfo'
+import HomeProgramsList from '../components/HomeComponents/HomeProgramsList'
 
 //MUI
-import { Container } from "@mui/material";
+import { Container } from '@mui/material'
 
 function Home() {
   return (
-    <Container style={{ fontFamily: "roboto" }}>
-      <HeroSection />
+    <Container>
+      <HomeHeroSection />
       <HomeInfo />
       <HomeProgramsList />
     </Container>
-  );
+  )
 }
 
-export default Home;
+export default Home

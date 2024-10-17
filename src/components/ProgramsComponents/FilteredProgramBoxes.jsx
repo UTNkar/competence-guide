@@ -1,34 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
+import styles from '../../css/ProgramsComponents/programComponents.module.css'
 
 //MUI
-import { Grid } from "@mui/material";
+import { Grid } from '@mui/material'
 
 export default function FilteredProgramBoxes(props) {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
-  ]);
+  ])
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize)
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  })
 
-  var columnWidth = 12;
-  var boxesRendered;
+  var columnWidth = 12
+  var boxesRendered
 
   if (windowSize[0] > 600) {
-    columnWidth = 6;
+    columnWidth = 6
     // Convenient for alphabetical order from top to bottom
-    const firstRow = props.propgramBoxes.filter((e, i) => i % 2 !== 0);
-    const secondRow = props.propgramBoxes.filter((e, i) => i % 2 === 0);
+    const firstRow = props.propgramBoxes.filter((e, i) => i % 2 !== 0)
+    const secondRow = props.propgramBoxes.filter((e, i) => i % 2 === 0)
 
     //TWO ROWS
 
@@ -41,7 +42,7 @@ export default function FilteredProgramBoxes(props) {
                   key={index + secondRow.length}
                   item
                   xs={12}
-                  style={{ float: "right" }}
+                  className={styles.programBoxLeft}
                 >
                   {box}
                 </Grid>
@@ -55,14 +56,19 @@ export default function FilteredProgramBoxes(props) {
         <Grid item xs={columnWidth}>
           {firstRow.length !== 0
             ? secondRow.map((box, index) => (
-                <Grid key={index} item xs={12} style={{ float: "left" }}>
+                <Grid
+                  key={index}
+                  item
+                  xs={12}
+                  className={styles.programBoxRight}
+                >
                   {box}
                 </Grid>
               ))
-            : ""}
+            : ''}
         </Grid>
       </Grid>
-    );
+    )
   } else {
     // ONE ROW
     boxesRendered = props.propgramBoxes.map((box, i) => {
@@ -70,9 +76,9 @@ export default function FilteredProgramBoxes(props) {
         <Grid key={i} item xs={12}>
           {box}
         </Grid>
-      );
-    });
+      )
+    })
   }
 
-  return boxesRendered;
+  return boxesRendered
 }

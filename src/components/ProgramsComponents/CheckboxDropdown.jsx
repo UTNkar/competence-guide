@@ -1,13 +1,20 @@
-import { useState } from "react";
-
+import { useState } from 'react'
+import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
-import { useTheme } from "@mui/material/styles";
-import { MenuItem, InputLabel, FormControl, Select, Chip, Box } from "@mui/material";
+import { useTheme } from '@mui/material/styles'
+import {
+  MenuItem,
+  InputLabel,
+  FormControl,
+  Select,
+  Chip,
+  Box,
+} from '@mui/material'
 
 // This is the the two dropdown menues for the program filtering page
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
+const ITEM_HEIGHT = 48
+const ITEM_PADDING_TOP = 8
 const MenuProps = {
   PaperProps: {
     style: {
@@ -15,7 +22,7 @@ const MenuProps = {
       width: 250,
     },
   },
-};
+}
 
 function getStyles(name, items, theme) {
   return {
@@ -23,53 +30,53 @@ function getStyles(name, items, theme) {
       items.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
-  };
+  }
 }
 
 export default function MultipleSelectChip(props) {
-  const theme = useTheme();
-  const [selectedItems, setSelectedItems] = useState([]);
+  const theme = useTheme()
+  const [selectedItems, setSelectedItems] = useState([])
 
   const handleDelete = (i) => {
-    const newList = selectedItems.filter((e, index) => index !== i);
+    const newList = selectedItems.filter((e, index) => index !== i)
 
-    setSelectedItems(newList);
-    props.onItemChecked(newList);
-  };
+    setSelectedItems(newList)
+    props.onItemChecked(newList)
+  }
 
-  const names = props.items;
+  const names = props.items
 
   const handleChange = (event) => {
     const {
       target: { value },
-    } = event;
+    } = event
 
-    props.onItemChecked(value);
+    props.onItemChecked(value)
 
     setSelectedItems(
       // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
+      typeof value === 'string' ? value.split(',') : value
+    )
+  }
 
   return (
     <div>
       <InputLabel>{props.label}</InputLabel>
-      <FormControl variant="standard" sx={{ m: 1, width: 300 }}>
+      <FormControl className={styles.form} variant='standard'>
         <Select
           multiple
           value={selectedItems}
           label={props.label}
           onChange={handleChange}
           renderValue={(selected) => (
-            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+            <Box className={styles.chipsBox}>
               {selected.map((value, index) => (
                 <Chip
                   key={value}
                   label={value}
                   onDelete={() => handleDelete(index)}
                   onMouseDown={(event) => {
-                    event.stopPropagation();
+                    event.stopPropagation()
                   }}
                 />
               ))}
@@ -89,5 +96,5 @@ export default function MultipleSelectChip(props) {
         </Select>
       </FormControl>
     </div>
-  );
+  )
 }

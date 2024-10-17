@@ -1,20 +1,18 @@
-
 // Custom components
-import HeroSection from "../components/ProgramsComponents/HeroSection";
-import FilterArea from "../components/ProgramsComponents/FilterArea";
+import ProgramHeroSection from '../components/ProgramsComponents/ProgramHeroSection'
+import FilterArea from '../components/ProgramsComponents/FilterArea'
+import styles from '../css/Pages/programFinder.module.css'
 
 // MUI
-import { Container } from "@mui/material";
-
+import { Container } from '@mui/material'
 
 function ProgramFinder() {
-
   return (
-    <Container style={{ padding: "0 50px", fontFamily: "roboto" }}>
-      <HeroSection/>
-      <FilterArea/>
+    <Container className={styles.pageContainer}>
+      <ProgramHeroSection />
+      <FilterArea />
     </Container>
-  );
+  )
 }
 
-export default ProgramFinder;
+export default ProgramFinder

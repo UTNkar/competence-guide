@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-
+//will be removed/changed
 // Custom components
 import FooterCol1 from "./FooterNavbarComponents/FooterCol1";
 import FooterCol2 from "./FooterNavbarComponents/FooterCol2";
