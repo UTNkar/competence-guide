@@ -1,18 +1,17 @@
 //MUI
-import { Container } from "@mui/material"; 
-
+import { Container } from '@mui/material'
+import styles from '../css/Pages/comparePrograms.module.css'
 //Custom components
-import HeroSection from "../components/CompareProgramsComponets/HeroSection";
-import CompareInfoContainer from "../components/CompareProgramsComponets/CompareInfoContainer"
+import CompareProgramHeroSection from '../components/CompareProgramsComponets/CompareProgramHeroSection'
+import CompareInfoContainer from '../components/CompareProgramsComponets/CompareInfoContainer'
 
 function ComparePrograms() {
-
   return (
-    <Container style={{ padding: "0 50px", fontFamily: "roboto" }}>
-      <HeroSection />
-      <CompareInfoContainer/>
+    <Container className={styles.pageContainer}>
+      <CompareProgramHeroSection />
+      <CompareInfoContainer />
     </Container>
-  );
+  )
 }
 
-export default ComparePrograms;
+export default ComparePrograms

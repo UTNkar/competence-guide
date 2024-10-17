@@ -1,41 +1,36 @@
-import { useState } from "react";
-
+import { useState } from 'react'
+import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 //MUI
-import { Grid, Button, Typography } from "@mui/material";
-import { ReactComponent as AddIcon } from "../../assets/AddIcon.svg";
+import { Grid, Button, Typography } from '@mui/material'
+import { ReactComponent as AddIcon } from '../../assets/AddIcon.svg'
 
 //Custom components
-import CompareAccordion from "./CompareAccordion";
-import CompareProgramInfoBox from "./CompareProgramInfoBox";
+import CompareAccordion from './CompareAccordion'
+import CompareProgramInfoBox from './CompareProgramInfoBox'
 
 // Program data
-import mockData from "../../assets/newMock.json";
-import iFrames from "../../assets/iFrames";
+import mockData from '../../assets/newMock.json'
+import iFrames from '../../assets/iFrames'
 
-export default function CompareInfoContainer({buttonTitle}) {
-  const [displayAccordion, setDisplayAccordion] = useState(false);
-  const [selectedComparingProgram, setSelectedComparingProgram] = useState();
+export default function CompareInfoContainer({ buttonTitle }) {
+  const [displayAccordion, setDisplayAccordion] = useState(false)
+  const [selectedComparingProgram, setSelectedComparingProgram] = useState()
 
   const handleClicked = () => {
-    setDisplayAccordion(!displayAccordion);
-  };
-
+    setDisplayAccordion(!displayAccordion)
+  }
 
   const handleContainerChange = (programName) => {
-    const data = mockData[programName];
-    setSelectedComparingProgram(
-      { name: programName, data: data }
-      );
-  };
+    const data = mockData[programName]
+    setSelectedComparingProgram({ name: programName, data: data })
+  }
 
   const handleCloseContainer = () => {
-    setDisplayAccordion(false);
-    setSelectedComparingProgram(undefined);
-  };
+    setDisplayAccordion(false)
+    setSelectedComparingProgram(undefined)
+  }
 
-
-
-  var ContainerContent;
+  var ContainerContent
   if (selectedComparingProgram === undefined) {
     if (displayAccordion) {
       // Accordions are displayed, user is choosing
@@ -45,34 +40,28 @@ export default function CompareInfoContainer({buttonTitle}) {
           setSelectedComparingProgram={handleContainerChange}
           title={buttonTitle}
         />
-      );
+      )
     } else {
       // Button "Jämför program" is yet to be pressed
       ContainerContent = (
-        <Button
-          style={{ width: "100%"}}
-          onClick={handleClicked}
-        >
+        <Button className={styles.containerContent} onClick={handleClicked}>
           <Grid container>
             <Grid item xs={12}>
-              <Typography
-                variant="body1"
-                style={{ position: "relative", top: "-100px" }}
-              >
+              <Typography variant='body1' className={styles.addProgramText}>
                 Lägg till ett program
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <AddIcon style={{ position: "relative", top: "-80px", height: "80px" }}/>
+              <AddIcon className={styles.addProgramIcon} />
             </Grid>
           </Grid>
         </Button>
-      );
+      )
     }
   } else {
-    const name = selectedComparingProgram.name;
-    const data = selectedComparingProgram.data;
-    const iframes = iFrames[name]; // often undefined since many programs dont have the pie charts
+    const name = selectedComparingProgram.name
+    const data = selectedComparingProgram.data
+    const iframes = iFrames[name] // often undefined since many programs dont have the pie charts
     ContainerContent = (
       <CompareProgramInfoBox
         iframes={iframes}
@@ -80,10 +69,8 @@ export default function CompareInfoContainer({buttonTitle}) {
         name={name}
         data={data}
       />
-    );
+    )
   }
 
-  return (
-        ContainerContent
-  );
+  return ContainerContent
 }
