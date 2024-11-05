@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Outfit:wght@100..900&display=swap');
+
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -27,7 +30,13 @@ audio:not([controls]) {
 }
 
 a {
-    background-color: #0000
+    background-color: #0000;
+}
+
+a {
+    color: var(--text-accent);
+    font-weight: 500;
+    text-decoration: none;
 }
 
 a:active,a:hover {
@@ -219,6 +228,8 @@ html {
     height: 100%
 }
 
+
+
 body {
     color: #333;
     background-color: #fff;
@@ -226,7 +237,8 @@ body {
     margin: 0;
     font-family: Arial,sans-serif;
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
+
 }
 
 img {
@@ -520,7 +532,7 @@ label {
     margin-bottom: 10px;
     padding: 8px 12px;
     font-size: 14px;
-    line_height: 1.42857;
+    line-height: 1.42857;
     display: block
 }
 
@@ -1430,7 +1442,7 @@ textarea.w_input,textarea.w_select {
     font-size: 17px;
     font-style: normal;
     font-weight: 300;
-    line_height: 1.2;
+    line-height: 1.2;
     list-style: disc;
     position: fixed;
     inset: 0;
@@ -1648,7 +1660,7 @@ textarea.w_input,textarea.w_select {
     }
 
     .w_lightbox_group .w_lightbox_image {
-        max_width: 82.3vw;
+        max-width: 82.3vw;
         max-height: 84vh
     }
 
@@ -2054,14 +2066,14 @@ textarea.w_input,textarea.w_select {
 }
 
 :root {
-    --text: Outfit,sans-serif;
+    --text: Outfit, sans-serif;
     --text-primary: #212427;
     --desktop-text-width: 60ch;
     --mobile-text-width: 40ch;
-    --text-paragraph: Domine,sans-serif;
+    --text-paragraph: Domine, sans-serif;
     --text-accent: #004c98;
     --text-secondary: #5c5c5c;
-    --icon: "Material Symbols Sharp",sans-serif;
+    --icon: "Material Symbols Sharp", sans-serif;
     --button-corner-radius: 6px;
     --blue-100: #dbebff;
     --blue-300: #b8d8ff;
@@ -2095,12 +2107,12 @@ textarea.w_input,textarea.w_select {
     --teal-300: white;
     --teal-900: #045356;
     --teal-700: #067378;
-    --text-code: Inconsolata,monospace;
+    --text-code: Inconsolata, monospace;
     --heading-decoration: #00000021;
     --heading-decoration-over-dark: #fff6;
     --notice-background-yellow: #ffc80042;
     --white-2: white;
-    --black-2: black
+    --black-2: black;
 }
 
 .w_layout_vflex {
@@ -2194,7 +2206,7 @@ textarea.w_input,textarea.w_select {
 
 .w_checkbox_input__inputType_custom.w__redirected_checked {
     background-color: #3898ec;
-    background_image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom_checkbox_checkmark.589d534424.svg);
+    background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom_checkbox_checkmark.589d534424.svg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2225,10 +2237,16 @@ body {
     line-height: 26px
 }
 
+body {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
 h1 {
     max-width: var(--desktop-text-width);
     margin-top: 0;
-    margin_bottom: .75em;
+    margin-bottom: .75em;
     font-size: 38px;
     font-weight: 600;
     line-height: 48px
@@ -2236,17 +2254,18 @@ h1 {
 
 h2 {
     max-width: var(--desktop-text-width);
-    margin_top: 1.25em;
-    margin_bottom: .5em;
+    margin-top: 1.25em;
+    margin-bottom: .5em;
     font-size: 24px;
     font-weight: 600;
     line-height: 30px
 }
 
 h3 {
+    font-family: Outfit, sans-serif;
     max-width: var(--desktop-text-width);
-    margin_top: 1.25em;
-    margin_bottom: .5em;
+    margin-top: 1.5em;
+    margin-bottom: .25em;
     padding-top: 0;
     font-size: 20px;
     font-weight: 500;
@@ -2255,8 +2274,8 @@ h3 {
 
 h4 {
     max-width: var(--desktop-text-width);
-    margin_top: 1.25em;
-    margin_bottom: .5em;
+    margin-top: 1.25em;
+    margin-bottom: .5em;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px
@@ -2264,8 +2283,8 @@ h4 {
 
 h5 {
     max-width: var(--desktop-text-width);
-    margin_top: 1.25em;
-    margin_bottom: .75em;
+    margin-top: 1.25em;
+    margin-bottom: .75em;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px
@@ -2273,19 +2292,30 @@ h5 {
 
 h6 {
     max-width: var(--desktop-text-width);
-    margin_top: 1.5em;
-    margin_bottom: .75em;
+    margin-top: 1.5em;
+    margin-bottom: .75em;
     font-size: 13px;
     font-weight: 500;
     line-height: 19px
+}
+
+.h_after {
+    height: 0.3ch;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 4.71875em;
+    min-height: 4px;
+    content: "";
+    background-color: var(--heading-decoration, rgba(0, 0, 0, 0.1));
+    display: block;
 }
 
 p {
     max-width: var(--desktop-text-width);
     font-family: var(--text-paragraph);
     text-align: left;
-    margin_top: .5em;
-    margin_bottom: .75em;
+    margin-top: .5em;
+    margin-bottom: .75em;
     font-weight: 400;
     line-height: 26px
 }
@@ -2304,7 +2334,7 @@ ul {
 }
 
 ol {
-    margin_top: .5em;
+    margin-top: .5em;
     margin-bottom: 1em;
     padding-left: 5ch
 }
@@ -2326,7 +2356,7 @@ form {
 
 label {
     margin-top: 1em;
-    margin_bottom: .75em;
+    margin-bottom: .75em;
     font-weight: 500;
     line-height: 23px;
     display: block
@@ -2348,7 +2378,7 @@ blockquote {
 }
 
 figure {
-    margin_top: 1.5em;
+    margin-top: 1.5em;
     margin-bottom: 2em;
     margin-right: 1em
 }
@@ -2386,8 +2416,8 @@ figcaption {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding_left: 1.25rem;
-    padding_right: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     display: block;
     position: relative
 }
@@ -2416,10 +2446,10 @@ figcaption {
     justify-content: flex-start;
     align-self: stretch;
     align-items: center;
-    margin_left: _.5em;
-    margin_right: _.5em;
-    padding_top: 1.5em;
-    padding_bottom: 1.5em;
+    margin-left: -.5em;
+    margin-right: -.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     display: flex
 }
 
@@ -2695,8 +2725,8 @@ figcaption {
     border-left: 6px solid var(--blue-500);
     flex: none;
     align-self: stretch;
-    margin_top: 1.5em;
-    margin_bottom: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 2em
@@ -2711,7 +2741,7 @@ figcaption {
 .faq_list {
     flex-flow: column wrap;
     flex: none;
-    grid_template: ".""."/1fr 1fr;
+    grid-template: ".""."/1fr 1fr;
     grid-auto-columns: 1fr;
     grid-auto-flow: row;
     place-content: stretch flex-start;
@@ -2789,7 +2819,7 @@ figcaption {
 }
 
 .large_image_wrapper.anamorphic {
-    aspect_ratio: 2.39
+    aspect-ratio: 2.39
 }
 
 .image_description {
@@ -2808,7 +2838,7 @@ figcaption {
 .large_image {
     object-fit: cover;
     object-position: 50% 0%;
-    background_image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/656e11cffb36ecc1b04c9795_styrelsen.jpeg);
+    background-image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/656e11cffb36ecc1b04c9795_styrelsen.jpeg);
     background-position: 50%;
     background-size: cover;
     flex: 0 auto;
@@ -2839,7 +2869,7 @@ figcaption {
     margin-top: 8px
 }
 
-.footer_info__wrapper {
+.footer_info_wrapper {
     grid-column-gap: 64px;
     grid-row-gap: 48px;
     flex-flow: row;
@@ -2891,7 +2921,7 @@ figcaption {
     border-radius: var(--image-corner-radius);
     background-color: var(--grey-100);
     color: var(--white-subdued);
-    background_image: url(https://d3e54v103j8qbb.cloudfront.net/img/background_image.svg);
+    background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/background_image.svg);
     background-position: 50%;
     background-size: cover;
     background-attachment: scroll;
@@ -2962,7 +2992,7 @@ figcaption {
 .text_field {
     border: 1px solid var(--grey-300);
     border-radius: var(--form-field-border-radius);
-    margin_top: .75em;
+    margin-top: .75em;
     margin-bottom: 0;
     padding: .5em .75em;
     line-height: 16px;
@@ -3157,8 +3187,8 @@ figcaption {
 .card_subhead {
     font-family: var(--text-paragraph);
     color: var(--text-secondary);
-    margin_top: .5em;
-    margin_bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px
@@ -3232,7 +3262,7 @@ figcaption {
     grid-row-gap: 6px;
     flex-flow: wrap;
     align-items: center;
-    margin_top: 1.5em
+    margin-top: 1.5em
 }
 
 .form_card {
@@ -3271,7 +3301,7 @@ figcaption {
 }
 
 .divider.module_content {
-    margin_top: 1.5em;
+    margin-top: 1.5em;
     margin-bottom: 1em
 }
 
@@ -3447,8 +3477,8 @@ figcaption {
 
 .content_card {
     border-radius: var(--paper-border-radius);
-    margin_top: 2.5em;
-    margin_bottom: 2.5em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
     padding: 2em 2.5em;
     display: block
 }
@@ -3468,8 +3498,8 @@ figcaption {
 }
 
 .content_card.small {
-    margin_top: 1.25em;
-    margin_bottom: 1.75em;
+    margin-top: 1.25em;
+    margin-bottom: 1.75em;
     padding: 1.25em 1.5em
 }
 
@@ -3485,8 +3515,8 @@ figcaption {
     width: var(--desktop-text-width);
     font-family: var(--text-paragraph);
     max-width: 100%;
-    padding_top: 1.75em;
-    padding_bottom: 1.75em
+    padding-top: 1.75em;
+    padding-bottom: 1.75em
 }
 
 .content_card.over_background_image {
@@ -3523,8 +3553,8 @@ figcaption {
 
 .form_block {
     max-width: 100%;
-    margin_top: 1.5em;
-    margin_bottom: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
     position: relative
 }
 
@@ -3533,8 +3563,8 @@ figcaption {
     background-color: var(--text-primary);
     color: var(--white);
     flex: 0 auto;
-    margin_top: _.15em;
-    margin_right: .1ch;
+    margin-top: -.15em;
+    margin-right: .1ch;
     padding: .15em .35em
 }
 
@@ -3551,7 +3581,7 @@ figcaption {
     white-space: break-spaces;
     word-break: normal;
     margin-top: 0;
-    margin_bottom: .75em;
+    margin-bottom: .75em;
     display: block
 }
 
@@ -3568,7 +3598,7 @@ figcaption {
 
 .paragraph_row_item.spaced {
     margin-top: 0;
-    margin_right: .3ch
+    margin-right: .3ch
 }
 
 .paragraph_column {
@@ -3608,16 +3638,16 @@ figcaption {
 }
 
 .logo_image_wrapper.contained.large {
-    margin_top: .75rem;
+    margin-top: .75rem;
     padding: 2rem 2.5rem
 }
 
 .logo_image_wrapper.contained.spaced {
-    margin_top: 1.5rem
+    margin-top: 1.5rem
 }
 
 .logo_image_wrapper.spaced {
-    margin_top: 1.5em
+    margin-top: 1.5em
 }
 
 .logo_image_wrapper.spaced.large {
@@ -3799,7 +3829,7 @@ figcaption {
 
 .module_tabs {
     z-index: 3;
-    grid_column_gap: .5em;
+    grid-column-gap: .5em;
     border-radius: var(--paper-border-radius);
     background-color: var(--white);
     box-shadow: 0 4px 12px 6px var(--grey-200);
@@ -3814,7 +3844,7 @@ figcaption {
 }
 
 .module_item_list_card {
-    grid_column_gap: 1.5em;
+    grid-column-gap: 1.5em;
     border: 1px solid var(--white);
     border-radius: var(--paper-border-radius);
     background-color: var(--white);
@@ -3863,7 +3893,7 @@ figcaption {
 }
 
 .module_item_header {
-    grid_column_gap: 1.5em;
+    grid-column-gap: 1.5em;
     display: flex
 }
 
@@ -3873,8 +3903,8 @@ figcaption {
 }
 
 .form_field_group {
-    grid_column_gap: 1.5em;
-    grid_row_gap: 1.5em;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
     flex-direction: row
 }
 
@@ -3891,8 +3921,8 @@ figcaption {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
     align-items: center;
-    margin_top: 1.5em;
-    margin_bottom: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     padding-left: 1em;
     display: flex
 }
@@ -3928,10 +3958,10 @@ figcaption {
     color: var(--text-secondary);
     white-space: nowrap;
     word-break: keep-all;
-    margin_top: .5em;
-    margin_bottom: .5em;
-    padding_left: .5em;
-    padding_right: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
     font-size: 15px;
     font-weight: 400;
     line-height: 20px
@@ -3967,7 +3997,7 @@ figcaption {
 }
 
 .background_image.uthg_rd {
-    background_image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/6564c083dd14dd5492bfc4d2_uthga%CC%8Ard_full.jpg);
+    background-image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/6564c083dd14dd5492bfc4d2_uthga%CC%8Ard_full.jpg);
     background-position: 50%;
     background-size: cover
 }
@@ -3977,13 +4007,13 @@ figcaption {
 }
 
 .background_image.blur.uppsala {
-    background_image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbb782f1588fbb0e8b9665_Universitetshuset_Uppsala_2.jpg);
+    background-image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbb782f1588fbb0e8b9665_Universitetshuset_Uppsala_2.jpg);
     background-position: 50%;
     background-size: cover
 }
 
 .background_image.blur.utm_rkelser {
-    background_image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbc0b6f58d5723c59b0699_Utmarkelse_Hemsidan_Rityta_1.original.jpg);
+    background-image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbc0b6f58d5723c59b0699_Utmarkelse_Hemsidan_Rityta_1.original.jpg);
     background-position: 0 0;
     background-size: auto
 }
@@ -3993,17 +4023,17 @@ figcaption {
 }
 
 .background_image.studying {
-    background_image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbb8870689e7b50d42cc00_Goteborgs_Universitet_vintern_2022_Fotograf_NatalieGreppi_tryck_28.jpg);
+    background-image: url(https://cdn.prod.website_files.com/655e29844518537470ba5b0f/65bbb8870689e7b50d42cc00_Goteborgs_Universitet_vintern_2022_Fotograf_NatalieGreppi_tryck_28.jpg);
     background-position: 0 0;
     background-size: cover
 }
 
 .locale_links {
-    margin_top: .5em
+    margin-top: .5em
 }
 
 .heading_3 {
-    margin_top: 2.6em
+    margin-top: 2.6em
 }
 
 .paragraph {
@@ -4315,7 +4345,7 @@ figcaption {
     }
 
     .spacer.less {
-        margin_top: .5em
+        margin-top: .5em
     }
 
     .background_image_wrapper {
@@ -4572,8 +4602,8 @@ figcaption {
         width: 100%;
         height: auto;
         min-height: 0;
-        padding_top: 28.125%;
-        padding_bottom: 28.125%
+        padding-top: 28.125%;
+        padding-bottom: 28.125%
     }
 
     .contact_card_label {
