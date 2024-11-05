@@ -17,7 +17,7 @@ def create_json(csvFilePath, jsonFilePath):
             data[key] = rows
             
     with open(jsonFilePath, 'w', encoding = encoding) as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
+        jsonf.write(json.dumps(data, ensure_ascii=False,  indent=4))
 
 
 # Decide the two file paths according to your 
