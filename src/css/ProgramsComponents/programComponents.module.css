@@ -1,0 +1,58 @@
+/* CheckboxDropdown.jsx */
+.form {
+    width: 300px;
+    margin: 1rem;
+}
+
+.chipsBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* DropdownSection.jsx */
+
+.outerContainer {
+    margin: 50px 0;
+}
+
+.selectSection {
+    text-align: center;
+}
+
+
+/* FilterArea.jsx */
+
+.dropdownSectionOuterContainer {
+    margin-bottom: 100px;
+}
+
+/* FilteredProgramBoxes.jsx */
+
+.programBoxLeft {
+    float: right;
+}
+
+.programBoxRight {
+    float: left;
+}
+
+
+/* ProgramAccordion.jsx */
+.programAccordionContainer {
+    margin: 55px 0;
+    position: sticky;
+    top: 30px;
+    border-radius: 10px;
+}
+
+.accordionHeading {
+    margin: auto;
+}
+
+.programInfoBoxPaper {
+    margin: 10px;
+    background-color: #CFE3F9;
+    max-width: 400px;
+    padding: 20px;
+}

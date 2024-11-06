@@ -1,0 +1,30 @@
+.verticalBar {
+    width: 1px;
+    background-color: white;
+    height: 510px;
+    margin-top: 25px;
+}
+
+
+.horizontalBar {
+    height: 1px;
+    margin: auto;
+    background-color: white;
+    width: 80%;
+    margin-top: 25px;
+}
+
+.column {
+    padding: 10px 30px;
+}
+
+.columnHeader {
+    font-weight: bold !important;
+}
+
+.programsListOuterContainer {
+    color: white;
+    margin: 50px auto;
+    background-color: #00459A;
+    border-radius: 5px;
+}
