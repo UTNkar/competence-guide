@@ -35,7 +35,7 @@ export default function GenerateCompareAccordion(props) {
   const listOfLinks = props.content.map((item, index) => {
     return (
       <ListItemButton
-        onClick={() => props.setSelectedComparingPrograms(item.name)}
+        onClick={() => props.setSelectedComparingProgram(item.name)}
         className={styles.listItemButton}
         key={index}
       >

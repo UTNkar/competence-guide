@@ -26,6 +26,7 @@ function ProgramInfoBox(props) {
   const description = props.data.description
   const type = props.data.type
   const credits = props.data.credits
+  const iframes = props.iframes
 
   // Toggle short/long description
   const handleExtendedDescription = () => {
@@ -78,6 +79,9 @@ function ProgramInfoBox(props) {
           </Typography>
         </Grid>
       </Grid>
+      {extendedDescription && iframes && iframes.map((frame, index) => {
+        return frame;
+      })}
     </Paper>
   )
 }
