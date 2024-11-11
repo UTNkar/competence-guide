@@ -8,6 +8,8 @@ import ProgramAccordion from './ProgramAccordion'
 import DropdownSection from './DropdownSection'
 
 import mockData from '../../assets/newMock.json'
+import iFrames from '../../assets/iFrames'
+
 
 //MUI
 import { Grid } from '@mui/material'
@@ -75,9 +77,11 @@ const FilterArea = (props) => {
     setRenderedProgramBoxes(filteredPrograms)
   }, [checkedItems])
 
+  
   const programBoxes = renderedProgramBoxes.map((elem) => {
-    return <ProgramInfoBox name={elem.name} data={elem.info} />
-  })
+    const iframe = iFrames[elem.name];
+    return <ProgramInfoBox name={elem.name} data={elem.info} iframes={iframe} />;
+});
 
   var firstColWidth = 3
   var secondColWidth = 9
