@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 
-import styles from "../css/Footer.css"
+import styles from "../css/FooterNavbarComponents/footer.module.css"
 
 // Custom components
 import FooterCol1 from "./FooterNavbarComponents/FooterCol1";
