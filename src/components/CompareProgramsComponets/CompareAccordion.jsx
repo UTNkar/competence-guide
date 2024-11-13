@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 //MUI
-import { Container, Typography, Grid, Button, IconButton, Box } from '@mui/material'
+import { Container, Typography, Grid, IconButton, Box } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 
 // Custom components

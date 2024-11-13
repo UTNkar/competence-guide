@@ -1,5 +1,23 @@
 @import url('./css/fonts.css');
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(33, 36, 39)
+};
+
+h1{
+    font-size: 38px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+p{
+    font-family: 'Domine', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }

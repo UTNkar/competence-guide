@@ -93,22 +93,18 @@ const HomeProgramsList = () => {
           justifyContent={oneColumn ? 'center' : 'start'}
         >
           <List>
-            <Typography
-              style={{
-                textAlign: oneColumn ? 'center' : 'start',
-              }}
+            <h2
               className={styles.columnHeader}
-              variant='h6'
             >
               {column.header}
-            </Typography>
+            </h2>
             {column.listItems.map((item, index) => (
               <ListItem
                 key={index}
                 style={{ textAlign: oneColumn ? 'center' : 'start' }}
                 disablePadding
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item}  className={styles.columnItem} disableTypography/>
               </ListItem>
             ))}
           </List>
