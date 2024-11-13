@@ -42,41 +42,33 @@ function ProgramInfoBox(props) {
   return (
     <Paper elevation={0} className={styles.programInfoBoxPaper}>
       <Grid container>
-        <Grid item xs={12}>
-          <Typography variant='h6'>{name}</Typography>
+        <Grid item xs={6}>
+          <h2>{name}</h2>
         </Grid>
         <Grid item xs={typeColumnWidth}>
-          <Typography>
-            Typ: <b>{type}</b>
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography>
-            Längd:
-            <b>
-              {' '}
-              {length} år ({credits} hp)
-            </b>{' '}
-          </Typography>
+          <h2 className={styles.typeAndLength}>
+            {type}
+          </h2>
+          <h2 className={styles.typeAndLength}>
+            {length} år - {credits} hp
+          </h2>
         </Grid>
         <Grid item xs={12}>
           {extendedDescription ? (
-            <Typography>
+            <p className={styles.description}>
               {description} <br />
               <Link target='_blank' href={url}>
                 Besök kursens hemsida
               </Link>
-            </Typography>
+            </p>
           ) : (
-            <Typography>{description.slice(0, 90) + ' . . .'}</Typography>
+            <p className={styles.description}>{description.slice(0, 90) + ' . . .'}</p>
           )}
         </Grid>
         <Grid item xs={12}>
-          <Typography>
-            <Button onClick={handleExtendedDescription}>
+            <Button onClick={handleExtendedDescription} className={styles.button}>
               {extendedDescription ? 'Visa mindre' : 'Visa mer'}
             </Button>
-          </Typography>
         </Grid>
       </Grid>
       {extendedDescription && iframes && iframes.map((frame, index) => {

@@ -8,9 +8,9 @@ const ProgramHeroSection = () => {
   return (
     <Grid container item xs={12} className={styles.heroSection}>
       <Grid item xs={6}>
-        <Typography variant='h5' color='inherit' gutterBottom>
+        <h1>
           Hitta kompetens
-        </Typography>
+        </h1>
       </Grid>
       <Grid item xs={6} className={styles.breadcrumbs}>
         <Typography
@@ -26,12 +26,12 @@ const ProgramHeroSection = () => {
       </Grid>
       <Grid item className={styles.buttonContainer}>
         <Grid item xs={9}>
-          <Typography variant='body2'>
+          <p>
             Kompetensguiden är framtagen av kåren i dialog med företrädare från
             universitetet. Syftet är att erbjuda framtida arbetsgivare en bra
             bild över de utbildningsprogram Uppsala universitet erbjuder inom
             teknik och naturvetenskap.
-          </Typography>
+          </p>
         </Grid>
       </Grid>
     </Grid>
