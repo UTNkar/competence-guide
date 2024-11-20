@@ -4,7 +4,6 @@ import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //Custom components
 import ProgramInfoBox from './ProgramInfoBox'
 import FilteredProgramBoxes from './FilteredProgramBoxes'
-import ProgramAccordion from './ProgramAccordion'
 import DropdownSection from './DropdownSection'
 
 import mockData from '../../assets/newMock.json'
@@ -25,22 +24,22 @@ for (const [key, value] of Object.entries(mockData)) {
 
 const FilterArea = (props) => {
   // windowsize
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ])
+  // const [windowSize, setWindowSize] = useState([
+  //   window.innerWidth,
+  //   window.innerHeight,
+  // ])
 
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
 
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight])
-    }
-    window.addEventListener('resize', handleWindowResize)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  })
+  // useEffect(() => {
+  //   const handleWindowResize = () => {
+  //     setWindowSize([window.innerWidth, window.innerHeight])
+  //   }
+  //   window.addEventListener('resize', handleWindowResize)
+  //   return () => {
+  //     window.removeEventListener('resize', handleWindowResize)
+  //   }
+  // })
 
   const [checkedItems, setCheckedItems] = useState({
     types: [],
@@ -83,23 +82,13 @@ const FilterArea = (props) => {
     return <ProgramInfoBox name={elem.name} data={elem.info} iframes={iframe} />;
 });
 
-  var firstColWidth = 3
-  var secondColWidth = 9
 
-  if (windowSize[0] < 995) {
-    firstColWidth = 12
-    secondColWidth = 12
-  }
 
   return (
     <Grid container>
-      <Grid item xs={firstColWidth}>
-        <ProgramAccordion />
-      </Grid>
       <Grid
         className={styles.dropdownSectionOuterContainer}
         item
-        xs={secondColWidth}
       >
         <DropdownSection
           checkedItems={checkedItems}

@@ -46,13 +46,14 @@
 
 
 /* ProgramAccordion.jsx */
+/*TODO REMOVE*/
 .programAccordionContainer {
     margin: 55px 0;
     position: sticky;
     top: 30px;
     border-radius: 10px;
 }
-
+/*TODO REMOVE*/
 .accordionHeading {
     margin: auto;
 }
