@@ -12,15 +12,13 @@ const ProgramHeroSection = () => {
         </h1>
       </Grid>
 
-      <Grid item className={styles.buttonContainer}>
-        <Grid item xs={9}>
+      <Grid item className={styles.heroInfoBox} xs={9}>
           <p>
             Kompetensguiden är framtagen av kåren i dialog med företrädare från
             universitetet. Syftet är att erbjuda framtida arbetsgivare en bra
             bild över de utbildningsprogram Uppsala universitet erbjuder inom
             teknik och naturvetenskap.
           </p>
-        </Grid>
       </Grid>
     </Grid>
   )

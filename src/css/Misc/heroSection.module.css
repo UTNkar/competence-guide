@@ -2,6 +2,10 @@
     padding-top: 20px;
 }
 
+.heroInfoBox {
+    margin: 20px 0;
+}
+
 /*TODO: Remove*/
 .breadcrumbs {
     text-align: right;
@@ -18,6 +22,7 @@
     top: 8px;
 }
 
+/*TODO move to home css file*/
 .buttonContainer {
     background-color: #CFE3F9;
     height: 200px;
