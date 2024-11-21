@@ -1,0 +1,236 @@
+/* This should not be here. It should be in the global.css file. */
+
+
+
+.footer {
+    all: unset;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+
+    /* font-family: var(--text); */
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    background-color: #fff;
+    min-height: 100%;
+    margin: 0;
+
+    -webkit-text-size-adjust: 100%;
+
+    margin-top: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.w_layout_vflex {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+
+.container {
+    z-index: 5;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    overflow-wrap: normal;
+    background-color: #0000;
+    flex-direction: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1140px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    display: block;
+    position: relative;
+}
+
+.footer_wrapper {
+    grid-column-gap: 72px;
+    grid-row-gap: 64px;
+    border-top: 1px solid var(--grey-200);
+    flex-flow: row;
+    place-content: flex-start;
+    align-self: stretch;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding: 80px 1rem;
+}
+
+.footer_logo_wrapper {
+    flex: none;
+}
+
+
+
+.w_inline_block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.w_tab_link.w__current {
+    background-color: #c8c8c8
+}
+
+.w_dropdown_link.w__current {
+    color: #0082f3
+}
+
+.secondary_navbar_item_wrapper.w__current {
+    color: var(--text-accent)
+}
+
+.w_nav_link.w__current {
+    color: #0082f3
+}
+
+
+
+.footer_logo {
+    height: 48px;
+}
+
+.footer_logo_wrapper {
+    flex: none;
+}
+
+.footer_map {
+    border:0;
+}
+
+.w_inline_block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.code_embed {
+    width: 280px;
+    height: 280px;
+    margin-top: 48px;
+}
+
+.w_embed:before, .w_embed:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+
+.w_embed:after {
+    clear: both;
+}
+
+.w_embed:before, .w_embed:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+
+.footer_info_wrapper {
+    grid-column-gap: 64px;
+    grid-row-gap: 48px;
+    flex-flow: row;
+    flex: 1;
+    place-content: flex-start flex-end;
+    align-items: flex-start;
+    margin-left: 0;
+}
+
+.footer_column {
+    min-width: 128px;
+}
+
+.footer_subheading {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.standalone_links {
+    font-family: var(--text)
+}
+
+.spacer {
+    opacity: 0;
+    flex: 1;
+    height: 0;
+    margin-top: 1em;
+    position: relative;
+}
+
+.footer_paragraph {
+    font-family: var(--text-paragraph);
+    margin-top: 8px;
+}
+
+.spaced {
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 991px) {
+    .section {
+        margin-top: 4em
+    }
+
+    .footer {
+        margin-top: 64px
+    }
+
+    .footer_wrapper {
+        padding-top: 64px;
+        padding-bottom: 64px
+    }
+
+
+    .footer_info_wrapper {
+        justify-content: flex-start
+    }
+
+    .spacer.less {
+        margin-top: .5em
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .footer_wrapper {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .footer_column {
+        min-width: 0
+    }
+
+    .footer_info_wrapper {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        max-height: 800px
+    }
+
+    .footer_logo_wrapper {
+        min-width: 0;
+        display: none
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .footer_subheading {
+        margin-top: 16px
+    }
+
+    .footer_info_wrapper {
+        max-height: none
+    }
+}

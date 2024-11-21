@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 import Error404 from './pages/Error404'
 import Home from './pages/Home'
 import ProgramFinder from './pages/ProgramFinder'
-import ComparePrograms from './pages/CopmarePrograms'
+import ComparePrograms from './pages/ComparePrograms'
 
 function App() {
   return (
