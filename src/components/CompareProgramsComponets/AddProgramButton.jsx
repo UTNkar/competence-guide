@@ -9,7 +9,7 @@ import CompareAccordion from "./CompareAccordion";
 import CompareProgramInfoBox from "./CompareProgramInfoBox";
 
 // Program data
-import mockData from "../../assets/newMock.json";
+import programInformation from "../../assets/programInformation.json";
 import iFrames from "../../assets/iFrames";
 
 export default function CompareInfoContainer({buttonTitle}) {
@@ -22,7 +22,7 @@ export default function CompareInfoContainer({buttonTitle}) {
 
 
   const handleContainerChange = (programName) => {
-    const data = mockData[programName];
+    const data = programInformation[programName];
     setSelectedComparingProgram(
       { name: programName, data: data }
       );

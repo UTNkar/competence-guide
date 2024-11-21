@@ -45,4 +45,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 ## Update program information
-To update the program information the csv_to_json.py program in the tools folder can be used to convert a csv file to json. Ensure that the csv file contain the same fields as the json file with the keywords in the last columns, 1 keyword per column.
+If you want to update all of the data in the file /src/assets/programInformation.json you can use the csv_to_json.py tool to translate from an csv file to json. Ensure that the csv file follows the same format as ProgamInformation_kompetensguiden.xlsx. 
+
+For minor updates it is recommended to edit the json file directly.
