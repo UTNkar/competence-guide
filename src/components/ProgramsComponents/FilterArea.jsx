@@ -7,20 +7,19 @@ import FilteredProgramBoxes from './FilteredProgramBoxes'
 import ProgramAccordion from './ProgramAccordion'
 import DropdownSection from './DropdownSection'
 
-import mockData from '../../assets/newMock.json'
+import programInformation from "../../assets/programInformation.json"
 import iFrames from '../../assets/iFrames'
-
 
 //MUI
 import { Grid } from '@mui/material'
 
 var allPrograms = []
 
-for (const [key, value] of Object.entries(mockData)) {
-  var obj = {}
-  obj['info'] = value
-  obj['name'] = key
-  allPrograms.push(obj)
+for (const [key, value] of Object.entries(programInformation)) {
+  var obj = {};
+  obj["info"] = value;
+  obj["name"] = key;
+  allPrograms.push(obj);
 }
 
 const FilterArea = (props) => {

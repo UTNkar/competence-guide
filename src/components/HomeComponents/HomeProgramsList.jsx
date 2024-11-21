@@ -4,7 +4,7 @@ import styles from '../../css/HomeComponents/homeProgramsList.module.css'
 import { Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
 
 //Program data
-import mockData from '../../assets/newMock.json'
+import programInformation from "../../assets/programInformation.json";
 
 // Component for the 4 colums of programs on the homescreen
 // Columns are rendered differently depending on page width
@@ -34,8 +34,8 @@ const HomeProgramsList = () => {
     { header: 'Master', listItems: [] },
   ]
 
-  for (const [key, value] of Object.entries(mockData)) {
-    var index
+  for (const [key, value] of Object.entries(programInformation)) {
+    var index;
     switch (value.type) {
       case 'Civilingenjör':
         index = 0

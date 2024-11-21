@@ -1,0 +1,1121 @@
+﻿{
+    "Byggteknik": {
+        "id": "12",
+        "Program": "Byggteknik",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du vara med och bygga framtidens hållbara samhälle där nya byggnader designas klimatsmart och gamla byggs om istället för att rivas? I takt med städers förtätning och miljonprogrammets behov av upprustning ökar behovet av byggingenjörer med kunskaper i hållbar och energieffektiv byggteknik. Högskoleingenjörsprogrammet i byggteknik ger dig en utbildning baserad på den kunskap och teknik som efterfrågas av näringsliv och samhälle.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-byggteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Byggproduktion",
+            "Cad",
+            "Ledarskap",
+            "Byggkonstruktion",
+            "Hållbar Utveckling",
+            "Förvaltning",
+            ""
+        ]
+    },
+    "Elektroteknik": {
+        "id": "13",
+        "Program": "Elektroteknik",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du bidra till att fossila bränslen ersätts med förnybara energikällor, bygga ut elkraften eller jobba för en hållbar utveckling av elbilar? Det kan bli verklighet om du läser till högskoleingenjör i elektroteknik. Som elektroingenjör förstår du hur tekniken fungerar och hur den kan användas för att skapa morgondagens produkter. Det är eftertraktat i en bransch med stort behov av kompetens både i Sverige och utomlands.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-elektroteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Elektronik",
+            ""
+        ]
+    },
+    "Energisystem": {
+        "id": "3",
+        "Program": "Energisystem",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Vill du vara med och utveckla framtidens energilösningar och skapa möjligheter för ett hållbart samhälle? På civilingenjörsprogrammet i energisystem får du breda kunskaper om energi-, klimat- och miljöfrågor och de färdigheter du behöver för att leda utvecklingen inom energiområdet mot en hållbar framtid. De stora och viktiga förändringar som behöver genomföras inom energisystemet gör att du blir mycket attraktiv på arbetsmarknaden.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-energisystem",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Energiteknik",
+            "Hållbar Utveckling",
+            "Tillämpad Fysik",
+            "Modellering",
+            ""
+        ]
+    },
+    "Industriell ekonomi": {
+        "id": "4",
+        "Program": "Industriell ekonomi",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Vill du vara med och skapa framtidens industri, med intelligenta maskiner, hållbara produkter och tjänster, och effektiva lösningar? Vill du utveckla nya innovativa koncept, ha världen som arbetsmarknad och samtidigt få en framtidssäker yrkesexamen? Ta första steget till en mångsidig och spännande karriär genom att läsa Civilingenjörsprogrammet i industriell ekonomi.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-industriell-ekonomi",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Industriell Ekonomi",
+            "Industriell Teknik",
+            ""
+        ]
+    },
+    "Informationsteknologi": {
+        "id": "5",
+        "Program": "Informationsteknologi",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Programmerad teknik finns överallt. Som civilingenjör i informationsteknologi kan du utveckla smarta energilösningar, digitala verktyg för e-hälsa eller lättanvända datorer. Du kan arbeta inom det område som känns mest meningsfullt för dig, med tillämpningar som får stor betydelse för andra människor och samhället i stort. Programmet ger dig en hett eftertraktad kompetens att jobba med IT på många olika sätt, inom många olika områden.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-informationsteknologi",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Dataanalys",
+            "Inbyggda System",
+            "Maskininlärning",
+            "Programmering",
+            "Systemutveckling",
+            "Datavetenskap",
+            ""
+        ]
+    },
+    "Kemiteknik": {
+        "id": "6",
+        "Program": "Kemiteknik",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Civilingenjörsprogrammet i kemiteknik vid Uppsala universitet är en utbildning för dig som gillar kemi och teknik. Utbildningens två inriktningar, läkemedel och material, ger dig möjlighet till en karriär inom utveckling och/eller tillverkning av dessa. Båda områdena är viktiga för människors hälsa, miljön och samhällets utveckling.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-kemiteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Teknisk Kemi",
+            "Läkemedels - Utvekling - Tillverkning -Analys",
+            "Materialvetenskap",
+            "Process Teknik",
+            ""
+        ]
+    },
+    "Miljö- och vattenteknik": {
+        "id": "7",
+        "Program": "Miljö- och vattenteknik",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "För att skapa ett hållbart samhälle måste vi hushålla med jordens resurser, satsa på ny kunskap, använda nya synsätt och skapa innovativa tekniska lösningar. Hur kan vi utveckla teknik för att lösa dagens och morgondagens utmaningar kring vatten och miljö? På Civilingenjörsprogrammet i miljö- och vattenteknik får du den kunskap och de färdigheter du behöver för att leda utvecklingen i miljö- och vattensektorn och angränsande områden.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-miljo-och-vattenteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Hållbar Utveckling",
+            "Samhällsplanering",
+            "Geovetenskap",
+            "Vattenresurser",
+            "Miljöteknik",
+            ""
+        ]
+    },
+    "Molekylär bioteknik": {
+        "id": "8",
+        "Program": "Molekylär bioteknik",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Vill du utveckla banbrytande teknik som förbättrar människors liv? Civilingenjörsprogrammet i molekylär bioteknik ger dig kunskaper om hur biologiska system och analys av biologiska data kan användas för att skapa innovativa lösningar för utveckling av läkemedel, livsmedel och bränslen. Kombinationen av ingenjörskunskaper och biologi gör dig eftertraktad på arbetsmarknaden. Som bioteknikingenjör löser du problem inom exempelvis miljö, hälsa och hållbar produktion.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-molekylar-bioteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Tillämpad Bioteknik",
+            "Molekylär Bioteknik",
+            ""
+        ]
+    },
+    "System i teknik och samhälle": {
+        "id": "9",
+        "Program": "System i teknik och samhälle",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Vill du vara med och påverka den snabba teknologiska förändringen i en positiv riktning för hela samhället? Vill du kunna förstå, förklara och nyttja samspelet mellan teknik och samhällsutveckling, samt se var människan och miljön står i detta, i en värld som ställer helt nya krav på vårt framtida samhällssystem? Välkommen till ett unikt framtidsinriktat civilingenjörsprogram med blicken riktad mot de stora frågorna!",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-system-teknik-och-samhalle",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Industriell Teknik",
+            "Ekonomi",
+            "Samhällsvetenskap",
+            "Humaniora",
+            ""
+        ]
+    },
+    "Teknisk fysik": {
+        "id": "10",
+        "Program": "Teknisk fysik",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Vill du ha stor frihet i din framtida yrkesroll, välj då Civilingenjörsprogrammet i teknisk fysik! Programmet ger dig både breda och djupa kunskaper i matematik, fysik och teknik. Den stora friheten i val av kurser ger dig möjlighet till specialisering för att ta dig an framtidens teknik- och samhällsutmaningar. En vanlig karriärväg är att du börjar som specialist för att senare få en roll som exempelvis projektledare, forskningschef eller VD.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-teknisk-fysik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Tillämpad Fysik",
+            ""
+        ]
+    },
+    "Teknisk fysik med materialvetenskap": {
+        "id": "11",
+        "Program": "Teknisk fysik med materialvetenskap",
+        "type": "Civilingenjör",
+        "length": "5",
+        "credits": "300",
+        "description": "Material behövs överallt och sätter de yttersta gränserna för all teknik. Materialvetenskap är en nyckelkompetens vid omställningen till ett hållbart samhälle. Kunskap om material behövs för att utveckla allt ifrån nya biomaterial till att ta fram alternativ till de sällsynta jordartsmetaller som används i modern batteri- och energiteknik. Eftersom nästan alla teknikföretag behöver materialvetare är arbetsmarknaden efter examen mycket god.",
+        "url": "https://www.uu.se/utbildning/program/civilingenjorsprogrammet-teknisk-fysik-med-materialvetenskap",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Materialvetenskap",
+            "Mikro Och Nanoteknik",
+            "Materialanalys",
+            ""
+        ]
+    },
+    "hållbar utveckling i industriell teknik": {
+        "id": "14",
+        "Program": "hållbar utveckling i industriell teknik",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du hjälpa till att utveckla en mer hållbar industri? Tycker du om att leda andra och vill vara med och påverka framtidens näringsliv? Då är högskoleingenjörsprogrammet i hållbar utveckling i industriell teknik definitivt ett alternativ för dig. På programmet lär du dig bland annat om digitalisering, förändringsarbete och hållbar utveckling, detta i ett nära samarbete med möjliga framtida arbetsgivare.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-hallbar-utveckling-industriell-teknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Tillämpad Kärnkraftteknik",
+            ""
+        ]
+    },
+    "kärnkraftteknik": {
+        "id": "15",
+        "Program": "kärnkraftteknik",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Är du intresserad av storskalig avancerad energiteknik med stor betydelse för det svenska samhället? Då finns Högskoleingenjörsprogrammet i kärnkraftteknik för dig. Utbildningen ger dig möjlighet att arbeta som ingenjör inom kärnkraftindustrin eller någon av dess många underleverantörer, med goda möjligheter till utveckling och karriär. Programmet är ettårigt och du ska tidigare ha läst minst två år på ett högskole- eller civilingenjörsprogram.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-karnkraftteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Produktutveckling",
+            "Produktionsledning",
+            "Tillverkning",
+            "Automatisering",
+            ""
+        ]
+    },
+    "Maskin": {
+        "id": "16",
+        "Program": "Maskin",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Maskiningenjörer behövs överallt där fysiska produkter konstrueras och tillverkas. På Högskoleingenjörsprogrammet i maskinteknik vid Uppsala universitet får du lära dig hela processen i att utveckla ny teknik från idé till färdig produkt. Du lär dig också att förverkliga dina idéer genom att arbeta med produktutveckling. Som färdig högskoleingenjör i maskinteknik kan du jobba med att utveckla morgondagens produkter inom tillverkande teknikföretag.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-maskinteknik",
+        "keywords": [
+            "Ingenjörsmässighet",
+            "Medicinsk Teknik",
+            "Elektroteknik",
+            "Medicinsk Fysik",
+            "Anatomi",
+            "Fysiologi",
+            ""
+        ]
+    },
+    "Medicin teknik": {
+        "id": "17",
+        "Program": "Medicin teknik",
+        "type": "Högskoleingenjör",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du utveckla morgondagens medicintekniska produkter som kan rädda liv, ställa tidig diagnos och underlätta för att rätt behandling sätts in? Lockar en snabbt växande och tvärvetenskaplig bransch, samtidigt som du vill bidra till förbättrad hälsa och sjukvård? Då kan Högskoleingenjörsprogrammet i medicinsk teknik vara något för dig.",
+        "url": "https://www.uu.se/utbildning/program/hogskoleingenjorsprogrammet-medicinsk-teknik",
+        "keywords": [
+            "Medicinteknik",
+            ""
+        ]
+    },
+    "Biologi": {
+        "id": "18",
+        "Program": "Biologi",
+        "type": "Kandidat",
+        "length": "3",
+        "credits": "180",
+        "description": "Biologi omfattar allt från ekologi och miljö till molekylärbiologi och genetik. Det som kännetecknar biologer från Uppsala universitet är den breda kompetensen. Med ett av landets största utbud av kurser inom biologi och molekylärbiologi väljer du själv vilken sorts biolog du vill bli. Hos oss får du en utbildning som omfattar djupa faktakunskaper, förmåga att lösa problem och kommunicera, tänka analytiskt och arbeta vetenskapligt.",
+        "url": "https://www.uu.se/utbildning/program/kandidatprogram-biologi",
+        "keywords": [
+            "Biologi",
+            "Molekylärbiologi",
+            "Statistik",
+            "Programmering",
+            "Fysiologi",
+            "Evolutionsbiologi",
+            "Ekologi",
+            "Biokemi",
+            "Matematiska Modeller",
+            ""
+        ]
+    },
+    "Datavetenskap": {
+        "id": "33",
+        "Program": "Datavetenskap",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Det finns ett stort behov av datavetare med mer än bara grundläggande utbildning. Masterprogrammet i datavetenskap ger möjlighet att anpassa och spetsa utbildningen efter dina intressen. Du undervisas av internationellt aktiva forskare vilket ger dig kunskap direkt från forskningsfronten. Med fokus på kreativitet och problemlösning förbereder utbildningen dig för en internationell karriär inom såväl avancerade industritillämpningar som forskning.",
+        "url": "",
+        "keywords": [
+            "Datavetenskap",
+            "Programmering",
+            "Dataanalys",
+            ""
+        ]
+    },
+    "Fysik - Fysik": {
+        "id": "20",
+        "Program": "Fysik - Fysik",
+        "type": "Kandidat",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du förstå naturens lagar och processer? Beräkna krafterna som håller ihop en atomkärna eller som verkar på en golfboll vid utslaget? Kandidatprogrammet i fysik ger dig stabila kunskaper i fysik och de matematiska verktyg du behöver. Uppsala universitets unika miljö med världsledande forskning och kompetens inom de flesta av fysikens områden gör att du kan fördjupa dig utifrån dina intressen.",
+        "url": "https://www.uu.se/utbildning/program/kandidatprogram-fysik-fysik",
+        "keywords": [
+            "Naturvetenskapligt Arbetssätt",
+            "Fysik",
+            "Programmering",
+            "Problemlösningsförmåga",
+            "Fundamental Och Tillämpad Fysik",
+            ""
+        ]
+    },
+    "Geovetenskap": {
+        "id": "21",
+        "Program": "Geovetenskap",
+        "type": "Kandidat",
+        "length": "3",
+        "credits": "180",
+        "description": "Upptäck jordens dynamik och historia. Hos oss lär du dig om berg och mineral, livets utveckling, luften, klimatet och jordens naturresurser. Utbildningen blandar teori och praktik och i många kurser bedrivs undervisningen i fält. Efter utbildningen kan du arbeta med samhällsplanering, miljöutredningar, klimatfrågor, mineral- och vattenresurser eller inom turism- eller informationsyrken. Arbetsmarknaden är god.",
+        "url": "https://www.uu.se/utbildning/program/kandidatprogram-geovetenskap",
+        "keywords": [
+            "Naturvetenskapligt Arbetssätt",
+            "Geologvetenskap",
+            "Gis",
+            "Sedimentologi",
+            ""
+        ]
+    },
+    "Kemi": {
+        "id": "22",
+        "Program": "Kemi",
+        "type": "Kandidat",
+        "length": "3",
+        "credits": "180",
+        "description": "",
+        "url": "https://www.uu.se/utbildning/program/kandidatprogram-kemi",
+        "keywords": [
+            "Naturvetenskapligt Arbetssätt",
+            "Laborativt Arbete",
+            "Analytisk Kemi",
+            "Organisk Kemi",
+            "Oorganisk Kemi",
+            "Fysikalisk Kemi",
+            ""
+        ]
+    },
+    "ledarskap – kvalitet – förbättring": {
+        "id": "23",
+        "Program": "ledarskap – kvalitet – förbättring",
+        "type": "Kandidat",
+        "length": "3",
+        "credits": "180",
+        "description": "Vill du leda och utveckla framtidens företag och organisationer utifrån ett långsiktigt hållbarhetsperspektiv? Kandidatprogrammet i ledarskap – kvalitet – förbättring ger dig kunskaper och verktyg inom ledarskap och verksamhetsutveckling. Du får studera utveckling utifrån både social, ekologisk och ekonomisk hållbarhet. Utbildningen har ett långsiktigt perspektiv på verksamhetsutveckling där vinster inte uppstår genom andra intressenters förluster.",
+        "url": "https://www.uu.se/utbildning/program/kandidatprogram-ledarskap-kvalitet-forbattring",
+        "keywords": [
+            "Ledarskap",
+            "Projektledning",
+            ""
+        ]
+    },
+    "Matematik": {
+        "id": "69",
+        "Program": "Matematik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du stärka dina matematiska förmågor och fördjupa dig i matematikens eget universum? Med insikter i matematikens centrala och aktuella forskningsområden tar du en ledande roll som expert och problemlösare av abstrakta och teoretiska frågeställningar. De färdigheter och den kompetens du får är tillämpliga på en mängd olika områden och högt värderade oavsett vilken karriärväg du väljer.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-matematik-matematik",
+        "keywords": [
+            "Matematik",
+            ""
+        ]
+    },
+    "Additiv tillverkning": {
+        "id": "26",
+        "Program": "Additiv tillverkning",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Bygg en ljusare och effektivare framtid – lager för lager. Som masterstudent i additiv tillverkning kommer du att lära dig att skapa komplexa fysiska objekt genom 3D-skrivare och datorassisterade designprocesser i alltifrån amorfa metaller till biokompatibla material. Bli en del av initiativet som samlar forskning och utbildning inom additiv tillverkning vid Ångströmlaboratoriet, ett av Europas mest avancerade laboratorier för funktionella material.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-additiv-tillverkning",
+        "keywords": [
+            "Materialteknik",
+            "Materialvetenskap",
+            "Additiv Tillverkning",
+            ""
+        ]
+    },
+    "Analytisk kemi - EACH": {
+        "id": "27",
+        "Program": "Analytisk kemi - EACH",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Detta internationella tvååriga masterprogram, EACH - Excellence in Analytical Chemistry, är för dig som vill bli specialist i analytisk kemi och väl kvalificerad att arbeta inom både industrin och kemiska analyslaboratorier över hela världen. Programmet ger dig de kunskaper och färdigheter som behövs i både grundläggande och tillämpade aspekter av modern analytisk kemi.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-analytisk-kemi-each",
+        "keywords": [
+            "Naturvetenskapligt Arbetssätt",
+            "Laborativt Arbete",
+            "Provberedning",
+            "Analytisk Kemi",
+            "Framföra Provresultat",
+            ""
+        ]
+    },
+    "Batteriteknik och energilagring": {
+        "id": "28",
+        "Program": "Batteriteknik och energilagring",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Läs masterprogrammet i batteriteknik och energilagringssystem för att få en unik karriärprofil med fokus på i batterimaterial, -celler och -system som förbereder dig för en aktiv roll i framtidens batteriforskning och -utveckling inom både akademi och industri. Energilagring är en snabbt växande global industri, där batterier är en central del av elektrifieringen av transport- och energisektorn – en arbetsmarknad som fortsätter att expandera.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-batteriteknik-och-energilagring",
+        "keywords": [
+            "Energilagring",
+            "Batteriteknik",
+            "Materialkemi",
+            ""
+        ]
+    },
+    "Bildanalys och maskininlärning": {
+        "id": "29",
+        "Program": "Bildanalys och maskininlärning",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du bidra till den visuella intelligensen hos morgondagens maskiner? Då ska du studera masterprogrammet i bildanalys och maskininlärning. Genom att specialisera dig inom dessa fält kan du bidra till att bygga en bättre värld med hjälp av mönsterigenkänning och analys och behandling av visuella data. Detta ger dig möjlighet att arbeta inom områden som medicin, biovetenskap, humaniora, robotik, astronomi, materialvetenskap och säkerhet.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-bildanalys-och-maskininlarning",
+        "keywords": [
+            "Bildanalys",
+            "Maskininlärning",
+            "Dataanalys",
+            ""
+        ]
+    },
+    "Biofysik": {
+        "id": "30",
+        "Program": "Biofysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "\"Vad är liv?\" frågade Schrödinger när han försökte smälta samman biologi och fysik. Läs masterprogrammet i biofysik för att lära dig att förstå komplexa biologiska system på molekylär nivå med hjälp av grundläggande begrepp och metoder inom fysik. Biofysikens tvärvetenskapliga natur har främjat stora vetenskapliga framsteg och kommer att ge dig möjlighet att skapa framtidens teknik och få kunskapen som krävs för att utforska livets mysterier.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biofysik",
+        "keywords": [
+            "Naturvetenskapligt Arbetssätt",
+            "Programmering",
+            "Biofysik",
+            "Biokemi",
+            ""
+        ]
+    },
+    "Bioinformatik": {
+        "id": "31",
+        "Program": "Bioinformatik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "",
+        "url": "",
+        "keywords": [
+            "Molekylärbiologi",
+            "Bioinformatik",
+            "Dataanalys",
+            ""
+        ]
+    },
+    "Dataanalys": {
+        "id": "32",
+        "Program": "Dataanalys",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Som dataanalytiker kommer du att lära dig utvinna värdefulla insikter ur en av de viktigaste resurserna i dag– data. Masterprogrammet i dataanalys ger dig kunskap med många användningsområden, allt från att bidra till att lösa vår tids stora samhällsproblem till att hjälpa företag av alla storlekar och områden att identifiera målgrupper och optimera sina produkter. Använd de senaste metoderna inom data engineering för att förvandla stora mängder information till övergripande kunskap.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-dataanalys-data-engineering",
+        "keywords": [
+            "Dataanalys",
+            "Maskininlärning",
+            "Programmering",
+            ""
+        ]
+    },
+    "Elektriska framdrivningssystem": {
+        "id": "34",
+        "Program": "Elektriska framdrivningssystem",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Elektrifieringen av transportsektorn sker nu. Vill du vara en del av denna förändring? Masterprogrammet i elektriska framdrivningssystem ger dig expertis inom elektromobilitet och tekniska färdigheter för att möta behoven från en fordonsindustri i ständig utveckling. Uppsala universitet erbjuder tillsammans med partners från branschen ett unikt program med specialkurser i elfordon, som förbereder dig för ett framtida jobb inom samhällets elektrifiering.",
+        "url": "",
+        "keywords": [
+            "Elektromobilitet",
+            "Elektrifiering",
+            "Styrsystem",
+            ""
+        ]
+    },
+    "Energifysik": {
+        "id": "35",
+        "Program": "Energifysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "En säker och pålitlig energiförsörjning är avgörande för vårt samhälle och vårt vardagsliv. Behovet på energi ökar, vilket gör utforskningen och användandet av nya energikällor allt viktigare. Energifysik täcker ett brett område av energikällor och omvandlingsprocesser, från vind- och vattenkraft till kärnkraft och kärnfusion. Inriktningen energifysik på masterprogrammet i fysik innehåller många av fysikens områden, som till exempel mekanik, elektromagnetism, fluidmekanik och kärnfysik.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-energifysik",
+        "keywords": [
+            "Fysik",
+            "Energifysik",
+            ""
+        ]
+    },
+    "Energiteknik - ENTECH - utlyses inte 2024": {
+        "id": "36",
+        "Program": "Energiteknik - ENTECH - utlyses inte 2024",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du lösa framtidens energiutmaningar med ny teknik och entreprenörskap? Masterprogrammet i energiteknik ger dig kunskap om energitekniker och färdigheter i problemlösning, innovation och ledarskap. Programmet är ett samarbete mellan fyra europeiska universitet och du kommer att studera vid flera av dessa under utbildningen. Efter examen kommer du att ha ett brett personligt nätverk och utmärkta karriärmöjligheter inom den europeiska energisektorn.",
+        "url": "",
+        "keywords": [
+            "Energiteknik",
+            ""
+        ]
+    },
+    "Evolutionsbiologi - MEME": {
+        "id": "37",
+        "Program": "Evolutionsbiologi - MEME",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Masterprogrammet i evolutionsbiologi (MEME) är ett forskningsinriktat Erasmus Mundus-program. Det innebär studier vid fyra ledande universitet i Europa och Harvard University i USA. Detta garanterar dig en förstklassig utbildning och du kan skräddarsy ditt program efter din karriärplan och integrera områden som evolutionär ekologi, genomik, makroevolution och utvecklingsbiologi.",
+        "url": "",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Finansiell matematik": {
+        "id": "38",
+        "Program": "Finansiell matematik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Att förstå och navigera i dagens snabbt föränderliga, globala ekonomiska och finansiella landskap kräver en stark matematisk kompetens. Masterprogrammet i finansiell matematik ger dig goda förutsättningar att göra karriär inom ett område med en växande global brist på högkvalificerade personer. Efter examen kan du arbeta med komplexa finansiella data och komma fram till innovativa lösningar på utmaningar i en rad olika affärssammanhang.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-matematik-finansiell-matematik",
+        "keywords": [
+            "Matematik",
+            "Finansiell Matematik",
+            "Statistik",
+            ""
+        ]
+    },
+    "Förnybar elgenerering": {
+        "id": "39",
+        "Program": "Förnybar elgenerering",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Masterprogrammet i förnybar elgenerering erbjuder dig utbildning i toppmoderna elkraftsystem och förnybar elproduktion. Elnätet i Europa och resten av världen står inför ett stort skifte. Det elektriska transmissionssystemet rymmer en ökande andel förnybara energikällor och det är stor efterfrågan på kvalificerade yrkesverksamma inom energi. Det här programmet hjälper dig att utveckla en attraktiv profil för arbetsmarknaden efter examen.",
+        "url": "",
+        "keywords": [
+            "Energiteknik",
+            ""
+        ]
+    },
+    "Fysik  för hållbar energi och komplexa system": {
+        "id": "40",
+        "Program": "Fysik  för hållbar energi och komplexa system",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "En säker och pålitlig energiförsörjning är avgörande för vårt samhälle och vårt vardagsliv. Behovet på energi ökar, vilket gör utforskningen och användandet av nya energikällor allt viktigare. Programmet täcker ett brett område av energikällor och omvandlingsprocesser, från vind- och vattenkraft till kärnkraft och kärnfusion. Inriktningen fysik för hållbar energi och komplexa system innehåller många av fysikens områden, som till exempel mekanik, elektromagnetism, fluidmekanik och kärnfysik.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-hallbar-energi",
+        "keywords": [
+            "Fysik",
+            "Energifysik",
+            ""
+        ]
+    },
+    "Fysik, astronomi och rymdfysik": {
+        "id": "41",
+        "Program": "Fysik, astronomi och rymdfysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Hur fungerar jordens magnetfält? Vad vet vi om andra planeter och exoplaneter? Hur utvecklas stjärnor, hur slutar deras liv? Hur bildades Vintergatan? Vad styr universums utveckling? Specialiseringen i astronomi och rymdfysik inom masterprogrammet i fysik tar upp dessa frågor. Du kommer att få en djup förståelse för olika fysiska fenomen som sträcker sig från rymden bortom jordens atmosfär till gränserna för det observerbara universum.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-astronomi-och-rymdfysik",
+        "keywords": [
+            "Astronomi",
+            "Fysik",
+            ""
+        ]
+    },
+    "Fysikalisk kemi": {
+        "id": "42",
+        "Program": "Fysikalisk kemi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du lära dig på djupet om viktiga fysikaliska och kemiska processer på molekylnivå och kombinera teori med avancerad experimentell teknik? Inriktningen fysikalisk kemi inom masterprogrammet i kemi ger dig möjlighet att förstå och kontrollera många av de grundläggande processer som är viktiga för övergången till ett hållbart samhälle. Efter examen kommer du att vara väl förberedd för att bedriva forskning och utveckling inom både akademin och industrin.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-kemi-fysikalisk-kemi",
+        "keywords": [
+            "Fysikalisk Kemi",
+            "Fysik",
+            "Kemi",
+            ""
+        ]
+    },
+    "Geofysik": {
+        "id": "43",
+        "Program": "Geofysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Hur fungerar jorden och hur tar vi reda på de processer som formar vår planet? Inom geofysiken använder vi verktyg och metoder från fysiken när vi studerar jorden. Vid geofysikinriktningen kombinerar du fysikkunskaper med resultat från fältmätningar, laboratorieexperiment och datormodellering för att fördjupa kunskapen om planeten jorden.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-geofysik",
+        "keywords": [
+            "Fysik",
+            "Geofysik",
+            ""
+        ]
+    },
+    "Hållbar destinationsutveckling (120hp)- utlyses inte 2024": {
+        "id": "44",
+        "Program": "Hållbar destinationsutveckling (120hp)- utlyses inte 2024",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du lösa framtidens energiutmaningar med ny teknik och entreprenörskap? Masterprogrammet i energiteknik ger dig kunskap om energitekniker och färdigheter i problemlösning, innovation och ledarskap. Programmet är ett samarbete mellan fyra europeiska universitet och du kommer att studera vid flera av dessa under utbildningen. Efter examen kommer du att ha ett brett personligt nätverk och utmärkta karriärmöjligheter inom den europeiska energisektorn.",
+        "url": "",
+        "keywords": [
+            "Hållbar Utveckling",
+            ""
+        ]
+    },
+    "Hållbar och innovativ hantering av naturresurser - SINReM": {
+        "id": "45",
+        "Program": "Hållbar och innovativ hantering av naturresurser - SINReM",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du vara delaktig i den gröna omställningen för hållbar prospektering och utvinning av mineralresurser? Inom masterprogrammet i hållbar och innovativ hantering av naturresurser - SINReM kan du studera, forska och starta eget företag. Du får möjlighet att skapa hållbara förändringar för jordens resurser tillsammans med aktuella initiativ inom industrin.",
+        "url": "",
+        "keywords": [
+            "Hållbar Utveckling",
+            "Materialvetenskap",
+            ""
+        ]
+    },
+    "Hållbar utveckling": {
+        "id": "46",
+        "Program": "Hållbar utveckling",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du få de kunskaper och färdigheter som krävs för att hantera komplexa utmaningar för en hållbar utveckling? Är du intresserad av att studera tillsammans med studenter från en mängd olika länder och bakgrunder? Strävar du efter att vara en del av och bidra till en hållbar framtid? Masterprogrammet i hållbar utveckling bygger på tre pelare - tvärvetenskap, systemtänkande och framtidsorientering, som genomsyrar alla våra kurser.",
+        "url": "",
+        "keywords": [
+            "Hållbar Utveckling",
+            ""
+        ]
+    },
+    "Inbyggda system": {
+        "id": "47",
+        "Program": "Inbyggda system",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du lära dig att konstruera och analysera inbyggda system samt säkerställa deras korrekta funktion? Då är Masterprogrammet i inbyggda system rätt för dig. Programmet ger dig en djupgående utbildning inom data- och systemvetenskap för inbyggda system och betonar design, implementering och analys av programvara. Du får också färdigheter i att skriva programvara i olika utvecklingsmiljöer och programmeringsparadigm.",
+        "url": "",
+        "keywords": [
+            "Datavetenskap",
+            "Systemvetenskap",
+            ""
+        ]
+    },
+    "Industriell analys": {
+        "id": "48",
+        "Program": "Industriell analys",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du utveckla nästa generations digitala och hållbara industriella system baserat på unik expertis inom både industriell teknik och datavetenskap? Masterprogrammet i industriell analys är unikt i sitt slag och kombinerar ämnen som systemanalys, dataanalys, AI och simulering. Som student vid programmet studerar du inom ett högaktuellt område där kompetensbehoven växer mycket snabbt.",
+        "url": "",
+        "keywords": [
+            "Dataanalys",
+            "Industriell Teknik",
+            ""
+        ]
+    },
+    "Industriell ledning och innovation": {
+        "id": "49",
+        "Program": "Industriell ledning och innovation",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du ha en karriär som kretsar kring att leda innovativa processer? Uppsala universitet erbjuder dig en bas för att driva innovationsarbete inom teknikintensiva företag inom olika branscher. Oavsett om du startar ett eget företag eller arbetar för ett etablerat företag, ger masterprogrammet i industriell ledning och innovation en djup förståelse samt en rad olika verktyg för att hantera komplexa innovationsprocesser.",
+        "url": "",
+        "keywords": [
+            "Industriell Teknik",
+            ""
+        ]
+    },
+    "Kärn och partikelfysik": {
+        "id": "50",
+        "Program": "Kärn och partikelfysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du förstå naturen på en grundläggande nivå och utforska universums mest våldsamma fenomen? Vill du lära dig teoretiska och experimentella metoder som används av forskare inom området? Då passar masterprogrammet i fysik med en inriktning mot kärn- och partikelfysik. Forskningen är både teoretisk och experimentell, och tekniken som gör experimenten möjliga används även inom andra områden, till exempel teknik, ekonomi och medicin.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-karn-och-partikelfysik",
+        "keywords": [
+            "Fysik",
+            "Kärnfysik",
+            "Partikelfysik",
+            ""
+        ]
+    },
+    "Kemi - Bio- nanomaterial": {
+        "id": "51",
+        "Program": "Kemi - Bio- nanomaterial",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du redo att dyka in i den spännande värld där vetenskap möter innovation? Vår inriktning i bio- och nanomaterial inom masterprogrammet i kemi är din inkörsport till en värld av oändliga möjligheter inom biomedicin, läkemedel och material. I detta dynamiska och tvärvetenskapliga program kommer du att utforska både teori och praktiska tillämpningar och förbereda dig för en karriär i framkanten av vetenskap och utveckling av nya produkter.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-kemi-bio-och-nanomaterial",
+        "keywords": [
+            "Kemi",
+            "Materialvetenskap",
+            ""
+        ]
+    },
+    "Kemi för förnybar energi": {
+        "id": "52",
+        "Program": "Kemi för förnybar energi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Övergången till ett samhälle baserat på förnybara energikällor pågår just nu och du kan vara med och bidra till förändringen. Inriktningen kemi för förnybar energi inom masterprogrammet i kemi ger dig en spetskompetens inom den fascinerande kemi som behövs i utvecklingen av nya lösningar för både hållbar produktion av el och av energilagring. Efter examen är du väl förberedd för en framtid inom både akademin eller forskning och utveckling inom den privata sektorn.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-kemi-kemi-for-fornybar-energi",
+        "keywords": [
+            "Energiteknik",
+            ""
+        ]
+    },
+    "Kemisk biologi": {
+        "id": "53",
+        "Program": "Kemisk biologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du vara en del av banbrytande forskning? Masterprogrammet i kemi med inriktning kemisk biologi är nära kopplad till världsledande forskning och du får chansen att göra ditt examensarbete inom en bred, dynamisk och modern forskningsmiljö. Med kurser som täcker organiska molekyler och biologiska makromolekyler, samt deras syntes, samverkan och interaktioner, kommer du att vara väl förberedd för en framtid inom bioteknik och läkemedelsutveckling.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-kemi-kemisk-biologi",
+        "keywords": [
+            "Biokemi",
+            ""
+        ]
+    },
+    "Kvantteknologi": {
+        "id": "54",
+        "Program": "Kvantteknologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Masterprogrammet i kvantteknologi vid Uppsala universitet förbereder dig för den framväxande kvantrevolutionen. Skaffa dig expertis inom optiska, elektroniska och magnetiska kvantfenomen och tillämpa dem på avancerad teknik. Dra nytta av praktiska projekt som leds av ledande experter inom kvantinnovation i en internationell miljö med toppmoderna anläggningar. Detta program rustar dig för framgång inom den akademiska världen och industrin.",
+        "url": "",
+        "keywords": [
+            "Kvantteknologi",
+            "Kvantfysik",
+            ""
+        ]
+    },
+    "Masterprogram i bioinformatik – Biologibakgrund": {
+        "id": "55",
+        "Program": "Masterprogram i bioinformatik – Biologibakgrund",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du förstå funktionen hos människans arvsanlag, återskapa släktförhållanden mellan olika arter eller utveckla nya läkemedel? Masterprogrammet i bioinformatik erbjuder dig en utbildning i det tvärvetenskapliga området bioinformatik där teori och praktik från matematik, datavetenskap och biologi vävs samman. Du kommer att få kunskap som är central inom flera forskningsområden för att själv kunna bidra till bioinformatikens snabba utveckling",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-bioinformatik-biologibakgrund",
+        "keywords": [
+            "Bioteknik",
+            "Dataanalys",
+            ""
+        ]
+    },
+    "Masterprogram i bioinformatik – Datavetenskaplig bakgrund": {
+        "id": "56",
+        "Program": "Masterprogram i bioinformatik – Datavetenskaplig bakgrund",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Har du en bakgrund inom datavetenskap och vill inrikta dig mot det spännande tvärvetenskapliga området bioinformatik? Vill du kombinera matematik, datavetenskap och biologi? Då är Masterprogrammet i bioinformatik något för dig. Under utbildningen får du kunskaper som är centrala inom olika forskningsområden, för att exempelvis förstå funktionen hos människans arvsanlag, återskapa släktförhållanden mellan arter eller utveckla nya av läkemedel.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-bioinformatik-datavetenskaplig-bakgrund",
+        "keywords": [
+            "Dataanalys",
+            "Bioteknik",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Cell- och molekylärbiologi": {
+        "id": "57",
+        "Program": "Masterprogram i biologi – Cell- och molekylärbiologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Att förstå de molekylära mekanismerna bakom cellers funktion, reproduktion och kommunikation är fundamentalt för att förstå flercelliga djur och växter. Kombinationen av cellbiologi och molekylär biologi i denna inriktning inom masterprogrammet i biologi uppmuntrar dig att utveckla en djup förståelse av biologiska system, alltifrån molekylära interaktioner på subatomär nivå till system och deras interaktioner i celler och organeller.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-cell-och-molekylarbiologi",
+        "keywords": [
+            "Biologi",
+            "Bioteknik",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Ekologi och naturvård": {
+        "id": "58",
+        "Program": "Masterprogram i biologi – Ekologi och naturvård",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Om du vill arbeta med naturvård eller forska inom ämnena ekologi och bevarandebiologi ska du söka inriktningen ekologi och naturvård på masterprogrammet i biologi. Här möts flera ämnen inom biologin och behandlar aspekter på flera nivåer: individer, populationer, arter och samhälle. Att förstå vårt natur- och kulturarv och förvalta detta är en av de viktigaste uppgifterna för ekologer och bevarandebiologer.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-ekologi-och-naturvard",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Ekosystem och akvatisk ekologi": {
+        "id": "59",
+        "Program": "Masterprogram i biologi – Ekosystem och akvatisk ekologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Med inriktningen ekosystem och akvatisk ekologi inom masterprogrammet i biologi tar du ett helhetsgrepp på naturen. Du lär dig hur ekosystem fungerar med tyngdpunkt på sjöar och vattendrag. Genom kunskap om fysiska, kemiska och framför allt biologiska processer och deras interaktioner, lär du känna hur naturens ekosystem fungerar och hur människan påverkar dem. Utbildningen har starka kopplingar till yrkesverksamhet inom vatten- och naturvård, och ansluter till pågående forskning.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-ekosystem-och-akvatisk-ekologi",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Evolutionsbiologi": {
+        "id": "60",
+        "Program": "Masterprogram i biologi – Evolutionsbiologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Alla livsformer är sammanbundna bakåt i tiden och har en gemensam historia. Hur de har utvecklats och vilka processer som påverkat uppkomsten av livets mångfald är fokus för denna inriktning. Inriktningen evolutionsbiologi på masterprogrammet i biologi är valet för dig som vill forska inom evolutionsbiologi. Med evolutionsbiologi menas all form av biologi där evolution är viktigt för förståelsen av olika fenomen - allt ifrån evolutionär ekologi till genomevolution.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-evolutionsbiologi",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Immunologi och mikrobiologi": {
+        "id": "61",
+        "Program": "Masterprogram i biologi – Immunologi och mikrobiologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Inriktningen immunologi och mikrobiologi inom masterprogrammet i biologi fokuserar på hur immunsystemet upptäcker och avlägsnar patogena bakterier, virus och parasiter. Förutom studier i infektionsbiologi, analyseras även vad som händer på cell- och molekylärnivå då immunsystemet överreagerar eller brister i tolerans mot kroppsegna vävnader. Detta kan exempelvis ske då allergier och autoimmunitet uppstår.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-immunologi-och-mikrobiologi",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – Miljötoxikologi": {
+        "id": "62",
+        "Program": "Masterprogram i biologi – Miljötoxikologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du intresserad av hur kemikalier påverkar människa och miljö och hur faror och risker med kemikalier bedöms? I så fall är inriktningen miljötoxikologi i masterprogrammet i biologi den rätta inriktningen för dig. Efter utbildningen kan du antingen jobba som miljötoxikolog - till exempel på något konsultföretag, någon statlig myndighet, eller inom miljöförvaltningar på kommuner - eller satsa på forskning inom toxikologi eller ekotoxikologi.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-miljotoxikologi",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i biologi – NABiS – samnordisk inriktning mot biodiversitet och systematik": {
+        "id": "63",
+        "Program": "Masterprogram i biologi – NABiS – samnordisk inriktning mot biodiversitet och systematik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "All den variation och rikedom av organismer som finns på vår planet, och deras evolutionära förhållanden, är i fokus på denna samnordiska inriktning mot biodiversitet och systematik inom masterprogrammet i biologi. Kombinationen av molekylära metoder och fältstudier har resulterat inte bara i att nya arter ständigt upptäcks utan också att vi kan förstå deras fylogenetiska samband. Vill du kunna besvara frågor kring evolution, biogeografi och ursprunget till all variation är detta inriktningen för dig.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-biologi-nabis-samnordisk-inriktning-mot-biodiversitet-och-systematik",
+        "keywords": [
+            "Biologi",
+            ""
+        ]
+    },
+    "Masterprogram i dataanalys – Maskininlärning och statistik": {
+        "id": "64",
+        "Program": "Masterprogram i dataanalys – Maskininlärning och statistik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du intresserad av att fördjupa dig i stora mängder data? Vill du utveckla din kunskap för att hjälpa lösa några av dagens samhällsproblem? Med en master i dataanalys, med inriktning maskininlärning och statistik, får du lära dig att göra avancerade statistiska analyser och hitta ny kunskap i stora mängder data.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-dataanalys-maskininlarning-och-statistik",
+        "keywords": [
+            "Dataanalys",
+            "Statistik",
+            ""
+        ]
+    },
+    "Masterprogram i geovetenskap – Geologi": {
+        "id": "65",
+        "Program": "Masterprogram i geovetenskap – Geologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du vara med i den gröna omställningen och se till så att samhället utvinner mineralresurser på ett ansvarsfullt sätt? Vill du se till att framtidens byggnader, tunnlar och lagring av kärnavfall blir både säkra och hållbara? Vill du arbeta för att reducera påverkan av vulkanutbrott och jordskred? På masterprogrammet i geovetenskap, inriktning geologi lär du dig att använda och bevara jordens resurser för att skapa en hållbar framtid.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-geovetenskap-geologi",
+        "keywords": [
+            "Geovetenskap",
+            ""
+        ]
+    },
+    "Masterprogram i geovetenskap – Hydrologi/hydrogeologi": {
+        "id": "66",
+        "Program": "Masterprogram i geovetenskap – Hydrologi/hydrogeologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du fascinerad av vattnets resa från regn till floder och grundvatten, dess väg genom landskapet och dess samspel med miljön? Om du brinner för att hantera vattenresurser eller ta itu med vattenrelaterade katastrofer är masterprogrammet i geovetenskap något för dig! Inriktningen mot hydrologi/hydrogeologi ger dig möjlighet att studera hydrologiska processer som avrinning, grundvattenbildning, flöde och mycket mer.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-geovetenskap-hydrologi-hydrogeologi",
+        "keywords": [
+            "Geovetenskap",
+            "Vattenresurser",
+            ""
+        ]
+    },
+    "Masterprogram i geovetenskap – Naturgeografi": {
+        "id": "67",
+        "Program": "Masterprogram i geovetenskap – Naturgeografi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du lära dig mer om de krafter och processer som formar jordens yta genom tiderna, och hur dessa är kopplade till förändringar i vårt klimat och vår miljö? Är du bekymrad över människans avtryck på landskapet som omger dig? Masterprogrammet i geovetenskap, med inriktning mot naturgeografi, ger dig kunskaper, metoder och färdigheter för att ta itu med dessa och andra frågor.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-geovetenskap-naturgeografi",
+        "keywords": [
+            ""
+        ]
+    },
+    "Masterprogram i geovetenskap – Paleobiologi": {
+        "id": "68",
+        "Program": "Masterprogram i geovetenskap – Paleobiologi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du intresserad av hur livet på jorden såg ut för miljontals år sedan? Vill du förstå hur livet har utvecklats och påverkats av jordens kemiska och fysiska förändringar? Är du nyfiken på hur klimatet och miljön har förändrats över tid? Masterprogrammet i geovetenskap, med inriktning paleobiologi, kombinerar forskning med biologiska vetenskaper för att återskapa och förstå de evolutionära förändringar som har ägt rum under historiens gång.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-geovetenskap-paleobiologi",
+        "keywords": [
+            "Geovetenskap",
+            "Paleobiologi",
+            ""
+        ]
+    },
+    "Matematisk fysik": {
+        "id": "70",
+        "Program": "Matematisk fysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du angelägen om att förstå grundläggande fysik men fascineras samtidigt av matematikens elegans? Tycker du om att utföra explicita beräkningar men söker de underliggande kortfattade mönstren? Då är inriktningen matematisk fysik inom masterprogrammet i fysik något för dig. På programmet får du lära dig att kombinera fysikalisk intuition med matematisk abstraktion och noggrannhet, och bli en skapare av det språk som kommer att driva framtidens forskning.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-matematisk-fysik",
+        "keywords": [
+            "Fysik",
+            "Matematik",
+            ""
+        ]
+    },
+    "Materialteknik": {
+        "id": "71",
+        "Program": "Materialteknik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Innovation inom material skapar möjligheter till utveckling inom all annan teknik. I takt med att medvetenheten om att tillgången på råmaterial är ändlig, växer också behovet av att ta fram nya hållbara material och tekniker. Masterprogrammet i materialteknik förbereder dig för att ta dig an dessa utmaningar. Programmet undervisas på Ångströmslaboratoriet, ett av Europas mest avancerade laboratorier för funktionella material och energi.",
+        "url": "",
+        "keywords": [
+            "Materialvetenskap",
+            "Materialteknik",
+            ""
+        ]
+    },
+    "Materialvetenskap": {
+        "id": "72",
+        "Program": "Materialvetenskap",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Materialvetenskap är grunden för innovationer och framgångar inom många områden. Utmaningar inom omställning till ett hållbart samhälle, energisektorn, samt tillgången till råmaterial ökar behoven på såväl utveckling av material som tekniker för materialframställning. Masterprogrammet i materialvetenskap förbereder dig att möta dessa framtidsutmaningar.",
+        "url": "",
+        "keywords": [
+            "Materialvetenskap",
+            ""
+        ]
+    },
+    "Metrologi och klimatfysik": {
+        "id": "73",
+        "Program": "Metrologi och klimatfysik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du intresserad av väder, prognoser, klimat och klimatförändringar? Då är inriktningen meteorologi och klimatfysik inom masterprogrammet i fysik rätt val för dig. Du får både en djup och bred kunskap inom dessa områden och blir beredd på ett jobb som till exempel prognosmeteorolog eller rådgivare för företag med väderberoende verksamhet. Du blir också väl förberedd på att ta dig an doktorandstudier eller inleda en internationell karriär.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-meteorologi-klimatfysik",
+        "keywords": [
+            "Fysik",
+            "Metrologi",
+            ""
+        ]
+    },
+    "Organisk kemi": {
+        "id": "74",
+        "Program": "Organisk kemi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Frågar du dig själv hur du kan bli rustad för framtida forskning och utveckling inom antingen den akademiska världen eller industrin? Svaret finns här. På vårt masterprogram i kemi med inriktning mot organisk kemi är du nära kopplad till världsledande forskargrupper inom området. Med lärare som är framstående experter får du en unik chans att göra ditt examensarbete vid forskningsfronten.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-kemi-organisk-kemi",
+        "keywords": [
+            "Organiskkemi",
+            "Kemi",
+            ""
+        ]
+    },
+    "Paleobiologi - PANGEA": {
+        "id": "75",
+        "Program": "Paleobiologi - PANGEA",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Är du intresserad av hur livet på jorden såg ut för miljarder år sedan? Vill du förstå hur livet har påverkats av jordens kemiska och fysikaliska förändringar? Och hur har klimatet och miljön förändrats över tid? Masterprogram i paleobiologi – PANGEA är ett Erasmus Mundus-program som är ett samarbete mellan universiteten i Uppsala, Lille i Frankrike, Aten i Grekland och Minho i Portugal.",
+        "url": "",
+        "keywords": [
+            "Bioteknik",
+            ""
+        ]
+    },
+    "Teoretisk fysik - kvantfält - strängteori": {
+        "id": "76",
+        "Program": "Teoretisk fysik - kvantfält - strängteori",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Studera universums grundläggande lagar med vårt masterprogram med inriktning mot teoretisk fysik – kvantfält- och strängteori. Du kommer att få den omfattande utbildning som förväntas av en teoretisk fysiker, skaffa nödvändiga matematiska färdigheter och utforska genombrott inom gauge- och konformteori, strängteori, holografi och mycket mer. Under ledning av framstående forskare ger du dig ut på en upptäcktsresa i framkant när det gäller att förstå naturen.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-fysik-teoretisk-fysik",
+        "keywords": [
+            "Fysik",
+            ""
+        ]
+    },
+    "Teoretisk kemo och beräkningskemi": {
+        "id": "77",
+        "Program": "Teoretisk kemo och beräkningskemi",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Vill du utveckla morgondagens molekyler och material med hjälp av beräkningskemi och teoretisk kemi kombinerat med nya maskininlärningsmetoder? På masterprogrammet i kemi - teoretisk kemi och beräkningskemi kommer du att ha en unik möjlighet att dyka djupt in i de mest spännande områdena av elektroniska strukturberäkningar, simuleringar av molekylär dynamik och accelererade modelleringsmetoder för maskininlärning. Låt din passion för beräkningskemi ta dig till nya höjder!",
+        "url": "",
+        "keywords": [
+            "Beräkningskemi",
+            "Beräkningsvetenskap",
+            ""
+        ]
+    },
+    "Tillämpad beräkningsvetenskap": {
+        "id": "78",
+        "Program": "Tillämpad beräkningsvetenskap",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Hur kan datorsimuleringar av komplexa problem och hantering av stora datamängder förbättra och forma framtida vetenskapliga undersökningar och ingenjörsarbete? Masterprogrammet i tillämpad beräkningsvetenskap syftar till att bredda och fördjupa dina kunskaper inom naturvetenskap eller teknik genom att lära dig tillämpa beräkningsmetoder, programmering, programvara samt matematiska och statistiska modeller inom ditt specifika intresseområde.",
+        "url": "",
+        "keywords": [
+            "Geovetenskap",
+            "Paleobiologi",
+            ""
+        ]
+    },
+    "Tillämpad bioteknik": {
+        "id": "79",
+        "Program": "Tillämpad bioteknik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Masterprogrammet i tillämpad bioteknik vänder sig till dig som vill inrikta dig mot tillämpad bioteknik och samtidigt få kunskap om projektstyrning och entreprenörskap. Det är ett program som ger dig en unik profil och där du möter både svenska och internationella studenter och lärare, vilket ger dig möjlighet att skapa ett nätverk inför framtiden. Programmet ger dig en unik profil som förbereder dig för en karriär i bioteknik inom både akademin och industrin.",
+        "url": "",
+        "keywords": [
+            "Bioteknik",
+            ""
+        ]
+    },
+    "Tillämpad matematik och statistik": {
+        "id": "80",
+        "Program": "Tillämpad matematik och statistik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "De flesta saker i den verkliga världen är komplexa, från biologiska system till finansmarknader och industriella processer. Att förklara dem är avgörande för att göra framsteg eller fatta beslut och för det krävs lösningar på många matematiska problem. Detta masterprogram med inriktning tillämpad matematik och statistik ger dig verktygen för att komma fram till svar och lösningar. Efter examen är du extremt flexibel och kan arbeta inom många olika branscher.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-matematik-tillampad-matematik-och-statistik",
+        "keywords": [
+            "Matematik",
+            "Statistik",
+            ""
+        ]
+    },
+    "Vattenteknik": {
+        "id": "81",
+        "Program": "Vattenteknik",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Tillgång till rent vatten är en grundläggande förutsättning för vårt moderna samhälle, och vatteningenjören spelar en central roll i distribuering, lagring och rening av vatten. Som student på masterprogrammet i vattenteknik kommer du att lära dig att använda banbrytande mät-, simulerings- och dataanalysmetoder för en hållbar utveckling av vattenresurser i bebyggda och naturliga miljöer. Programmet har en profil mot digitalisering i vattensektorn.",
+        "url": "",
+        "keywords": [
+            "Vattenresurser",
+            "Programmering",
+            ""
+        ]
+    },
+    "Vindkraftsprojektering (120 hp)": {
+        "id": "82",
+        "Program": "Vindkraftsprojektering (120 hp)",
+        "type": "Master",
+        "length": "2",
+        "credits": "120",
+        "description": "Idag sker en kraftig utbyggnad av vindkraften för att klara klimatmålen och energiförsörjningen samt möta efterfrågan på förnybar el. Det finns därför ett stort behov av yrkeskunniga som kan leda vindkraftsprojekt, både nationellt och internationellt. Det här ettåriga magisterprogrammet i vindkraftsprojektering är tvärvetenskapligt och öppet för naturvetare, samhällsvetare och teknologer. Programmet lägger grunden för en karriär inom den globala vindkraftsindustrin.",
+        "url": "https://www.uu.se/utbildning/program/masterprogram-vindkraftsprojektering",
+        "keywords": [
+            "Byggteknik",
+            ""
+        ]
+    }
+}
