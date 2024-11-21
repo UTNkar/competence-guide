@@ -61,7 +61,7 @@ export default function MultipleSelectChip(props) {
 
   return (
     <div>
-      <InputLabel>{props.label}</InputLabel>
+      <h2 className={styles.filterHeader}>{props.label}</h2>
       <FormControl className={styles.form} variant='standard'>
         <Select
           multiple

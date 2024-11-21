@@ -8,8 +8,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+
 }
 
+
+
+
+.filterHeader {
+    font-weight: 400;
+}
 /* DropdownSection.jsx */
 
 .outerContainer {
@@ -55,4 +62,19 @@
     background-color: #CFE3F9;
     max-width: 400px;
     padding: 20px;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.button {
+    font-family: 'Domine', sans-serif !important;
+    text-transform: none !important;
+    font-size: 16px;
+}
+
+.typeAndLength {
+    color: #004c98;
+    font-size: 22px;
 }
