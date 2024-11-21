@@ -85,17 +85,12 @@ const FilterArea = (props) => {
 
 
   return (
-    <Grid container>
-      <Grid
-        className={styles.dropdownSectionOuterContainer}
-        item
-      >
+    <Grid container className={styles.dropdownSectionOuterContainer}>
         <DropdownSection
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}
         />
         <FilteredProgramBoxes propgramBoxes={programBoxes} />
-      </Grid>
     </Grid>
   )
 }

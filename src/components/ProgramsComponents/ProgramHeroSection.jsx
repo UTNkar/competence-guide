@@ -1,13 +1,13 @@
 // MUI
 import { Grid } from '@mui/material'
 
-import styles from '../../css/Misc/heroSection.module.css'
+import styles from '../../css/ProgramsComponents/programComponents.module.css'
 
 const ProgramHeroSection = () => {
   return (
     <Grid container item xs={12} className={styles.heroSection}>
-      <Grid item xs={12}>
-        <h1>
+      <Grid item xs={9}>
+        <h1 >
           Hitta kompetens
         </h1>
       </Grid>
