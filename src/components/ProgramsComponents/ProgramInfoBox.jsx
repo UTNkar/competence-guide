@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
-import { Paper, Grid, Typography, Button, Link } from '@mui/material'
+import { Paper, Grid, Button, Link } from '@mui/material'
 
 function ProgramInfoBox(props) {
   const [extendedDescription, setExtendedDescription] = useState(false)

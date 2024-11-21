@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from 'react'
 import styles from '../../css/HomeComponents/homeProgramsList.module.css'
 //MUI
-import { Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
+import { Grid, List, ListItem, ListItemText } from '@mui/material'
 
 //Program data
 import programInformation from "../../assets/programInformation.json";

@@ -4,7 +4,6 @@ import styles from '../../css/ProgramsComponents/programComponents.module.css'
 import { useTheme } from '@mui/material/styles'
 import {
   MenuItem,
-  InputLabel,
   FormControl,
   Select,
   Chip,
