@@ -7,7 +7,8 @@ import FilteredProgramBoxes from './FilteredProgramBoxes'
 import ProgramAccordion from './ProgramAccordion'
 import DropdownSection from './DropdownSection'
 
-import programInformation from "../../assets/programInformation.json";
+import programInformation from "../../assets/programInformation.json"
+import iFrames from '../../assets/iFrames'
 
 //MUI
 import { Grid } from '@mui/material'
