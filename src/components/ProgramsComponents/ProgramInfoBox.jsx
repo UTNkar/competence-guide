@@ -80,7 +80,12 @@ function ProgramInfoBox(props) {
         </Grid>
       </Grid>
       {extendedDescription && iframes && iframes.map((frame, index) => {
-        return frame;
+        return (
+          <div key={index}>
+            <h3>{frame.props.title}</h3>
+            {frame}
+          </div>
+        );
       })}
     </Paper>
   )
