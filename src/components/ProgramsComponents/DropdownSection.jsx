@@ -58,7 +58,7 @@ export default function FilterArea(props) {
       <Grid item xs={dropdownWidth} className={styles.selectSection}>
         <CheckboxDropdown
           onItemChecked={handleProfessionChecked}
-          label='Yrkesgrupp'
+          label='Kompetenser'
           items={[
             'Astronomi',
             'Biomedicin/Medicinteknik',

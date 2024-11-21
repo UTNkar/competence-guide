@@ -19,7 +19,16 @@
 }
 
 .columnHeader {
-    font-weight: bold !important;
+    font-weight: 350;
+    color: #ffffff;
+    font-size: 26px;
+    
+}
+
+.columnItem {
+    font-weight: 350;
+    color: #ffffff;
+    font-size: 18px;
 }
 
 .programsListOuterContainer {

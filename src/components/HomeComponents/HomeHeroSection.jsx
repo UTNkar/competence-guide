@@ -35,9 +35,9 @@ const HomeHeroSection = () => {
     <Grid container className={styles.heroSection}>
       <Grid container item xs={12}>
         <Grid item xs={6}>
-          <Typography variant='h5' color='inherit' gutterBottom>
+          <h1>
             Kompetensguiden
-          </Typography>
+          </h1>
         </Grid>
         <Grid item xs={6} className={styles.breadcrumbs}>
           <Typography
@@ -62,7 +62,7 @@ const HomeHeroSection = () => {
         </Grid>
         <Grid item xs={buttonColumnWidth}>
           <Button variant='contained' className={styles.button} href='/compare'>
-            Jämför kompetens
+              Jämför kompetens
           </Button>
         </Grid>
       </Grid>

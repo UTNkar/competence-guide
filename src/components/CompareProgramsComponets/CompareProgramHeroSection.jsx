@@ -8,9 +8,9 @@ export default function CompareProgramHeroSection() {
     <Grid container className={styles.heroSection}>
       <Grid container item xs={12}>
         <Grid item xs={6}>
-          <Typography variant='h5' color='inherit' gutterBottom>
+          <h1>
             Jämför program
-          </Typography>
+          </h1>
         </Grid>
         <Grid className={styles.breadcrumbs} item xs={6}>
           <Typography
@@ -26,12 +26,12 @@ export default function CompareProgramHeroSection() {
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <Typography variant='body2' className={styles.pageDescription}>
+        <p className={styles.pageDescription}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta hic
           aliquid asperiores fugiat. Quidem, odio tenetur! Nemo repudiandae
           doloribus libero totam dignissimos consectetur neque, nulla laborum
           suscipit aliquid! Nesciunt, molestiae?
-        </Typography>
+        </p>
       </Grid>
     </Grid>
   )

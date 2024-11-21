@@ -30,6 +30,9 @@
 
 .button {
     background: #00459A !important;
+    text-transform: none !important;
+    font-weight: 500 !important; 
+    font-size: 17px !important;
 }
 
 .circleContainer {
