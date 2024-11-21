@@ -1,7 +1,7 @@
-import { useState, useEffect, Fragment } from "react";
-
+import { useState, useEffect, Fragment } from 'react'
+import styles from '../../css/HomeComponents/homeProgramsList.module.css'
 //MUI
-import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
+import { Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
 
 //Program data
 import programInformation from "../../assets/programInformation.json";
@@ -13,92 +13,74 @@ const HomeProgramsList = () => {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
-  ]);
+  ])
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize)
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  })
 
   const listContent = [
-    { header: "Civilingenjör", listItems: [] },
-    { header: "Högskoleingenjör", listItems: [] },
-    { header: "Kandidat", listItems: [] },
-    { header: "Master", listItems: [] },
-  ];
+    { header: 'Civilingenjör', listItems: [] },
+    { header: 'Högskoleingenjör', listItems: [] },
+    { header: 'Kandidat', listItems: [] },
+    { header: 'Master', listItems: [] },
+  ]
 
   for (const [key, value] of Object.entries(programInformation)) {
     var index;
     switch (value.type) {
-      case "Civilingenjör":
+      case 'Civilingenjör':
         index = 0
-        break;
-      case "Högskoleingenjör":
+        break
+      case 'Högskoleingenjör':
         index = 1
-        break;
-      case "Kandidat":
+        break
+      case 'Kandidat':
         index = 2
-        break;
+        break
       default:
         // "Master"
         index = 3
     }
-    listContent[index].listItems.push(key);
+    listContent[index].listItems.push(key)
   }
 
-  var programColumnWidth = 2.93;
-  var oneColumn = false;
+  var programColumnWidth = 2.93
+  var oneColumn = false
 
-  if (windowSize[0] < 869 && 640 < windowSize[0]) {
-    programColumnWidth = 5.95;
+  if (windowSize[0] < 960 && 640 < windowSize[0]) {
+    programColumnWidth = 5.95
   } else if (640 > windowSize[0]) {
-    programColumnWidth = 11.95;
-    oneColumn = true;
+    programColumnWidth = 11.95
+    oneColumn = true
   }
 
   // Create 4 columns of programs
+
   const programsList = listContent.map((column, index) => {
-    var verticalBar = (
-      <div
-        style={{
-          width: "1px",
-          backgroundColor: "white",
-          height: "510px",
-          marginTop: "45px",
-        }}
-      ></div>
-    );
+    var verticalBar = <div className={styles.verticalBar}></div>
 
     // Cases when vericalBar should be horizontal or removed
-    if (column.header !== "Master") {
+    if (column.header !== 'Master') {
       if (programColumnWidth > 11) {
-        verticalBar = (
-          <div
-            style={{
-              height: "1px",
-              margin: "auto",
-              backgroundColor: "white",
-              width: "80%",
-              marginTop: "25px",
-            }}
-          ></div>
-        );
+        verticalBar = <div className={styles.horizontalBar}></div>
       } else if (
-        column.header === "Högskoleingenjör" &&
+        column.header === 'Högskoleingenjör' &&
         programColumnWidth > 3 &&
         programColumnWidth < 6
       ) {
-        verticalBar = "";
+        verticalBar = ''
       }
     } else {
-      verticalBar = "";
+      verticalBar = ''
     }
 
     return (
@@ -107,47 +89,36 @@ const HomeProgramsList = () => {
           item
           xs={programColumnWidth}
           container
-          style={{ padding: "10px 30px" }}
-          justifyContent={oneColumn ? "center" : "start"}
+          className={styles.column}
+          justifyContent={oneColumn ? 'center' : 'start'}
         >
           <List>
-            <Typography
-              style={{
-                textAlign: oneColumn ? "center" : "start",
-                marginBottom: "20px",
-              }}
-              variant="h6"
+            <h2
+              className={styles.columnHeader}
             >
               {column.header}
-            </Typography>
+            </h2>
             {column.listItems.map((item, index) => (
               <ListItem
                 key={index}
-                style={{ textAlign: oneColumn ? "center" : "start" }}
+                style={{ textAlign: oneColumn ? 'center' : 'start' }}
                 disablePadding
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item}  className={styles.columnItem} disableTypography/>
               </ListItem>
             ))}
           </List>
         </Grid>
         {verticalBar}
       </Fragment>
-    );
-  });
+    )
+  })
 
   return (
-    <Grid
-      style={{
-        color: "white",
-        margin: " 50px auto",
-        backgroundColor: "#00459A",
-      }}
-      container
-    >
+    <Grid className={styles.programsListOuterContainer} container>
       {programsList}
     </Grid>
-  );
-};
+  )
+}
 
-export default HomeProgramsList;
+export default HomeProgramsList

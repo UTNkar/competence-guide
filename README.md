@@ -33,6 +33,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+Follow the section [commands](https://docs.utn.se/server-software/systemd/) to run the build on UTN's server turing.
+Note that this requires collaboration with a system administrator. 
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**

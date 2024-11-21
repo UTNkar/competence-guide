@@ -1,8 +1,8 @@
-import { useState } from "react";
-
+import { useState } from 'react'
+import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 //MUI
-import { Container, Typography, Grid, Button } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import { Container, Typography, Grid, IconButton, Box } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close'
 
 // Custom components
 import GenerateCompareAccordion from "./GenerateCompareAccordion";
@@ -10,66 +10,55 @@ import programInformation from "../../assets/programInformation.json";
 
 export default function CompareAccordion(props) {
   const allPrograms = [
-    { header: "Master", listItems: [] },
-    { header: "Civilingenjör", listItems: [] },
-    { header: "Högskoleingenjör", listItems: [] },
-    { header: "Kandidat", listItems: [] },
-  ];
+    { header: 'Master', listItems: [] },
+    { header: 'Civilingenjör', listItems: [] },
+    { header: 'Högskoleingenjör', listItems: [] },
+    { header: 'Kandidat', listItems: [] },
+  ]
 
   for (const [key, value] of Object.entries(programInformation)) {
     var index;
     switch (value.type) {
-      case "Master":
-        index = 0;
-        break;
-      case "Civilingenjör":
-        index = 1;
-        break;
-      case "Högskoleingenjör":
-        index = 2;
-        break;
+      case 'Master':
+        index = 0
+        break
+      case 'Civilingenjör':
+        index = 1
+        break
+      case 'Högskoleingenjör':
+        index = 2
+        break
       default:
         //Kandidat
-        index = 3;
-        break;
+        index = 3
+        break
     }
-    allPrograms[index].listItems.push({ name: key, url: value.url });
+    allPrograms[index].listItems.push({ name: key, url: value.url })
   }
 
   // State handler function used by Accordions
-  const [expanded, setExpanded] = useState("");
+  const [expanded, setExpanded] = useState('')
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+    setExpanded(newExpanded ? panel : false)
+  }
 
   return (
-    <Container
-      style={{
-        borderRadius: "10px",
-      }}
-    >
-      <Grid container>
+    <Container className={styles.compareAccordionContainer}>
+      <Grid container className={styles.headingContainer}>
         <Grid item xs={6}>
-          <Typography variant="h6" style={{ margin: "auto" }}>
-            {props.title}
-          </Typography>
+          <Typography variant='h6'>{props.title}</Typography>
         </Grid>
         <Grid item xs={6}>
-          <Button
+          <IconButton
+            className={styles.closeButton}
             onClick={props.handleCloseAccordion}
-            style={{
-              backgroundColor: "transparent",
-              color: "black",
-              float: "right",
-              postition: "relative",
-              top: "-8px",
-            }}
           >
             <CloseIcon />
-          </Button>
+          </IconButton>
         </Grid>
       </Grid>
+      <Box className={styles.accordionBox}>
       {allPrograms.map((item, index) => {
         return (
           <GenerateCompareAccordion
@@ -81,8 +70,10 @@ export default function CompareAccordion(props) {
             content={item.listItems}
             number={index}
           />
-        );
+        )
       })}
+      </Box>
+
     </Container>
-  );
+  )
 }

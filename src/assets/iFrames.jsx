@@ -30,7 +30,7 @@ const iFrames = {
       key="3"
       style={{ border: "0" }}
       src="https://datawrapper.dwcdn.net/lIn3Y/2/"
-      title="År 4-5, inriktning människa, maskin &amp;amp; samhälle"
+      title="År 4-5, inriktning människa, maskin och samhälle"
     ></iframe>,
   ],
   "Kemiteknik": [

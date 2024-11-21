@@ -1,17 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
+import styles from '../../css/ProgramsComponents/programComponents.module.css'
 
 //Custom components
-import ProgramInfoBox from "./ProgramInfoBox";
-import FilteredProgramBoxes from "./FilteredProgramBoxes";
-import ProgramAccordion from "./ProgramAccordion";
-import DropdownSection from "./DropdownSection";
+import ProgramInfoBox from './ProgramInfoBox'
+import FilteredProgramBoxes from './FilteredProgramBoxes'
+import ProgramAccordion from './ProgramAccordion'
+import DropdownSection from './DropdownSection'
 
 import programInformation from "../../assets/programInformation.json";
 
 //MUI
-import { Grid } from "@mui/material";
+import { Grid } from '@mui/material'
 
-var allPrograms = [];
+var allPrograms = []
 
 for (const [key, value] of Object.entries(programInformation)) {
   var obj = {};
@@ -25,74 +26,79 @@ const FilterArea = (props) => {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
-  ]);
+  ])
 
-
-  const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms);
+  const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-    window.addEventListener("resize", handleWindowResize);
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
+    window.addEventListener('resize', handleWindowResize)
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  })
 
   const [checkedItems, setCheckedItems] = useState({
     types: [],
     professions: [],
-  });
+  })
 
   useEffect(() => {
     // Filter shown programs based on filters
     const filteredPrograms = allPrograms.filter((program) => {
-      const typesSelected = checkedItems.types;
-      const professionsSelected = checkedItems.professions;
-      const keywords = program.info.keywords;
-      const type = program.info.type;
+      const typesSelected = checkedItems.types
+      const professionsSelected = checkedItems.professions
+      const keywords = program.info.keywords
+      const type = program.info.type
 
       if (typesSelected.length === 0 && professionsSelected.length === 0) {
-        return true;
+        return true
       } else if (typesSelected.length === 0) {
         // filter by selected professions only
         return (
           professionsSelected.filter((value) => keywords.includes(value))
             .length > 0
-        );
+        )
       } else if (professionsSelected.length === 0) {
         // filter by selected types of programs only
-        return typesSelected.includes(type);
+        return typesSelected.includes(type)
       } else {
         return (
           professionsSelected.filter((value) => keywords.includes(value))
             .length > 0 && typesSelected.includes(type)
-        );
+        )
       }
-    });
+    })
 
-    setRenderedProgramBoxes(filteredPrograms);
-  }, [checkedItems]);
+    setRenderedProgramBoxes(filteredPrograms)
+  }, [checkedItems])
 
+  
   const programBoxes = renderedProgramBoxes.map((elem) => {
-    return <ProgramInfoBox name={elem.name} data={elem.info} />;
-  });
+    const iframe = iFrames[elem.name];
+    return <ProgramInfoBox name={elem.name} data={elem.info} iframes={iframe} />;
+});
 
-  var firstColWidth = 3;
-  var secondColWidth = 9;
+  var firstColWidth = 3
+  var secondColWidth = 9
 
   if (windowSize[0] < 995) {
-    firstColWidth = 12;
-    secondColWidth = 12;
+    firstColWidth = 12
+    secondColWidth = 12
   }
 
   return (
     <Grid container>
       <Grid item xs={firstColWidth}>
-        <ProgramAccordion/>
+        <ProgramAccordion />
       </Grid>
-      <Grid style={{marginBottom: "100px"}} item xs={secondColWidth}>
+      <Grid
+        className={styles.dropdownSectionOuterContainer}
+        item
+        xs={secondColWidth}
+      >
         <DropdownSection
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}
@@ -100,7 +106,7 @@ const FilterArea = (props) => {
         <FilteredProgramBoxes propgramBoxes={programBoxes} />
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default FilterArea;
+export default FilterArea

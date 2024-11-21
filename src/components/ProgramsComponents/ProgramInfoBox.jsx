@@ -1,91 +1,86 @@
-import { useState, useEffect } from "react";
-
+import { useState, useEffect } from 'react'
+import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
-import { Paper, Grid, Typography, Button, Link } from "@mui/material";
+import { Paper, Grid, Typography, Button, Link } from '@mui/material'
 
 function ProgramInfoBox(props) {
-  const [extendedDescription, setExtendedDescription] = useState(false);
+  const [extendedDescription, setExtendedDescription] = useState(false)
 
-  const [windowSize, setWindowSize] = useState([window.innerWidth]);
+  const [windowSize, setWindowSize] = useState([window.innerWidth])
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
+      setWindowSize([window.innerWidth, window.innerHeight])
+    }
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize)
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  });
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  })
 
-  const name = props.name;
-  const url = props.data.url;
-  const length = props.data.length;
-  const description = props.data.description;
-  const type = props.data.type;
-  const credits = props.data.credits;
+  const name = props.name
+  const url = props.data.url
+  const length = props.data.length
+  const description = props.data.description
+  const type = props.data.type
+  const credits = props.data.credits
+  const iframes = props.iframes
 
   // Toggle short/long description
   const handleExtendedDescription = () => {
-    setExtendedDescription(!extendedDescription);
-  };
+    setExtendedDescription(!extendedDescription)
+  }
 
   // Adjust layout based on screen width
-  var typeColumnWidth = 6;
+  var typeColumnWidth = 6
   if (windowSize[0] < 880) {
-    typeColumnWidth = 12;
+    typeColumnWidth = 12
   }
 
   return (
-    <Paper
-      elevation={0}
-      style={{
-        margin: "10px",
-        backgroundColor: "#CFE3F9",
-        maxWidth: "400px",
-        padding: "20px",
-      }}
-    >
+    <Paper elevation={0} className={styles.programInfoBoxPaper}>
       <Grid container>
-        <Grid item xs={12}>
-          <Typography variant="h6">{name}</Typography>
+        <Grid item xs={6}>
+          <h2>{name}</h2>
         </Grid>
         <Grid item xs={typeColumnWidth}>
-          <Typography>
-            Typ: <b>{type}</b>
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography>
-            Längd:
-            <b>
-              {" "}
-              {length} år ({credits} hp)
-            </b>{" "}
-          </Typography>
+          <h2 className={styles.typeAndLength}>
+            {type}
+          </h2>
+          <h2 className={styles.typeAndLength}>
+            {length} år - {credits} hp
+          </h2>
         </Grid>
         <Grid item xs={12}>
           {extendedDescription ? (
-            <Typography>
+            <p className={styles.description}>
               {description} <br />
-              <Link target="_blank" href={url}>
+              <Link target='_blank' href={url}>
                 Besök kursens hemsida
               </Link>
-            </Typography>
+            </p>
           ) : (
-            <Typography>{description.slice(0, 90) + " . . ."}</Typography>
+            <p className={styles.description}>{description.slice(0, 90) + ' . . .'}</p>
           )}
         </Grid>
         <Grid item xs={12}>
-          <Typography>
-            <Button onClick={handleExtendedDescription}>Visa mer</Button>
-          </Typography>
+            <Button onClick={handleExtendedDescription} className={styles.button}>
+              {extendedDescription ? 'Visa mindre' : 'Visa mer'}
+            </Button>
         </Grid>
       </Grid>
+      {extendedDescription && iframes && iframes.map((frame, index) => {
+        return (
+          <div key={index}>
+            <h3>{frame.props.title}</h3>
+            {frame}
+          </div>
+        );
+      })}
     </Paper>
-  );
+  )
 }
 
-export default ProgramInfoBox;
+export default ProgramInfoBox

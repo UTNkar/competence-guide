@@ -1,0 +1,15 @@
+.fab {
+    background-color: #00459a !important;
+    transform: scale(0.8);
+}
+
+.fab:hover {
+    background-color: #00459a;
+    transform: scale(1);
+    transition: .2s ease;
+}
+
+.icon {
+    color: white;
+    transform: scale(1.3);
+}
