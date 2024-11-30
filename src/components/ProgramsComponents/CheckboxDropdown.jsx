@@ -4,7 +4,6 @@ import styles from '../../css/ProgramsComponents/programComponents.module.css'
 import { useTheme } from '@mui/material/styles'
 import {
   MenuItem,
-  InputLabel,
   FormControl,
   Select,
   Chip,
@@ -61,7 +60,7 @@ export default function MultipleSelectChip(props) {
 
   return (
     <div>
-      <InputLabel>{props.label}</InputLabel>
+      <h2 className={styles.filterHeader}>{props.label}</h2>
       <FormControl className={styles.form} variant='standard'>
         <Select
           multiple

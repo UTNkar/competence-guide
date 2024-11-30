@@ -1,10 +1,10 @@
 import { useState, useEffect, Fragment } from 'react'
 import styles from '../../css/HomeComponents/homeProgramsList.module.css'
 //MUI
-import { Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
+import { Grid, List, ListItem, ListItemText } from '@mui/material'
 
 //Program data
-import mockData from '../../assets/newMock.json'
+import programInformation from "../../assets/programInformation.json";
 
 // Component for the 4 colums of programs on the homescreen
 // Columns are rendered differently depending on page width
@@ -34,8 +34,8 @@ const HomeProgramsList = () => {
     { header: 'Master', listItems: [] },
   ]
 
-  for (const [key, value] of Object.entries(mockData)) {
-    var index
+  for (const [key, value] of Object.entries(programInformation)) {
+    var index;
     switch (value.type) {
       case 'Civilingenjör':
         index = 0
@@ -93,22 +93,18 @@ const HomeProgramsList = () => {
           justifyContent={oneColumn ? 'center' : 'start'}
         >
           <List>
-            <Typography
-              style={{
-                textAlign: oneColumn ? 'center' : 'start',
-              }}
+            <h2
               className={styles.columnHeader}
-              variant='h6'
             >
               {column.header}
-            </Typography>
+            </h2>
             {column.listItems.map((item, index) => (
               <ListItem
                 key={index}
                 style={{ textAlign: oneColumn ? 'center' : 'start' }}
                 disablePadding
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item}  className={styles.columnItem} disableTypography/>
               </ListItem>
             ))}
           </List>

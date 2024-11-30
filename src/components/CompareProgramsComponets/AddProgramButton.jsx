@@ -9,8 +9,8 @@ import CompareAccordion from './CompareAccordion'
 import CompareProgramInfoBox from './CompareProgramInfoBox'
 
 // Program data
-import mockData from '../../assets/newMock.json'
-import iFrames from '../../assets/iFrames'
+import programInformation from "../../assets/programInformation.json";
+import iFrames from "../../assets/iFrames";
 
 export default function CompareInfoContainer({ buttonTitle }) {
   const [displayAccordion, setDisplayAccordion] = useState(false)
@@ -21,9 +21,11 @@ export default function CompareInfoContainer({ buttonTitle }) {
   }
 
   const handleContainerChange = (programName) => {
-    const data = mockData[programName]
-    setSelectedComparingProgram({ name: programName, data: data })
-  }
+    const data = programInformation[programName];
+    setSelectedComparingProgram(
+      { name: programName, data: data }
+      );
+  };
 
   const handleCloseContainer = () => {
     setDisplayAccordion(false)

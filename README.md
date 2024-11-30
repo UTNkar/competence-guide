@@ -33,6 +33,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+Follow the section [commands](https://docs.utn.se/server-software/systemd/) to run the build on UTN's server turing.
+Note that this requires collaboration with a system administrator. 
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
@@ -42,3 +45,9 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+
+## Update program information
+If you want to update all of the data in the file /src/assets/programInformation.json you can use the csv_to_json.py tool to translate from an csv file to json. Ensure that the csv file follows the same format as ProgamInformation_kompetensguiden.xlsx. 
+
+For minor updates it is recommended to edit the json file directly.
