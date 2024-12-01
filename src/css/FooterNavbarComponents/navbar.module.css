@@ -8,19 +8,37 @@
     transform-style: preserve-3d;
 }
 
+/* DROPDOWN ANIMATION 
+    This controls animation of drop down menu and is the only solution I have found to animate the display property */
+
 .navbar_dropdown_closed {
     opacity: 0; 
     transform: translate3d(0px, -6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
     transform-style: preserve-3d; 
+    position: absolute;
     display: none;
+
 }
 
-.navbar_dropdown_open {
-    opacity: 1; 
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
-    transform-style: preserve-3d; 
-    display: block;
+@keyframes open_dropdown {
+    from {
+        opacity: 0; 
+        transform: translate3d(0px, -6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+    }
+    to {
+        opacity: 1; 
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+    }
 }
+
+.navbar_dropdown_item_wrapper:hover .navbar_dropdown_closed {
+    animation: open_dropdown 0.2s;
+    animation-fill-mode: forwards;
+    display: block;
+
+}
+
+/* END DROPDOWN ANIMATION */
 
 .navbar_dropdown_item {
     border-color: rgb(224,224,224);
@@ -236,6 +254,8 @@
     transform-style: preserve-3d;
 }
 
+
+
 .navbar_menu {
     flex-flow: wrap;
     justify-content: flex-end;
@@ -245,6 +265,125 @@
     padding-left: 0;
     display: flex
 }
+
+.navbar_dropdown_list_wrapper {
+    z-index: 2;
+    background-color: #0000;
+    display: none;
+    position: absolute;
+    right: -17px
+}
+
+.navbar_popover_arrow {
+    z-index: 3;
+    border-radius: var(--paper-border-radius);
+    background-color: var(--white);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -8px;
+    right: 23px;
+    transform: rotate(45deg)
+}
+
+.navbar_dropdown_list {
+    z-index: 2;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    border-radius: var(--paper-border-radius);
+    color: var(--text-primary);
+    background-color: #fff;
+    flex-direction: column;
+    padding: 32px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 50px 100px -20px #32325d40,0 30px 60px -30px #0000004d,0 -16px 48px -4px #32325d1a
+}
+
+.navbar_dropdown_list_item_wrapper {
+    border-left: 4px solid var(--grey-300);
+    cursor: pointer;
+    flex-direction: column;
+    flex: none;
+    align-self: stretch;
+    align-items: stretch;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex
+}
+
+.navbar_dropdown_list_item_label_wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.navbar_dropdown_list_label {
+    font-family: var(--text);
+    color: var(--text-primary);
+    white-space: nowrap;
+    word-break: keep-all;
+    flex: none;
+    align-items: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    position: relative
+}
+
+.navbar_dropdown_list_label:focus-visible {
+    outline-offset: 0px;
+    color: #0050bd;
+    border-radius: 5px;
+    outline: 2px solid #0050bd
+}
+
+.navbar_dropdown_list_label[data-wf-focus-visible] {
+    outline-offset: 0px;
+    color: #0050bd;
+    border-radius: 5px;
+    outline: 2px solid #0050bd
+}
+
+.navbar_dropdown_list_label.arrow {
+    opacity: 0;
+    transform: translate(2px,4px)
+}
+
+.without_spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.without_decoration::after {
+    display: none;
+}
+
+body {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+a:hover {
+    cursor: pointer;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+    height: 0.3ch;
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+    width: 3.71875em;
+    min-height: 3px;
+    content: "";
+    background-color: var(--heading-decoration, rgba(0, 0, 0, 0.1));
+    display: block;
+}
+
+h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decoration), h4:not(.without_decoration), h5:not(.without_decoration), h6:not(.without_decoration) {
+    margin-bottom: 0;
+  }
 
 
 @media screen and (max-width: 991px) {
@@ -307,6 +446,32 @@
         display: block;
         position: relative
     }
+
+    .navbar_dropdown_list_wrapper {
+        align-self: stretch;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        display: none;
+        position: relative;
+        right: auto
+    }
+
+    .navbar_dropdown_list {
+        grid-row-gap: 10px;
+        box-shadow: none;
+        align-items: stretch;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+    .navbar_dropdown_list_item_wrapper {
+        padding: 0 0 0 18px
+    }
+
+    .w_inline_block {
+        max-width: 100%;
+        display: inline-block
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -364,5 +529,10 @@
         width: 100vw;
         padding-top: 24px;
         padding-bottom: 24px
+    }
+
+    .navbar_dropdown_list {
+        padding-left: 20px;
+        padding-right: 20px
     }
 }
