@@ -61,6 +61,15 @@
     float: left;
 }
 
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;    
+    overflow: hidden;
+    /* white-space: nowrap; */
+}
+
 
 /* ProgramAccordion.jsx */
 /*TODO REMOVE*/
@@ -76,29 +85,36 @@
 }
 
 .programInfoBoxPaper {
-    margin: 10px;
-    background-color: #CFE3F9;
+    margin: 30px;
     padding: 30px 50px 30px;
-    max-width: 400px;
+    max-width: 500px;
+    min-height: 500px;
     border: solid;
     border-color: #dedede;
     border-radius: 7px !important;
     border-width: 3px;
-}
-
-.description {
-    font-size: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .button {
     font-family: 'Domine', sans-serif !important;
     text-transform: none !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
 }
-
+.alignYear {
+    margin: 10 0;
+    white-space: normal;
+}
 .typeAndLength {
     color: #004c98;
-    font-size: 22px;
-    margin: 0;
     text-align:right;
+    margin: 10 0;
 }
+.noMargin {
+    margin: 0;
+}
+
+.noAfter:after {
+    content: none !important; /* Removes the :after pseudo-element */
+  }
