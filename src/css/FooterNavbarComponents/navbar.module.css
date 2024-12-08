@@ -1,3 +1,5 @@
+/* Many styles can probably be consolidated, they are already heavily consolidated from webflow*/
+
 .navbar_icon_closed {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
     transform-style: preserve-3d;
@@ -8,7 +10,7 @@
     transform-style: preserve-3d;
 }
 
-/* DROPDOWN ANIMATION 
+/* DROPDOWN ANIMATIONS 
     This controls animation of drop down menu and is the only solution I have found to animate the display property */
 
 .navbar_dropdown_closed {
@@ -38,15 +40,7 @@
 
 }
 
-/* END DROPDOWN ANIMATION */
 
-.navbar_dropdown_item {
-    border-color: rgb(224,224,224);
-}
-
-.navbar_dropdown_item_hover {
-    border-color: rgb(0,69,154);
-}
 
 .navbar_dropdown_item_icon {
     opacity: 0; 
@@ -55,12 +49,112 @@
     color: rgb(33,36,39); 
 }
          
-.navbar_dropdown_item_icon_hover {
-    opacity: 1; 
-    transform: translate3d(4px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
-    transform-style: preserve-3d; 
-    color: rgb(0,69,154);  
+
+@keyframes dropdown_item_hover_icon {
+    from {
+        opacity: 0; 
+        transform: translate3d(2px, 4px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+        color: rgb(33,36,39); 
+    }
+    to {
+        opacity: 1; 
+        transform: translate3d(4px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+        color: rgb(0,69,154);  
+    }
 }
+
+.dropdown_item_hover_target:hover  .navbar_dropdown_item_icon {
+    animation: dropdown_item_hover_icon 0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.navbar_dropdown_item {
+    border-color: rgb(224,224,224);
+}
+
+@keyframes dropdown_item_hover_color {
+    from {
+        border-color: rgb(224,224,224);        
+    }
+    to {
+        border-color: rgb(0,69,154);
+    }
+}
+
+.dropdown_item_hover_target:hover  .navbar_dropdown_item {
+    animation: dropdown_item_hover_color 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.dropdown_item_hover_target:hover .navbar_dropdown_list_label {
+    transition: 0.2;
+    color:#0050bd;
+}
+
+
+
+
+
+/* END DROPDOWN ANIMATIONS */
+
+
+
+
+.menu_button {
+    color: var(--text-primary);
+    display: none
+}
+
+.w_button {
+    color: #fff;
+    line-height: inherit;
+    cursor: pointer;
+    background-color: #3898ec;
+    border: 0;
+    border-radius: 0;
+    padding: 9px 15px;
+    text-decoration: none;
+    display: inline-block
+}
+
+
+.navbar_dropdown_list_label {
+    font-family: var(--text);
+    color: var(--text-primary);
+    white-space: nowrap;
+    word-break: keep-all;
+    flex: none;
+    align-items: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    position: relative
+}
+
+.navbar_dropdown_list_label:focus-visible {
+    outline-offset: 0px;
+    color: #0050bd;
+    border-radius: 5px;
+    outline: 2px solid #0050bd
+}
+
+
+
+.navbar_dropdown_list_label[data-wf-focus-visible] {
+    outline-offset: 0px;
+    color: #0050bd;
+    border-radius: 5px;
+    outline: 2px solid #0050bd
+}
+
+.navbar_dropdown_list_label.arrow {
+    opacity: 0;
+    transform: translate(2px,4px)
+}
+
 
 .navbar {
     background-color: #0000;
@@ -70,7 +164,7 @@
 
 .w_nav {
     z-index: 1000;
-    background: #ddd;
+    /* background: #ddd; */
     position: relative
 }
 
@@ -318,38 +412,7 @@
     align-items: center
 }
 
-.navbar_dropdown_list_label {
-    font-family: var(--text);
-    color: var(--text-primary);
-    white-space: nowrap;
-    word-break: keep-all;
-    flex: none;
-    align-items: center;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    position: relative
-}
 
-.navbar_dropdown_list_label:focus-visible {
-    outline-offset: 0px;
-    color: #0050bd;
-    border-radius: 5px;
-    outline: 2px solid #0050bd
-}
-
-.navbar_dropdown_list_label[data-wf-focus-visible] {
-    outline-offset: 0px;
-    color: #0050bd;
-    border-radius: 5px;
-    outline: 2px solid #0050bd
-}
-
-.navbar_dropdown_list_label.arrow {
-    opacity: 0;
-    transform: translate(2px,4px)
-}
 
 .without_spacing {
     margin-top: 0;
@@ -386,7 +449,58 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
   }
 
 
+
 @media screen and (max-width: 991px) {
+      
+    
+    /* Show and Hide Animations */
+    .menu_button.show {
+        z-index: 2;
+        opacity: 1;
+        transform: scale(1);
+        /* display: block */
+    }
+    
+    .menu_button.hide {
+        z-index: 1;
+        opacity: 0;
+        transform: scale(0.35);
+        /* display: none */
+    }
+
+
+    .hamburger {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5rem;
+        margin-left: auto; /* Push this item to the right */
+    }
+
+    .menu_button {
+        font-family: var(--icon);
+        background-color: #0000;
+        color: var(--text-primary);
+
+        font-size: 32px;
+        font-weight: 400;
+
+        line-height: 32px;
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 1;
+        transition: 0.15s ease-in-out;
+    }
+
+
+
     .w_nav[data-collapse=medium] .w_nav_menu {
         display:none
     }
@@ -471,6 +585,35 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
     .w_inline_block {
         max-width: 100%;
         display: inline-block
+    }
+
+    /* MOBILE NAVBAR */
+    /* something something, animate mobile wrapper and menu shows up */
+
+    .navbar_menu_wrapper_mobile {
+        transform: translate3d(0px, -24px, 0px) ; 
+        transform-style: preserve-3d; 
+        display: none; 
+        opacity: 0;
+    }
+
+    @keyframes open_dropdown {
+        from {
+            transform: translate3d(0px, -24px, 0px) ; 
+            transform-style: preserve-3d; 
+            opacity: 0;
+        }
+        to {
+            transform: translate3d(0px, 0px, 0px) ; 
+            transform-style: preserve-3d; 
+            opacity: 1;
+        }
+    }
+
+    .menu_button.open > .navbar_menu_wrapper_mobile {
+        animation: open_dropdown 0.2s;
+        animation-fill-mode: forwards;
+        display: block; 
     }
 }
 

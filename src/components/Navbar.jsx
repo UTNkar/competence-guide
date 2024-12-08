@@ -82,6 +82,17 @@ const Tabs = [
 ]
 
 function Navbar() {
+  const [hamburgerIconState, setHamburgerIconState] = useState(true);
+
+  const show = styles.hamburger_icon_show;
+  const hide = styles.hamburger_icon_hide;
+
+  const hamburger = () => {
+    setHamburgerIconState((prev) => !prev);
+
+  }
+
+
   return (
     <div data-animation="over-right"
       data-collapse="medium"
@@ -90,7 +101,7 @@ function Navbar() {
       data-easing2="linear"
       role="banner"
       className={`${styles.navbar} ${styles.w_nav}`}>
-      <div className={`${styles.container}`}>
+      <div className={`${styles.w_layout_vflex} ${styles.container} `}>
         <div className={`${styles.navbar_wrapper}`}>
           <a href="/" class={` ${styles.navbar_brand} ${styles.w_nav_brand}`} aria-label="home">
             <img width="64" height="64"
@@ -106,7 +117,7 @@ function Navbar() {
               https://cdn.prod.website-files.com/655e29844518537470ba5b0f/65bcf578eaa70a4540ea6e8a_utn_standard_bla%20(2).png 3227w
               "
               sizes="190px" className={`${styles.logo_icon}`}></img></a>
-          <div className={`${styles.navbar_menu_wrapper}`}>
+          <div className={`${styles.w_layout_vflex} ${styles.navbar_menu_wrapper} ${styles.navbar_menu_wrapper_mobile}`}>
             <nav className={`${styles.navbar_menu}`}>
               {/* <div className="navbar-popover-arrow main-menu"></div> */}
 
@@ -120,7 +131,29 @@ function Navbar() {
               }
             </nav>
           </div>
+          
+          <div class="navbar-menu-overlay" ></div> 
+          {/* opacity: 1; display: block; */}
 
+
+          <div className={`${styles.hamburger}`}>
+
+            <div
+              className={`${styles.menu_button} ${hamburgerIconState ? styles.show : styles.hide}`}
+              onClick={hamburger}
+            >
+              menu
+            </div>
+
+            <div
+              className={`${styles.menu_button}  ${hamburgerIconState ?  styles.hide : styles.show }`}
+              onClick={hamburger}
+            >
+              close
+            </div>
+          </div>
+
+          
         </div>
       </div>
     </div>
@@ -163,7 +196,7 @@ function NavbarDropdown({ items }) {
 
 function NavbarDropdownItem({ title, url }) {
   return (
-    <main className={`${styles.w_layout_vflex}`}>
+    <main className={`${styles.w_layout_vflex} ${styles.dropdown_item_hover_target}`}>
       <a href={url} aria-current="page"
         className={`${styles.navbar_dropdown_list_item_wrapper} ${styles.w_inline_block} ${styles.navbar_dropdown_item}`}
       // style="border-color: rgb(0,69,154);"
