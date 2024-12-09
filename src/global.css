@@ -161,7 +161,7 @@ h6 {
 
 /* This works for the gray lines under the headings */
 h1::after, h2::after, h3::after,  h5::after, h6::after {
-    height: 0.3ch;
+    height: 0.2ch;
     margin-top: 0.75em;
     margin-bottom: 1em;
     width: 3.71875em;

@@ -21,17 +21,36 @@
     border-radius: 10px;
     padding: 10px 15px;
     max-height: 600px;
-    border: 1px solid #CFE3F9;
+    border: 2px solid var(--grey-300);
 }
 
 .headingContainer {
-    padding: 5px 0;
     align-items: center;
 }
 
+.headingRight{
+    text-align: end;
+    color: var(--text-accent);
+    padding-bottom: 12px;
+}
+
 .closeButton {
-    color: black;
-    float: right;
+    position: absolute !important;
+
+    top: 10px;
+    left: 32px;
+    padding: 0px !important;
+
+}
+
+.closeButton:hover {
+    background: none !important;
+    scale: 1.08;
+    transition: all 0.3s ease;
+   
+}
+.closeButtonIcon{
+    /* color: var(--text-accent); */
 }
 
 .accordionBox {
@@ -52,16 +71,45 @@
 /* CompareProgramInfoBox.jsx */
 
 .compareProgramInfoBoxPaper {
-    background-color: #CFE3F9;
-    padding: 20px;
+    padding: 15px 35px;
     height: 500px;
     overflow: auto;
-
+    position: relative;
 }
 
+.showMoreBtn{
+    padding: 0 !important;
+    font-family: var(--text-paragraph) !important;
+    text-transform: none !important;
+}
+
+.showMoreBtn:hover{
+    background: none !important;
+}
 
 /* GenerateCompareAccordion.jsx */
 
+.topProgramTitle{
+    padding: 0 !important;
+    height: 20px !important;
+}
+
+.arrowIcon{
+    font-size: 2rem;
+    color: var(--heading-decoration);
+}
+
+.programName{
+    font-family: var(--text) !important;
+    font-size: 18px !important;
+}
+
 .listItemButton {
     border-radius: 5px;
+    padding: 0 0 0 23px !important;
+}
+
+.listItemText{
+    font-family: var(--text) !important;
+
 }
