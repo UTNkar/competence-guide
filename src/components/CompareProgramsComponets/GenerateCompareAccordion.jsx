@@ -6,7 +6,6 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import { Typography, List, ListItemButton } from '@mui/material'
 import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
-import { Margin } from '@mui/icons-material';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
