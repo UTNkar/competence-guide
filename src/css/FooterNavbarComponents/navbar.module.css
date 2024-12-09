@@ -448,6 +448,10 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
     margin-bottom: 0;
   }
 
+.navbar_menu_overlay {
+    opacity: 0;
+    display: none
+}
 
 
 @media screen and (max-width: 991px) {
@@ -455,7 +459,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
     
     /* Show and Hide Animations */
     .menu_button.show {
-        z-index: 2;
+        z-index: 4;
         opacity: 1;
         transform: scale(1);
         /* display: block */
@@ -610,12 +614,36 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
         }
     }
 
-    .menu_button.open > .navbar_menu_wrapper_mobile {
+    .navbar_menu_wrapper_mobile.open {
         animation: open_dropdown 0.2s;
         animation-fill-mode: forwards;
         display: block; 
     }
+
+    .navbar_menu_overlay {
+        z-index: 3;
+        background-color: #00000026;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+    }
+
+    .navbar_menu_overlay.open {
+        opacity: 1; 
+        display: block;
+    }
+
+
+    .navbar_popover_arrow {
+        display: block;
+        right: 22px
+    }
+
+
 }
+
+
 
 @media screen and (max-width: 767px) {
     .w_nav[data-collapse=small] .w_nav_menu {
@@ -642,6 +670,10 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
 }
 
 @media screen and (max-width: 479px) {
+    .navbar_popover_arrow {
+        right: 22px
+    }
+
     .w_nav[data-collapse=tiny] .w_nav_menu {
         display:none
     }

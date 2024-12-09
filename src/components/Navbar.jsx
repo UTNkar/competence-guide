@@ -117,9 +117,8 @@ function Navbar() {
               https://cdn.prod.website-files.com/655e29844518537470ba5b0f/65bcf578eaa70a4540ea6e8a_utn_standard_bla%20(2).png 3227w
               "
               sizes="190px" className={`${styles.logo_icon}`}></img></a>
-          <div className={`${styles.w_layout_vflex} ${styles.navbar_menu_wrapper} ${styles.navbar_menu_wrapper_mobile}`}>
+          <div className={`${styles.w_layout_vflex} ${styles.navbar_menu_wrapper} ${styles.navbar_menu_wrapper_mobile} ${hamburgerIconState ? '' : styles.open}`}>
             <nav className={`${styles.navbar_menu}`}>
-              {/* <div className="navbar-popover-arrow main-menu"></div> */}
 
               {Tabs.map(({ title, items }) => {
                 return (
@@ -131,6 +130,8 @@ function Navbar() {
               }
             </nav>
           </div>
+
+
           
           <div class="navbar-menu-overlay" ></div> 
           {/* opacity: 1; display: block; */}
@@ -155,6 +156,9 @@ function Navbar() {
 
           
         </div>
+
+        <div className={`${styles.navbar_menu_overlay} ${hamburgerIconState ? '' : styles.open}`}></div>
+
       </div>
     </div>
   );
