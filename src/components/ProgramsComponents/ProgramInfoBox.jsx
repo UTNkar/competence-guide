@@ -38,22 +38,27 @@ function ProgramInfoBox(props) {
   if (windowSize[0] < 880) {
     typeColumnWidth = 12
   }
+var isLong = name.length > 20
+
 
   return (
     <Paper elevation={0} className={styles.programInfoBoxPaper}>
       <Grid container >
-        <Grid item xs={6} >
-          <h2 className= {styles.alignYear}>{name}</h2>
+        <Grid item xs={isLong ? 12 : 5} >
+            <h2 className= {isLong ? `${styles.programTitle} ${styles.noAfter}` : `${styles.programTitle}`}>{name}</h2>
         </Grid>
-        <Grid item xs={typeColumnWidth}  >
-          <h2 className={`${styles.typeAndLength} ${styles.noAfter} `}>
+
+        <Grid item xs={isLong ? 12 : 7}  >
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} ${styles.noAfter}`: `${styles.typeAndLength} ${styles.noAfter}`}>
             {type}
           </h2>
-          <h2 className={`${styles.typeAndLength} ${styles.noAfter} ${styles.noMargin}`}>
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} ${styles.noMargin}` : `${styles.typeAndLength} ${styles.noAfter} ${styles.noMargin}`}>
             {length} år - {credits} hp
           </h2>
         </Grid>
-        <Grid item xs={12}>
+          
+
+        <Grid item xs={12} className={styles.descriptionContainer}>
           {extendedDescription ? (
             <p>
               {description} <br />
@@ -62,7 +67,7 @@ function ProgramInfoBox(props) {
               </Link>
             </p>
           ) : (
-            <p className={styles.description}>{description }</p>
+            <p className={isLong ? `${styles.description}`: `${styles.description} ${styles.longDescription}`}>{description }</p>
           )}
           <Button onClick={handleExtendedDescription} className={styles.button}>
             {extendedDescription ? 'Visa mindre' : 'Visa mer'}
