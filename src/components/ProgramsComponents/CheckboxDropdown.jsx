@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useTheme } from '@mui/material/styles'
 import {
   MenuItem,
@@ -11,6 +13,7 @@ import {
   Box,
 } from '@mui/material'
 
+import '../../global.css'
 // This is the the two dropdown menues for the program filtering page
 
 const ITEM_HEIGHT = 48
@@ -59,11 +62,17 @@ export default function MultipleSelectChip(props) {
     )
   }
 
+  var deleteIcon = (
+    <CloseIcon className={styles.chipCloseButton}></CloseIcon>
+  )
+
+
   return (
     <div>
-      <h2 className={styles.filterHeader}>{props.label}</h2>
       <FormControl className={styles.form} variant='standard'>
+        <h2 className={`${styles.filterHeader} without_after`}>{props.label}</h2>
         <Select
+          className={styles.SelectBox}
           multiple
           value={selectedItems}
           label={props.label}
@@ -73,8 +82,10 @@ export default function MultipleSelectChip(props) {
               {selected.map((value, index) => (
                 <Chip
                   key={value}
+                  className={styles.chip}
                   label={value}
                   onDelete={() => handleDelete(index)}
+                  deleteIcon={deleteIcon}
                   onMouseDown={(event) => {
                     event.stopPropagation()
                   }}
@@ -83,6 +94,12 @@ export default function MultipleSelectChip(props) {
             </Box>
           )}
           MenuProps={MenuProps}
+          sx={{
+            "& .MuiSelect-icon": {
+              color: "#dedede", // Change icon color
+              fontSize: "2.5rem", // Change icon size
+            }, 
+          }}
         >
           {names.map((name) => (
             <MenuItem

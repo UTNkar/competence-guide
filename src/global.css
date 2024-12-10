@@ -94,6 +94,8 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
     margin-bottom: 0;
 }
 
+
+
 h1 {
     max-width: var(--desktop-text-width);
     margin-top: 0;
@@ -160,7 +162,7 @@ h6 {
 }
 
 /* This works for the gray lines under the headings */
-h1::after, h2::after, h3::after,  h5::after, h6::after {
+h1:not(.without_after):after, h2:not(.without_after):after, h3:not(.without_after):after,  h5:not(.without_after):after, h6:not(.without_after):after {
     height: 0.3ch;
     margin-top: 0.75em;
     margin-bottom: 1em;
@@ -218,6 +220,8 @@ a:active, a:hover {
 }
 
 
+
+
 /*put over_dark on parent elements*/
 .over_dark {
     color: var(--white);
@@ -267,3 +271,4 @@ a:active, a:hover {
 
 @media screen and (max-width: 479px) {
 }
+
