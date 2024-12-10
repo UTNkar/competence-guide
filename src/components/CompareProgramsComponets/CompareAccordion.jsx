@@ -5,8 +5,8 @@ import { Container, Typography, Grid, IconButton, Box } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 
 // Custom components
-import GenerateCompareAccordion from './GenerateCompareAccordion'
-import mockData from '../../assets/newMock.json'
+import GenerateCompareAccordion from "./GenerateCompareAccordion";
+import programInformation from "../../assets/programInformation.json";
 
 export default function CompareAccordion(props) {
   const allPrograms = [
@@ -16,8 +16,8 @@ export default function CompareAccordion(props) {
     { header: 'Kandidat', listItems: [] },
   ]
 
-  for (const [key, value] of Object.entries(mockData)) {
-    var index
+  for (const [key, value] of Object.entries(programInformation)) {
+    var index;
     switch (value.type) {
       case 'Master':
         index = 0

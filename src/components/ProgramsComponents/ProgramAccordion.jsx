@@ -8,7 +8,7 @@ import { Container, Typography } from '@mui/material'
 import GenerateAccordion from './GenerateAccordion'
 
 //Program data
-import mockData from '../../assets/newMock.json'
+import programInformation from "../../assets/programInformation.json"
 
 export default function ProgramAccordion() {
   const allPrograms = [
@@ -18,8 +18,8 @@ export default function ProgramAccordion() {
     { header: 'Master', listItems: [] },
   ]
 
-  for (const [key, value] of Object.entries(mockData)) {
-    var index
+  for (const [key, value] of Object.entries(programInformation)) {
+    var index;
     switch (value.type) {
       case 'Civilingenjör':
         index = 0
