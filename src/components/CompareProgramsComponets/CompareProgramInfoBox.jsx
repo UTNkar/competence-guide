@@ -53,7 +53,10 @@ function CompareProgramInfoBox(props) {
   }
 
   return (
-    <Paper className={styles.compareProgramInfoBoxPaper}>
+    <Paper 
+      elevation={0} 
+      sx = {{borderRadius: '10px'}}
+      className={styles.compareProgramInfoBoxPaper}>
       <IconButton
         className={styles.closeButton}
         onClick={() => props.handleCloseAccordion()}
