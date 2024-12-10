@@ -479,6 +479,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
         height: 32px;
         margin-right: 0.5rem;
         margin-left: auto; /* Push this item to the right */
+        cursor: pointer;
     }
 
     .menu_button {
