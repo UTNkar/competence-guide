@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
+import { useNavigate } from 'react-router-dom';
+
 
 //Custom components
 import ProgramInfoBox from './ProgramInfoBox'
@@ -28,6 +30,13 @@ const FilterArea = (props) => {
     window.innerWidth,
     window.innerHeight,
   ])
+
+  const navigate = useNavigate();
+
+  const handleCompare = () => {
+    //const [program1, program2] = selectedPrograms;
+    navigate(`/compare`);
+  };
 
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
 
@@ -116,6 +125,16 @@ const FilterArea = (props) => {
       <Grid item xs={firstColWidth}>
         <ProgramAccordion />
       </Grid>
+      <Grid item xs={12} style={{ textAlign: 'center', margin: '20px 0' }}>
+      <Button
+          variant="contained"
+          color="primary"
+          disabled={selectedPrograms.length !== 2}
+          onClick={handleCompare}
+        >
+          Compare Selected Programs
+        </Button>
+      </Grid>
       <Grid
         className={styles.dropdownSectionOuterContainer}
         item
@@ -126,16 +145,6 @@ const FilterArea = (props) => {
           setCheckedItems={setCheckedItems}
         />
         <FilteredProgramBoxes propgramBoxes={programBoxes} />
-      </Grid>
-      <Grid item xs={12} style={{ textAlign: 'center', margin: '20px 0' }}>
-        <Button
-          variant="contained"
-          color="primary"
-          disabled={selectedPrograms.length !== 2}>
-        </Button>
-      </Grid>
-      <Grid item xs={12}>
-        {programBoxes}
       </Grid>
     </Grid>
   )

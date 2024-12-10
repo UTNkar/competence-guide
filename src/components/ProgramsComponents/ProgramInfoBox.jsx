@@ -50,7 +50,6 @@ function ProgramInfoBox(props) {
             onChange={() => onSelectProgram(name)}
             inputProps={{ 'aria-label': 'Select program' }}
           />
-          <h2>{name}</h2>
         </Grid>
       </Grid>
       <Grid container>
