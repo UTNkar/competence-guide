@@ -112,7 +112,7 @@ function Navbar() {
               sizes="190px" className={`${styles.logo_icon}`}></img></a>
           <div className={`${styles.w_layout_vflex} ${styles.navbar_menu_wrapper} ${styles.navbar_menu_wrapper_mobile} ${hamburgerIconState ? '' : styles.open}`}>
             <nav className={`${styles.navbar_menu}`}>
-
+              <div className={`${styles.navbar_popover_arrow} ${styles.main_menu}`}></div>
               {Tabs.map(({ title, items }) => {
                 return (
                   <div className={`${styles.navbar_dropdown_item_wrapper}`}>
@@ -123,12 +123,6 @@ function Navbar() {
               }
             </nav>
           </div>
-
-
-          
-          <div class="navbar-menu-overlay" ></div> 
-          {/* opacity: 1; display: block; */}
-
 
           <div className={`${styles.hamburger}`}>
 

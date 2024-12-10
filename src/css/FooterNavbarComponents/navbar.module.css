@@ -477,7 +477,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
         position: relative;
         width: 32px;
         height: 32px;
-        margin-right: 0.5rem;
+        margin-right: 6px;
         margin-left: auto; /* Push this item to the right */
         cursor: pointer;
     }
@@ -619,6 +619,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
         animation: open_dropdown 0.2s;
         animation-fill-mode: forwards;
         display: block; 
+        right: 0px
     }
 
     .navbar_menu_overlay {
@@ -636,7 +637,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
     }
 
 
-    .navbar_popover_arrow {
+    .navbar_popover_arrow.main_menu {
         display: block;
         right: 22px
     }
@@ -671,7 +672,7 @@ h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decora
 }
 
 @media screen and (max-width: 479px) {
-    .navbar_popover_arrow {
+    .navbar_popover_arrow.main_menu {
         right: 22px
     }
 
