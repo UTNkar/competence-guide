@@ -49,14 +49,6 @@ export default function CompareAccordion(props) {
         <Grid item xs={6}>
           <h3>{props.title}</h3>
         </Grid>
-        <Grid item xs={6}>
-          <IconButton
-            className={styles.closeButton}
-            onClick={props.handleCloseAccordion}
-          >
-            <CloseIcon />
-          </IconButton>
-        </Grid>
       </Grid>
       <Box className={styles.accordionBox}>
       {allPrograms.map((item, index) => {
