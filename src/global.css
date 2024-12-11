@@ -171,10 +171,6 @@ h1:not(.without_decoration):after, h2:not(.without_decoration):after, h3:not(.wi
     display: block;
 }
 
-.noAfter{
-    margin-top: 0.75em;
-    margin-bottom: 5em;
-}
 
 
 

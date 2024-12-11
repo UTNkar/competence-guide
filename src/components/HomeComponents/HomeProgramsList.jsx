@@ -69,7 +69,7 @@ const HomeProgramsList = () => {
     oneColumn = true
   }
 
-   // split master into 3 columns if not one
+   // split master into 3 columns if not oneColumn
    if (!oneColumn){
     var chunksize = listContent[3].listItems.length / 3
     var chunk1 = listContent[3].listItems.slice(0,chunksize)
@@ -82,7 +82,7 @@ const HomeProgramsList = () => {
 
   }
 
-  // Create 3 columns of programs and Master underneath
+  
 
   const programsList = listContent.map((column, index) => {
     var verticalBar = ''
