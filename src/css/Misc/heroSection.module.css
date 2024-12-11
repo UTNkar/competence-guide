@@ -28,7 +28,16 @@
     padding: 20px;
 }
 
+
 .pageDescription {
     padding: 30px 0;
 }
 
+
+@media screen and (max-width: 479px) {
+
+    .pageDescription {
+        padding: 0 0 10px 0;
+    }
+    }
+    

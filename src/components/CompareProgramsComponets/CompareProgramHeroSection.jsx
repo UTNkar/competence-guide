@@ -1,6 +1,5 @@
 //MUI
 import { Grid, Typography, Link } from '@mui/material'
-import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 import styles from '../../css/Misc/heroSection.module.css'
 
 export default function CompareProgramHeroSection() {
@@ -9,20 +8,8 @@ export default function CompareProgramHeroSection() {
       <Grid container item xs={12}>
         <Grid item xs={6}>
           <h1>
-            Jämför program
+            Jämför kompetens
           </h1>
-        </Grid>
-        <Grid className={styles.breadcrumbs} item xs={6}>
-          <Typography
-            variant='body1'
-            className={styles.breadcrumbsText}
-            color='inherit'
-          >
-            <Link href='https://utn.se'>Hem</Link>{' '}
-            <ArrowRightIcon className={styles.arrowRight} />
-            <Link href='/'>Kompetensguiden</Link>{' '}
-            <ArrowRightIcon className={styles.arrowRight} /> Jämför kompetens
-          </Typography>
         </Grid>
       </Grid>
       <Grid item xs={12}>

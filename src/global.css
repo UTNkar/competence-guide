@@ -58,7 +58,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
 body {
@@ -66,7 +66,7 @@ body {
     color: var(--text-primary);
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px
+    line-height: 26px;
 }
 
 section {
@@ -100,7 +100,7 @@ h1 {
     margin-bottom: .75em;
     font-size: 38px;
     font-weight: 600;
-    line-height: 48px
+    line-height: 48px;
 }
 
 h2 {
@@ -109,7 +109,7 @@ h2 {
     margin-bottom: .5em;
     font-size: 24px;
     font-weight: 600;
-    line-height: 30px
+    line-height: 30px;
 }
 
 h3 {
@@ -147,7 +147,7 @@ h5 {
     margin-bottom: .75em;
     font-size: 16px;
     font-weight: 500;
-    line-height: 22px
+    line-height: 22px;
 }
 
 h6 {
@@ -156,7 +156,7 @@ h6 {
     margin-bottom: .75em;
     font-size: 13px;
     font-weight: 500;
-    line-height: 19px
+    line-height: 19px;
 }
 
 /* This works for the gray lines under the headings */
@@ -222,7 +222,7 @@ a:active, a:hover {
 /*put over_dark on parent elements*/
 .over_dark {
     color: var(--white);
-    position: relative
+    position: relative;
 }
 
 .over_dark h1::after, .over_dark h2::after, .over_dark h3::after, .over_dark h4::after, .over_dark h5::after, .over_dark h6::after {
@@ -232,37 +232,37 @@ a:active, a:hover {
 
 @media screen and (max-width: 991px) {
     h3 {
-        font-weight:600
+        font-weight:600;
     }
 
     .section {
-        margin-top: 4em
+        margin-top: 4em;
     }
 
     .spacer.less {
-        margin-top: .5em
+        margin-top: .5em;
     }
 }
 
 @media screen and (max-width: 767px) {
     h1 {
-        max-width:var(--mobile-text-width)
+        max-width:var(--mobile-text-width);
     }
 
     h2 {
-        max-width: 35ch
+        max-width: 35ch;
     }
 
     h3 {
-        max-width: var(--mobile-text-width)
+        max-width: var(--mobile-text-width);
     }
 
     h4 {
-        max-width: 50ch
+        max-width: 50ch;
     }
 
     h5,h6,p,li,blockquote,figcaption {
-        max-width: var(--mobile-text-width)
+        max-width: var(--mobile-text-width);
     }
 }
 

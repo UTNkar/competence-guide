@@ -1,34 +1,45 @@
 // MUI
 import { styled } from '@mui/material/styles'
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import MuiAccordion from '@mui/material/Accordion'
 import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
-import { Typography, List, ListItemButton, ListItemText } from '@mui/material'
+import { Typography, List, ListItemButton } from '@mui/material'
 import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({}))
+))(({ theme }) => ({
+  margin: 0, 
+  '&:before': {
+    display: 'none', 
+  },
+}));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    expandIcon={<ArrowRightIcon className={styles.arrowIcon}  />}
     {...props}
   />
 ))(({ theme }) => ({
   flexDirection: 'row-reverse',
+  padding: 0,
+  minHeight: 'fit-content', 
+  '&.Mui-expanded': {
+    minHeight: 'fit-content', 
+  },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
   },
   '& .MuiAccordionSummary-content': {
-    marginLeft: theme.spacing(1),
+    margin: 0, 
+    padding: 0, 
   },
 }))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(1),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
+  padding: 0,
+  margin: 0
 }))
 
 export default function GenerateCompareAccordion(props) {
@@ -39,7 +50,9 @@ export default function GenerateCompareAccordion(props) {
         className={styles.listItemButton}
         key={index}
       >
-        <ListItemText primary={item.name} />
+        <Typography className={styles.listItemText}>
+          {item.name}
+        </Typography>
       </ListItemButton>
     )
   })
@@ -51,8 +64,8 @@ export default function GenerateCompareAccordion(props) {
       expanded={props.expanded === panelNumber}
       onChange={props.handleChange(panelNumber)}
     >
-      <AccordionSummary>
-        <Typography>{props.title}</Typography>
+      <AccordionSummary className={styles.topProgramTitle} >
+        <Typography className={styles.programName}>{props.title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <List component='nav'>{listOfLinks}</List>
