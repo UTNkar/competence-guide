@@ -3,7 +3,10 @@
 }
 
 .heroInfoBox {
-    margin: 20px 0;
+    margin: 20px 0px;
+}
+.heroDescription {
+    font-weight: normal !important;
 }
 
 /*TODO: Remove*/

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
+import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles'
 import {
   MenuItem,
@@ -10,6 +11,7 @@ import {
   Box,
 } from '@mui/material'
 
+import '../../global.css'
 // This is the the two dropdown menues for the program filtering page
 
 const ITEM_HEIGHT = 48
@@ -58,22 +60,30 @@ export default function MultipleSelectChip(props) {
     )
   }
 
+  var deleteIcon = (
+    <CloseIcon className={styles.chipCloseButton}></CloseIcon>
+  )
+
+
   return (
     <div>
-      <h2 className={styles.filterHeader}>{props.label}</h2>
       <FormControl className={styles.form} variant='standard'>
+        <h2 className={`${styles.filterHeader} without_after`}>{props.label}</h2>
         <Select
           multiple
           value={selectedItems}
           label={props.label}
           onChange={handleChange}
+          // disableUnderline
           renderValue={(selected) => (
             <Box className={styles.chipsBox}>
               {selected.map((value, index) => (
                 <Chip
                   key={value}
+                  className={styles.chip}
                   label={value}
                   onDelete={() => handleDelete(index)}
+                  deleteIcon={deleteIcon}
                   onMouseDown={(event) => {
                     event.stopPropagation()
                   }}
@@ -82,6 +92,24 @@ export default function MultipleSelectChip(props) {
             </Box>
           )}
           MenuProps={MenuProps}
+          sx={{
+            "& .MuiSelect-icon": {
+              color: "#dedede", // Change icon color
+              fontSize: "2.5rem", // Change icon size
+            },   
+            /* default */
+            "&.MuiInput-underline:before": {
+              borderBottom: "2px solid #dedede",
+            },
+            /* hover */
+            "&.MuiInput-underline:hover:before": {
+              borderBottom: "2px solid #dbebff"
+            },
+            /* focused */
+            "&.MuiInput-underline:after": {
+              borderBottom: "2px solid #dedede",
+            }
+          }}
         >
           {names.map((name) => (
             <MenuItem

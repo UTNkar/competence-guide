@@ -48,14 +48,14 @@ export default function FilterArea(props) {
 
   return (
     <Grid container className={styles.outerContainer}>
-      <Grid item xs={dropdownWidth} >
-        <CheckboxDropdown className={styles.selectSectionLeft}
+      <Grid item xs={dropdownWidth} className={styles.selectSectionLeft}>
+        <CheckboxDropdown 
           onItemChecked={handleTypeCheck}
           label='Typ av program'
           items={['Civilingenjör', 'Kandidat', 'Högskoleingenjör', 'Master']}
         />
       </Grid>
-      <Grid item xs={dropdownWidth} className={styles.selectSectionLeft}>
+      <Grid item xs={dropdownWidth} className={styles.selectSectionRight}>
         <CheckboxDropdown
           onItemChecked={handleProfessionChecked}
           label='Kompetenser'
