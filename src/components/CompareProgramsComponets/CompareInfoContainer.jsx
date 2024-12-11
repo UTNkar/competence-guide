@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 
 //MUI
@@ -32,10 +33,13 @@ export default function CompareInfoContainer() {
     columnWidth = 12
   }
 
+  const location = useLocation();
+  const { selectedPrograms } = location.state || {};
+  console.log(selectedPrograms[0])
   return (
     <Grid container>
       <Grid className={styles.outerContainer} item xs={columnWidth} container>
-        <AddProgramButton buttonTitle={'Program 1'} />
+        <AddProgramButton buttonTitle={'Program 1'} selectedProgram={selectedPrograms[0]} />
       </Grid>
       <Grid item xs={columnWidth} container className={styles.outerContainer}>
         <AddProgramButton buttonTitle={'Program 2'} />

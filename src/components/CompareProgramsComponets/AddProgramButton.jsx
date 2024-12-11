@@ -12,7 +12,7 @@ import CompareProgramInfoBox from './CompareProgramInfoBox'
 import programInformation from "../../assets/programInformation.json";
 import iFrames from "../../assets/iFrames";
 
-export default function CompareInfoContainer({ buttonTitle }) {
+export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   const [displayAccordion, setDisplayAccordion] = useState(false)
   const [selectedComparingProgram, setSelectedComparingProgram] = useState()
 
@@ -33,6 +33,7 @@ export default function CompareInfoContainer({ buttonTitle }) {
   }
 
   var ContainerContent
+  console.log(selectedProgram)
   if (selectedComparingProgram === undefined) {
     if (displayAccordion) {
       // Accordions are displayed, user is choosing

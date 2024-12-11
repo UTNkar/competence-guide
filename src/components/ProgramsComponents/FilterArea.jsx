@@ -35,7 +35,7 @@ const FilterArea = (props) => {
 
   const handleCompare = () => {
     //const [program1, program2] = selectedPrograms;
-    navigate(`/compare`);
+    navigate(`/compare`, {state: {selectedPrograms}});
   };
 
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
