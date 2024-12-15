@@ -41,21 +41,21 @@ export default function FilterArea(props) {
   }
 
   // Adjust layout based on screen width
-  var dropdownWidth = 6
-  if (windowSize[0] < 880) {
+  var dropdownWidth = 5.5
+  if (windowSize[0] < 767) {
     dropdownWidth = 12
   }
 
   return (
-    <Grid container className={styles.outerContainer}>
-      <Grid item xs={dropdownWidth} className={styles.selectSectionLeft}>
+    <Grid container className={styles.boxContainer}>
+      <Grid item  xs={dropdownWidth}>
         <CheckboxDropdown 
           onItemChecked={handleTypeCheck}
           label='Typ av program'
           items={['Civilingenjör', 'Kandidat', 'Högskoleingenjör', 'Master']}
         />
       </Grid>
-      <Grid item xs={dropdownWidth} className={styles.selectSectionRight}>
+      <Grid item  xs={dropdownWidth}>
         <CheckboxDropdown
           onItemChecked={handleProfessionChecked}
           label='Kompetenser'
