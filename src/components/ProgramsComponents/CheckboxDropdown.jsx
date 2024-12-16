@@ -68,7 +68,7 @@ export default function MultipleSelectChip(props) {
   return (
     <div>
       <FormControl className={styles.form} variant='standard'>
-        <h2 className={`${styles.filterHeader} without_after`}>{props.label}</h2>
+        <h2 className={`${styles.filterHeader} without_decoration`}>{props.label}</h2>
         <Select
           multiple
           value={selectedItems}

@@ -138,6 +138,3 @@
     margin: 0;
 }
 
-.noAfter:after {
-    content: none !important; /* Removes the :after pseudo-element */
-  }

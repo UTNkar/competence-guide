@@ -45,14 +45,14 @@ var isLong = name.length > 20
     <Paper elevation={0} className={styles.programInfoBoxPaper}>
       <Grid container >
         <Grid item xs={isLong ? 12 : 5} >
-            <h2 className= {isLong ? `${styles.programTitle} ${styles.noAfter}` : `${styles.programTitle}`}>{name}</h2>
+            <h2 className= {isLong ? `${styles.programTitle} without_decoration` : `${styles.programTitle} without_decoration`}>{name}</h2>
         </Grid>
 
         <Grid item xs={isLong ? 12 : 7}  >
-          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} ${styles.noAfter}`: `${styles.typeAndLength} ${styles.noAfter}`}>
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration`: `${styles.typeAndLength} without_decoration`}>
             {type}
           </h2>
-          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} ${styles.noMargin}` : `${styles.typeAndLength} ${styles.noAfter} ${styles.noMargin}`}>
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration` : `${styles.typeAndLength} without_decoration ${styles.noMargin}`}>
             {length} år - {credits} hp
           </h2>
         </Grid>
