@@ -38,10 +38,10 @@ export default function CompareInfoContainer() {
   return (
     <Grid container>
       <Grid className={styles.outerContainer} item xs={columnWidth} container>
-        <AddProgramButton buttonTitle={'Program 1'} selectedProgram={selectedPrograms[0]} />
+        <AddProgramButton buttonTitle={'Välj program'} selectedProgram={selectedPrograms[0]} />
       </Grid>
       <Grid item xs={columnWidth} container className={styles.outerContainer}>
-        <AddProgramButton buttonTitle={'Program 2'} selectedProgram={selectedPrograms[1]} />
+        <AddProgramButton buttonTitle={'Välj program'} selectedProgram={selectedPrograms[1]} />
       </Grid>
     </Grid>
   )

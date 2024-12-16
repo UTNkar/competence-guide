@@ -12,13 +12,10 @@ import CompareProgramInfoBox from './CompareProgramInfoBox'
 import programInformation from "../../assets/programInformation.json";
 import iFrames from "../../assets/iFrames";
 
+
 export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
-  const [displayAccordion, setDisplayAccordion] = useState(false)
   const [selectedComparingProgram, setSelectedComparingProgram] = useState(selectedProgram ? { name: selectedProgram, data: programInformation[selectedProgram] } : undefined)
 
-  const handleClicked = () => {
-    setDisplayAccordion(!displayAccordion)
-  }
 
   const handleContainerChange = (programName) => {
     const data = programInformation[programName];
@@ -28,13 +25,11 @@ export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   };
 
   const handleCloseContainer = () => {
-    setDisplayAccordion(false)
     setSelectedComparingProgram(undefined)
   }
 
   var ContainerContent
   if (selectedComparingProgram === undefined) {
-    if (displayAccordion) {
       // Accordions are displayed, user is choosing
       ContainerContent = (
         <CompareAccordion
@@ -43,23 +38,6 @@ export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
           title={buttonTitle}
         />
       )
-    } else {
-      // Button "Jämför program" is yet to be pressed
-      ContainerContent = (
-        <Button className={styles.containerContent} onClick={handleClicked}>
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant='body1' className={styles.addProgramText}>
-                Lägg till ett program
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <AddIcon className={styles.addProgramIcon} />
-            </Grid>
-          </Grid>
-        </Button>
-      )
-    }
   } else {
     const name = selectedComparingProgram.name
     const data = selectedComparingProgram.data
