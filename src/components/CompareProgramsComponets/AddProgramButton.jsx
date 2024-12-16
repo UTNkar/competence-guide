@@ -14,7 +14,7 @@ import iFrames from "../../assets/iFrames";
 
 export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   const [displayAccordion, setDisplayAccordion] = useState(false)
-  const [selectedComparingProgram, setSelectedComparingProgram] = useState(selectedProgram ? { name: selectedProgram } : undefined)
+  const [selectedComparingProgram, setSelectedComparingProgram] = useState(selectedProgram ? { name: selectedProgram, data: programInformation[selectedProgram] } : undefined)
 
   const handleClicked = () => {
     setDisplayAccordion(!displayAccordion)
