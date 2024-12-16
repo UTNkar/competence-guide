@@ -35,14 +35,13 @@ export default function CompareInfoContainer() {
 
   const location = useLocation();
   const { selectedPrograms } = location.state || {};
-  console.log(selectedPrograms[0])
   return (
     <Grid container>
       <Grid className={styles.outerContainer} item xs={columnWidth} container>
         <AddProgramButton buttonTitle={'Program 1'} selectedProgram={selectedPrograms[0]} />
       </Grid>
       <Grid item xs={columnWidth} container className={styles.outerContainer}>
-        <AddProgramButton buttonTitle={'Program 2'} />
+        <AddProgramButton buttonTitle={'Program 2'} selectedProgram={selectedPrograms[1]} />
       </Grid>
     </Grid>
   )

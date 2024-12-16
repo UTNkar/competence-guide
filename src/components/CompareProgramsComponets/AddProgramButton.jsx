@@ -14,7 +14,7 @@ import iFrames from "../../assets/iFrames";
 
 export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   const [displayAccordion, setDisplayAccordion] = useState(false)
-  const [selectedComparingProgram, setSelectedComparingProgram] = useState()
+  const [selectedComparingProgram, setSelectedComparingProgram] = useState(selectedProgram ? { name: selectedProgram } : undefined)
 
   const handleClicked = () => {
     setDisplayAccordion(!displayAccordion)
@@ -33,7 +33,6 @@ export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   }
 
   var ContainerContent
-  console.log(selectedProgram)
   if (selectedComparingProgram === undefined) {
     if (displayAccordion) {
       // Accordions are displayed, user is choosing
