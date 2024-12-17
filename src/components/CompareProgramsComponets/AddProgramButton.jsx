@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styles from '../../css/CompareProgramsComponents/comparePrograms.module.css'
 //MUI
 import { Grid, Button, Typography } from '@mui/material'
 import { ReactComponent as AddIcon } from '../../assets/AddIcon.svg'
@@ -30,6 +29,7 @@ export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
   }
 
   var ContainerContent
+
   if (selectedComparingProgram === undefined) {
       // Accordions are displayed, user is choosing
       ContainerContent = (

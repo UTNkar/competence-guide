@@ -34,13 +34,13 @@ export default function CompareInfoContainer({ selectedPrograms }) {
         <Grid className={styles.outerContainer} item xs={columnWidth} container>
           <AddProgramButton 
           buttonTitle={'Program 1'} 
-          selectedPrograms={selectedPrograms[0]}
+          selectedProgram={selectedPrograms[0]}
           />
         </Grid>
         <Grid item xs={columnWidth} container className={styles.outerContainer}>
           <AddProgramButton 
           buttonTitle={'Program 2'} 
-          selectedPrograms={selectedPrograms[1]}
+          selectedProgram={selectedPrograms[1]}
           />
         </Grid>
       </Grid>
