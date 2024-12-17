@@ -12,14 +12,10 @@ import CompareProgramInfoBox from './CompareProgramInfoBox'
 import programInformation from "../../assets/programInformation.json";
 import iFrames from "../../assets/iFrames";
 
-export default function CompareInfoContainer({ buttonTitle, selectedPrograms }) {
-  const [displayAccordion, setDisplayAccordion] = useState(false)
-  const [selectedComparingProgram, setSelectedComparingProgram] = useState()
-  console.log(selectedPrograms)
 
-  const handleClicked = () => {
-    setDisplayAccordion(!displayAccordion)
-  }
+export default function CompareInfoContainer({ buttonTitle, selectedProgram }) {
+  const [selectedComparingProgram, setSelectedComparingProgram] = useState(selectedProgram ? { name: selectedProgram, data: programInformation[selectedProgram] } : undefined)
+
 
   const handleContainerChange = (programName) => {
     const data = programInformation[programName];
@@ -29,28 +25,12 @@ export default function CompareInfoContainer({ buttonTitle, selectedPrograms }) 
   };
 
   const handleCloseContainer = () => {
-    setDisplayAccordion(false)
     setSelectedComparingProgram(undefined)
     
   }
 
   var ContainerContent
-
-  if (selectedPrograms) {
-    // If there is a selected program passed via props
-    const name = selectedPrograms
-    const data = programInformation[name]
-    const iframes = iFrames[name]
-    ContainerContent = (
-      <CompareProgramInfoBox
-        iframes={iframes}
-        handleCloseAccordion={handleCloseContainer}
-        name={name}
-        data={data}
-      />
-    )
-  } else if (selectedComparingProgram === undefined) {
-    if (displayAccordion) {
+  if (selectedComparingProgram === undefined) {
       // Accordions are displayed, user is choosing
       ContainerContent = (
         <CompareAccordion
@@ -59,22 +39,6 @@ export default function CompareInfoContainer({ buttonTitle, selectedPrograms }) 
           title={buttonTitle}
         />
       )
-    } else {
-      ContainerContent = (
-        <Button className={styles.containerContent} onClick={handleClicked}>
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant='body1' className={styles.addProgramText}>
-                Lägg till ett program
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <AddIcon className={styles.addProgramIcon} />
-            </Grid>
-          </Grid>
-        </Button>
-      )
-    }
   } else {
     const name = selectedComparingProgram.name
     const data = selectedComparingProgram.data
