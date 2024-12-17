@@ -433,7 +433,7 @@ a:hover {
     cursor: pointer;
 }
 
-h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+/* h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     height: 0.3ch;
     margin-top: 0.75em;
     margin-bottom: 1em;
@@ -442,7 +442,7 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     content: "";
     background-color: var(--heading-decoration, rgba(0, 0, 0, 0.1));
     display: block;
-}
+} */
 
 h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decoration), h4:not(.without_decoration), h5:not(.without_decoration), h6:not(.without_decoration) {
     margin-bottom: 0;
