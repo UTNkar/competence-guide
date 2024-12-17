@@ -47,15 +47,7 @@ export default function CompareAccordion(props) {
     <Container className={styles.compareAccordionContainer}>
       <Grid container className={styles.headingContainer}>
         <Grid item xs={6}>
-          <Typography variant='h6'>{props.title}</Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <IconButton
-            className={styles.closeButton}
-            onClick={props.handleCloseAccordion}
-          >
-            <CloseIcon />
-          </IconButton>
+          <h3>{props.title}</h3>
         </Grid>
       </Grid>
       <Box className={styles.accordionBox}>

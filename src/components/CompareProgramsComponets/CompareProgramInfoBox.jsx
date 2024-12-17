@@ -11,9 +11,10 @@ import {
   IconButton,
 } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
+import KeyboardBackspaceRoundedIcon from '@mui/icons-material/KeyboardBackspaceRounded';
 
 function CompareProgramInfoBox(props) {
-  const [extendedDescription, setExtendedDescription] = useState(false);
+  const [extendedDescription, setExtendedDescription] = useState(false)
 
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
@@ -52,55 +53,46 @@ function CompareProgramInfoBox(props) {
   }
 
   return (
-    <Paper className={styles.compareProgramInfoBoxPaper}>
+    <Paper 
+      elevation={0} 
+      sx = {{borderRadius: '10px'}}
+      className={styles.compareProgramInfoBoxPaper}>
+      <IconButton
+        className={styles.closeButton}
+        onClick={() => props.handleCloseAccordion()}
+      >
+        <KeyboardBackspaceRoundedIcon className={styles.closeButtonIcon}/>
+      </IconButton>
       <Grid container>
         <Grid item xs={12}>
           <Grid container className={styles.headingContainer}>
             <Grid item xs={6}>
-              <Typography variant='h5'>
-                <b>{name}</b>
-              </Typography>
+              <h3>{name}</h3>
             </Grid>
-            <Grid item xs={6}>
-              <IconButton
-                className={styles.closeButton}
-                onClick={() => props.handleCloseAccordion()}
-              >
-                <CloseIcon />
-              </IconButton>
+            <Grid item xs={6} className={styles.headingRight}>
+              <h4>
+                {type}
+                <br />
+                {length} år ({credits} hp)
+              </h4>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={typeColumnWidth}>
-          <Typography>
-            Typ: <b>{type}</b>
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography>
-            Längd:
-            <b>
-              {' '}
-              {length} år ({credits} hp)
-            </b>{' '}
-          </Typography>
-        </Grid>
         <Grid item xs={12}>
           {extendedDescription ? (
-            <Typography>
+            <p>
               {description} <br />
-              <Link target='_blank' href={url}>
+              <a target='_blank' href={url}>
                 Besök kursens hemsida
-              </Link>
-            </Typography>
+              </a>
+            </p>
           ) : (
-            <Typography>{description.slice(0, 90) + ' . . .'}</Typography>
+            <p >{description.slice(0, 90) + ' . . .'}</p>
           )}
         </Grid>
         <Grid item xs={12}>
           <Typography>
-            <Button onClick={handleExtendedDescription}>
-              {' '}
+            <Button onClick={handleExtendedDescription} className={styles.showMoreBtn}>
               {extendedDescription ? 'Visa mindre' : 'Visa mer'}
             </Button>
           </Typography>
@@ -115,4 +107,4 @@ function CompareProgramInfoBox(props) {
   )
 }
 
-export default CompareProgramInfoBox;
+export default CompareProgramInfoBox
