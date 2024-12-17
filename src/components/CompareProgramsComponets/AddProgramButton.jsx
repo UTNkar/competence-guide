@@ -12,9 +12,10 @@ import CompareProgramInfoBox from './CompareProgramInfoBox'
 import programInformation from "../../assets/programInformation.json";
 import iFrames from "../../assets/iFrames";
 
-export default function CompareInfoContainer({ buttonTitle }) {
+export default function CompareInfoContainer({ buttonTitle, selectedPrograms }) {
   const [displayAccordion, setDisplayAccordion] = useState(false)
   const [selectedComparingProgram, setSelectedComparingProgram] = useState()
+  console.log(selectedPrograms)
 
   const handleClicked = () => {
     setDisplayAccordion(!displayAccordion)
@@ -30,10 +31,25 @@ export default function CompareInfoContainer({ buttonTitle }) {
   const handleCloseContainer = () => {
     setDisplayAccordion(false)
     setSelectedComparingProgram(undefined)
+    
   }
 
   var ContainerContent
-  if (selectedComparingProgram === undefined) {
+
+  if (selectedPrograms) {
+    // If there is a selected program passed via props
+    const name = selectedPrograms
+    const data = programInformation[name]
+    const iframes = iFrames[name]
+    ContainerContent = (
+      <CompareProgramInfoBox
+        iframes={iframes}
+        handleCloseAccordion={handleCloseContainer}
+        name={name}
+        data={data}
+      />
+    )
+  } else if (selectedComparingProgram === undefined) {
     if (displayAccordion) {
       // Accordions are displayed, user is choosing
       ContainerContent = (
@@ -44,7 +60,6 @@ export default function CompareInfoContainer({ buttonTitle }) {
         />
       )
     } else {
-      // Button "Jämför program" is yet to be pressed
       ContainerContent = (
         <Button className={styles.containerContent} onClick={handleClicked}>
           <Grid container>
