@@ -1,0 +1,67 @@
+
+.buttonContainer {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    display: flex;
+    align-content: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.buttonWrapper{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%; 
+}
+
+
+.button {
+    background: #dbebff !important;
+    color: #004c98 !important;
+    border-radius: 5px !important;
+    margin-right: 30px !important;
+    box-shadow: none !important;
+    align-self: stretch !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+
+    text-transform: none !important;
+    font-family: var(--text) !important;
+    font-weight: 400 !important; 
+    font-size: 17px !important;
+    
+}
+
+.buttonSecondary{
+    background-color: #eee !important;
+    color: #212427 !important;
+    text-shadow: 0 1px 1px #0003 !important;
+} 
+
+.largeButtonSecondary{
+    background-color: #eee;;
+    color: #212427;
+    text-shadow: 0 1px 1px #0003;
+}
+
+.largeButton {
+    border-radius: var(--button-corner-radius) !important;
+    background-color: var(--blue-100) !important;
+    font-family: var(--text) !important;
+    color: var(--text-accent) !important;
+    text-align: center !important;
+    white-space: pre-line !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-self: stretch !important;
+    align-items: center !important;
+    margin-right: 5px !important;
+    padding: 14px 20px !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 19px !important;
+    transition: opacity .35s cubic-bezier(.23,1,.32,1) !important;
+    display: inline-block !important;
+}
