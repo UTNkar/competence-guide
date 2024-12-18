@@ -28,6 +28,7 @@
     padding-right: 30px !important;
 
     text-transform: none !important;
+    font-family: var(--text) !important;
     font-weight: 400 !important; 
     font-size: 17px !important;
     
