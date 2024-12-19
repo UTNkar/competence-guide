@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
 //MUI
-import { Paper, Grid, Button, Link } from '@mui/material'
+import {Checkbox, Paper, Grid, Button, Link } from '@mui/material'
 
 function ProgramInfoBox(props) {
   const [extendedDescription, setExtendedDescription] = useState(false)
@@ -27,6 +27,8 @@ function ProgramInfoBox(props) {
   const type = props.data.type
   const credits = props.data.credits
   const iframes = props.iframes
+  const isSelected = props.isSelected
+  const onSelectProgram = props.onSelectProgram
 
   // Toggle short/long description
   const handleExtendedDescription = () => {
@@ -41,6 +43,15 @@ function ProgramInfoBox(props) {
 
   return (
     <Paper elevation={0} className={styles.programInfoBoxPaper}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Checkbox
+            checked={isSelected}
+            onChange={() => onSelectProgram(name)}
+            inputProps={{ 'aria-label': 'Select program' }}
+          />
+        </Grid>
+      </Grid>
       <Grid container>
         <Grid item xs={6}>
           <h2>{name}</h2>
