@@ -7,10 +7,8 @@ import {
   Grid,
   Typography,
   Button,
-  Link,
   IconButton,
 } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close'
 import KeyboardBackspaceRoundedIcon from '@mui/icons-material/KeyboardBackspaceRounded';
 
 function CompareProgramInfoBox(props) {
@@ -34,11 +32,11 @@ function CompareProgramInfoBox(props) {
   })
 
   const name = props.name
-  const url = props.data.url
-  const length = props.data.length
-  const description = props.data.description
-  const type = props.data.type
-  const credits = props.data.credits
+  const url = props?.data?.url || 'default-url'
+  const length = props?.data?.length || ''
+  const description = props?.data?.description || 'default'
+  const type = props?.data?.type || 'default'
+  const credits = props?.data?.credits || '0'
   const iframes = props.iframes
 
   // Toggle short/long description

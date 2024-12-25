@@ -419,9 +419,6 @@
     margin-bottom: 0;
 }
 
-.without_decoration::after {
-    display: none;
-}
 
 body {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -429,6 +426,7 @@ body {
     -webkit-font-smoothing: antialiased !important;
   }
 
+<<<<<<< HEAD
 a:hover {
     cursor: pointer;
 }
@@ -447,6 +445,8 @@ a:hover {
 h1:not(.without_decoration), h2:not(.without_decoration), h3:not(.without_decoration), h4:not(.without_decoration), h5:not(.without_decoration), h6:not(.without_decoration) {
     margin-bottom: 0;
   }
+=======
+>>>>>>> dev
 
 .navbar_menu_overlay {
     opacity: 0;

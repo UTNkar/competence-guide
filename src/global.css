@@ -175,6 +175,7 @@ h1:not(.without_decoration):after, h2:not(.without_decoration):after, h3:not(.wi
 
 
 
+
 p {
     max-width: var(--desktop-text-width);
     font-family: var(--text-paragraph);

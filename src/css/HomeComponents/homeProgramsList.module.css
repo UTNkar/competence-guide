@@ -18,18 +18,11 @@
     padding: 10px 30px;
 }
 
-.columnHeader {
-    font-weight: 350;
-    color: #ffffff;
-    font-size: 26px;
-    
+.programsListHeader {
+    height: 40px
 }
 
-.columnItem {
-    font-weight: 350;
-    color: #ffffff;
-    font-size: 18px;
-}
+
 
 .programsListOuterContainer {
     color: white;

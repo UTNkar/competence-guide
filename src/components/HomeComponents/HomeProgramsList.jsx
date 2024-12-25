@@ -1,5 +1,6 @@
 import { useState, useEffect, Fragment } from 'react'
 import styles from '../../css/HomeComponents/homeProgramsList.module.css'
+import "../../global.css"
 //MUI
 import { Grid, List, ListItem, ListItemText } from '@mui/material'
 
@@ -32,6 +33,8 @@ const HomeProgramsList = () => {
     { header: 'Högskoleingenjör', listItems: [] },
     { header: 'Kandidat', listItems: [] },
     { header: 'Master', listItems: [] },
+    { header: ' ', listItems: [] },
+    { header: ' ', listItems: [] },
   ]
 
   for (const [key, value] of Object.entries(programInformation)) {
@@ -53,20 +56,36 @@ const HomeProgramsList = () => {
     listContent[index].listItems.push(key)
   }
 
-  var programColumnWidth = 2.93
+ 
+  
+  
+  var programColumnWidth = 4
   var oneColumn = false
 
   if (windowSize[0] < 960 && 640 < windowSize[0]) {
-    programColumnWidth = 5.95
+    programColumnWidth = 6
   } else if (640 > windowSize[0]) {
-    programColumnWidth = 11.95
+    programColumnWidth = 12
     oneColumn = true
   }
 
-  // Create 4 columns of programs
+   // split master into 3 columns if not oneColumn
+   if (!oneColumn){
+    var chunksize = listContent[3].listItems.length / 3
+    var chunk1 = listContent[3].listItems.slice(0,chunksize)
+    var chunk2 = listContent[3].listItems.slice(chunksize,chunksize * 2)
+    var chunk3 = listContent[3].listItems.slice(chunksize*2, -1)
+  
+    listContent[3].listItems = chunk1
+    listContent[4].listItems = chunk2
+    listContent[5].listItems = chunk3
+
+  }
+
+  
 
   const programsList = listContent.map((column, index) => {
-    var verticalBar = <div className={styles.verticalBar}></div>
+    var verticalBar = ''
 
     // Cases when vericalBar should be horizontal or removed
     if (column.header !== 'Master') {
@@ -82,7 +101,9 @@ const HomeProgramsList = () => {
     } else {
       verticalBar = ''
     }
+   
 
+    
     return (
       <Fragment key={index}>
         <Grid
@@ -90,18 +111,22 @@ const HomeProgramsList = () => {
           xs={programColumnWidth}
           container
           className={styles.column}
-          justifyContent={oneColumn ? 'center' : 'start'}
+          justifyContent={'start'}
         >
           <List>
-            <h2
-              className={styles.columnHeader}
-            >
+          <div className={styles.programsListHeader}>
+            <h3
+              className="without_decoration"
+              >
               {column.header}
-            </h2>
+            </h3>
+          </div>
+            
+          
             {column.listItems.map((item, index) => (
               <ListItem
                 key={index}
-                style={{ textAlign: oneColumn ? 'center' : 'start' }}
+                style={{ textAlign: 'start' }}
                 disablePadding
               >
                 <ListItemText primary={item}  className={styles.columnItem} disableTypography/>
@@ -113,6 +138,8 @@ const HomeProgramsList = () => {
       </Fragment>
     )
   })
+
+  
 
   return (
     <Grid className={styles.programsListOuterContainer} container>
