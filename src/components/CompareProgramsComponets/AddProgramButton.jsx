@@ -1,7 +1,4 @@
 import { useState } from 'react'
-//MUI
-import { Grid, Button, Typography } from '@mui/material'
-import { ReactComponent as AddIcon } from '../../assets/AddIcon.svg'
 
 //Custom components
 import CompareAccordion from './CompareAccordion'

@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 //Custom components
 import ProgramInfoBox from './ProgramInfoBox'
 import FilteredProgramBoxes from './FilteredProgramBoxes'
-import ProgramAccordion from './ProgramAccordion'
 import DropdownSection from './DropdownSection'
 
 import programInformation from "../../assets/programInformation.json"
@@ -26,10 +25,10 @@ for (const [key, value] of Object.entries(programInformation)) {
 
 const FilterArea = (props) => {
   // windowsize
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ])
+  // const [windowSize, setWindowSize] = useState([
+  //   window.innerWidth,
+  //   window.innerHeight,
+  // ])
 
   const navigate = useNavigate();
 
@@ -39,6 +38,16 @@ const FilterArea = (props) => {
   };
 
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
+
+  // useEffect(() => {
+  //   const handleWindowResize = () => {
+  //     setWindowSize([window.innerWidth, window.innerHeight])
+  //   }
+  //   window.addEventListener('resize', handleWindowResize)
+  //   return () => {
+  //     window.removeEventListener('resize', handleWindowResize)
+  //   }
+  // })
 
   const [selectedPrograms, setSelectedPrograms] = useState([]);
 
@@ -53,16 +62,6 @@ const FilterArea = (props) => {
       }
     });
   };
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight])
-    }
-    window.addEventListener('resize', handleWindowResize)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  })
 
   const [checkedItems, setCheckedItems] = useState({
     types: [],
@@ -112,19 +111,10 @@ const FilterArea = (props) => {
     isSelected={isSelected} />;
 });
 
-  var firstColWidth = 3
-  var secondColWidth = 9
 
-  if (windowSize[0] < 995) {
-    firstColWidth = 12
-    secondColWidth = 12
-  }
 
   return (
-    <Grid container>
-      <Grid item xs={firstColWidth}>
-        <ProgramAccordion />
-      </Grid>
+    <Grid container className={styles.dropdownSectionOuterContainer}>
       <Grid item xs={12} style={{ textAlign: 'center', margin: '20px 0' }}>
       <Button
           variant="contained"
@@ -136,10 +126,7 @@ const FilterArea = (props) => {
         </Button>
       </Grid>
       <Grid
-        className={styles.dropdownSectionOuterContainer}
-        item
-        xs={secondColWidth}
-      >
+        className={styles.dropdownSectionOuterContainer}>
         <DropdownSection
           checkedItems={checkedItems}
           setCheckedItems={setCheckedItems}

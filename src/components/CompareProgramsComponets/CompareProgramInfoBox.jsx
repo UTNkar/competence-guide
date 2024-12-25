@@ -7,10 +7,8 @@ import {
   Grid,
   Typography,
   Button,
-  Link,
   IconButton,
 } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close'
 import KeyboardBackspaceRoundedIcon from '@mui/icons-material/KeyboardBackspaceRounded';
 
 function CompareProgramInfoBox(props) {

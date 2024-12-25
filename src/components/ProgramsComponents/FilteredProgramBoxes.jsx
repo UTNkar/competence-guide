@@ -25,8 +25,8 @@ export default function FilteredProgramBoxes(props) {
   var columnWidth = 12
   var boxesRendered
 
-  if (windowSize[0] > 600) {
-    columnWidth = 6
+  if (windowSize[0] > 767) {
+    columnWidth = 5.5
     // Convenient for alphabetical order from top to bottom
     const firstRow = props.propgramBoxes.filter((e, i) => i % 2 !== 0)
     const secondRow = props.propgramBoxes.filter((e, i) => i % 2 === 0)
@@ -34,7 +34,7 @@ export default function FilteredProgramBoxes(props) {
     //TWO ROWS
 
     boxesRendered = (
-      <Grid container>
+      <Grid container className={styles.boxContainer}>
         <Grid item xs={columnWidth}>
           {firstRow.length !== 0
             ? firstRow.map((box, index) => (
@@ -42,7 +42,7 @@ export default function FilteredProgramBoxes(props) {
                   key={index + secondRow.length}
                   item
                   xs={12}
-                  className={styles.programBoxLeft}
+                  className={styles.programBox}
                 >
                   {box}
                 </Grid>
@@ -60,7 +60,7 @@ export default function FilteredProgramBoxes(props) {
                   key={index}
                   item
                   xs={12}
-                  className={styles.programBoxRight}
+                  className={styles.programBox}
                 >
                   {box}
                 </Grid>
@@ -73,7 +73,7 @@ export default function FilteredProgramBoxes(props) {
     // ONE ROW
     boxesRendered = props.propgramBoxes.map((box, i) => {
       return (
-        <Grid key={i} item xs={12}>
+        <Grid className={styles.programBox} key={i} item xs={12}>
           {box}
         </Grid>
       )

@@ -6,21 +6,50 @@
     padding-top: 20px;
 }
 
+.heroInfoBox {
+    margin: 20px 0px;
+}
+.heroDescription {
+    font-weight: normal !important;
+}
+
+/*TODO: Remove*/
 .breadcrumbs {
     text-align: right;
     position: relative;
 }
-
+/*TODO: Remove*/
 .breadcrumbsText {
     font-size: 12px;
     color: #9E9E9E;
 }
-
+/*TODO: Remove*/
 .arrowRight {
     position: relative;
     top: 8px;
 }
 
+<<<<<<< HEAD
+/*TODO move to home css file*/
+.buttonContainer {
+    background-color: #CFE3F9;
+    height: 200px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button {
+    background: #00459A !important;
+    text-transform: none !important;
+    font-weight: 500 !important; 
+    font-size: 17px !important;
+}
+=======
+>>>>>>> dev
 
 .circleContainer {
     position: relative;

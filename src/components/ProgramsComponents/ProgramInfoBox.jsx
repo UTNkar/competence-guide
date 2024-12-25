@@ -40,46 +40,49 @@ function ProgramInfoBox(props) {
   if (windowSize[0] < 880) {
     typeColumnWidth = 12
   }
+var isLong = name.length > 20
+
 
   return (
     <Paper elevation={0} className={styles.programInfoBoxPaper}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Checkbox
+      <Grid container >
+        <Grid item xs={isLong ? 12 : 5} >
+            <h2 className= {isLong ? `${styles.programTitle} without_decoration` : `${styles.programTitle} without_decoration`}>{name}</h2>
+
+        </Grid>
+        <Grid item xs={isLong ? 12 : 7}  >
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration`: `${styles.typeAndLength} without_decoration`}>
+            {type}
+          </h2>
+          <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration` : `${styles.typeAndLength} without_decoration ${styles.noMargin}`}>
+            {length} år - {credits} hp
+          </h2>
+        </Grid>
+      </Grid>
+      <Grid container>
+        
+        <Grid>
+        <Checkbox
             checked={isSelected}
             onChange={() => onSelectProgram(name)}
             inputProps={{ 'aria-label': 'Select program' }}
           />
         </Grid>
-      </Grid>
-      <Grid container>
-        <Grid item xs={6}>
-          <h2>{name}</h2>
-        </Grid>
-        <Grid item xs={typeColumnWidth}>
-          <h2 className={styles.typeAndLength}>
-            {type}
-          </h2>
-          <h2 className={styles.typeAndLength}>
-            {length} år - {credits} hp
-          </h2>
-        </Grid>
-        <Grid item xs={12}>
+          
+        <Grid item xs={12} className={styles.descriptionContainer}>
           {extendedDescription ? (
-            <p className={styles.description}>
+            <p>
               {description} <br />
               <Link target='_blank' href={url}>
                 Besök kursens hemsida
               </Link>
             </p>
           ) : (
-            <p className={styles.description}>{description.slice(0, 90) + ' . . .'}</p>
+            <p className={isLong ? `${styles.description}`: `${styles.description} ${styles.longDescription}`}>{description }</p>
           )}
-        </Grid>
-        <Grid item xs={12}>
-            <Button onClick={handleExtendedDescription} className={styles.button}>
-              {extendedDescription ? 'Visa mindre' : 'Visa mer'}
-            </Button>
+          <Button onClick={handleExtendedDescription} className={styles.button}>
+            {extendedDescription ? 'Visa mindre' : 'Visa mer'}
+          </Button>
         </Grid>
       </Grid>
       {extendedDescription && iframes && iframes.map((frame, index) => {

@@ -25,11 +25,6 @@ const HomeHeroSection = () => {
     }
   })
 
-  var buttonColumnWidth = 6
-  if (windowSize[0] < 520) {
-    buttonColumnWidth = 12
-  }
-
   return (
     <Grid container className={styles.heroSection}>
       <Grid container item xs={12}>
