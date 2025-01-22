@@ -115,16 +115,6 @@ const FilterArea = (props) => {
 
   return (
     <Grid container className={styles.dropdownSectionOuterContainer}>
-      <Grid item xs={12} style={{ textAlign: 'center', margin: '20px 0' }}>
-      <Button
-          variant="contained"
-          color="primary"
-          disabled={selectedPrograms.length !== 2}
-          onClick={handleCompare}
-        >
-          Compare Selected Programs
-        </Button>
-      </Grid>
       <Grid
         className={styles.dropdownSectionOuterContainer}>
         <DropdownSection
@@ -132,6 +122,18 @@ const FilterArea = (props) => {
           setCheckedItems={setCheckedItems}
         />
         <FilteredProgramBoxes propgramBoxes={programBoxes} />
+      </Grid>
+      <Grid className={styles.stickyBtn} item xs={12}>
+       
+          <Button
+              className={styles.Button}
+              variant="contained"
+              disabled={selectedPrograms.length !== 2}
+              onClick={handleCompare}
+              fullWidth             
+              >
+              Jämför Utbildningar
+          </Button>
       </Grid>
     </Grid>
   )
