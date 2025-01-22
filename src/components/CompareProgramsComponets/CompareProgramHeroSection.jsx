@@ -14,10 +14,10 @@ export default function CompareProgramHeroSection() {
       </Grid>
       <Grid item xs={12}>
         <p className={styles.pageDescription}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta hic
-          aliquid asperiores fugiat. Quidem, odio tenetur! Nemo repudiandae
-          doloribus libero totam dignissimos consectetur neque, nulla laborum
-          suscipit aliquid! Nesciunt, molestiae?
+          Här kan du välja två specifika program på Teknisk-Natuvetenskapliga fakulteten och få upp en kort beskrivning av dem.
+          I vissa fall kan du även få ett cirkeldiagram över vad programmen ägnar sig åt för att få en ännu bättre överblick över 
+          vad som skiljer programmen åt, och huruvida de har det du söker.
+
         </p>
       </Grid>
     </Grid>

@@ -14,10 +14,10 @@ const ProgramHeroSection = () => {
 
       <Grid item xs={12} className = {styles.heroInfoBox}>
           <p>   
-            Kompetensguiden är framtagen av kåren i dialog med företrädare från
-            universitetet. Syftet är att erbjuda framtida arbetsgivare en bra
-            bild över de utbildningsprogram Uppsala universitet erbjuder inom
-            teknik och naturvetenskap.
+            Här kan du läsa om alla program på Teknisk-Natuvetenskapliga fakulteten. 
+            Du kan välja att filtrera på typ av program, specifika kompetenser eller båda.
+            Du kan även välja att markera två stycken program som du är intresserad av att 
+            jämföra med varandra, och sedan gå vidare till "Jämföra program" där du får se enbart de två sida vid sida. 
           </p>
       </Grid>
     </Grid>
