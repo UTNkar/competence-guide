@@ -48,7 +48,7 @@ const HomeButtonSection = () => {
               className={`${styles.button} ${styles.buttonSecondary}`} 
               href='/compare'
             >
-              Jämför kompetens
+              Jämför program
             </Button>
           </Grid>
         </Grid>

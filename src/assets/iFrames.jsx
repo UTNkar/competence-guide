@@ -17,7 +17,7 @@ const iFrames = {
       title="År 1-3 Civilingenjörsprogrammet i industriell ekonomi"
     ></iframe>,
   ],
-  "Informationsteknogi": [
+  "Informationsteknologi": [
     <iframe
       height="500"
       key="2"
