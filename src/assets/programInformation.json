@@ -182,7 +182,7 @@
     },
     "hållbar utveckling i industriell teknik": {
         "id": "14",
-        "Program": "hållbar utveckling i industriell teknik",
+        "Program": "Hållbar utveckling i industriell teknik",
         "type": "Högskoleingenjör",
         "length": "3",
         "credits": "180",
@@ -196,7 +196,7 @@
     },
     "kärnkraftteknik": {
         "id": "15",
-        "Program": "kärnkraftteknik",
+        "Program": "Kärnkraftteknik",
         "type": "Högskoleingenjör",
         "length": "3",
         "credits": "180",
@@ -231,7 +231,7 @@
     },
     "Medicin teknik": {
         "id": "17",
-        "Program": "Medicin teknik",
+        "Program": "Medicinsk teknik",
         "type": "Högskoleingenjör",
         "length": "3",
         "credits": "180",
@@ -331,7 +331,7 @@
     },
     "ledarskap – kvalitet – förbättring": {
         "id": "23",
-        "Program": "ledarskap – kvalitet – förbättring",
+        "Program": "Ledarskap – kvalitet – förbättring",
         "type": "Kandidat",
         "length": "3",
         "credits": "180",
@@ -549,7 +549,7 @@
     },
     "Fysik  för hållbar energi och komplexa system": {
         "id": "40",
-        "Program": "Fysik  för hållbar energi och komplexa system",
+        "Program": "Fysik för hållbar energi och komplexa system",
         "type": "Master",
         "length": "2",
         "credits": "120",
@@ -702,7 +702,7 @@
     },
     "Kemi - Bio- nanomaterial": {
         "id": "51",
-        "Program": "Kemi - Bio- nanomaterial",
+        "Program": "Kemi - Bio - nanomaterial",
         "type": "Master",
         "length": "2",
         "credits": "120",
