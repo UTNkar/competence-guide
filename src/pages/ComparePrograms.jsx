@@ -1,6 +1,5 @@
 //MUI
 import { Container } from '@mui/material'
-import styles from '../css/Pages/comparePrograms.module.css'
 import { useLocation } from 'react-router-dom';
 
 //Custom components
@@ -12,7 +11,7 @@ function ComparePrograms() {
   const { selectedPrograms } = location.state || { selectedPrograms: [] };
 
   return (
-    <Container className={styles.pageContainer}>
+    <Container className="pageContainer">
       <CompareProgramHeroSection />
       <CompareInfoContainer selectedPrograms={selectedPrograms} />
     </Container>

@@ -9,7 +9,7 @@ import { Container } from '@mui/material'
 
 function Home() {
   return (
-    <Container>
+    <Container className="pageContainer">
       <HomeHeroSection />
       <HomeInfo />
       <HomeButtonSection/>

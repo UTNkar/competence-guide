@@ -8,7 +8,7 @@ export default function CompareProgramHeroSection() {
       <Grid container item xs={12}>
         <Grid item xs={6}>
           <h1>
-            Jämför kompetens
+            Jämför program
           </h1>
         </Grid>
       </Grid>

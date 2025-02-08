@@ -220,7 +220,9 @@ a:active, a:hover {
     margin-bottom: 0;
 }
 
-
+.pageContainer {
+    padding: 0px 50px 20px 50px !important;
+}
 
 
 /*put over_dark on parent elements*/

@@ -12,13 +12,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    padding-right: 10px;
 
 }
 
 .chip {
     background-color: #dbebff !important;
     color: #004c98 !important;
-
     font-family: Outfit, sans-serif !important;
     font-size: 14px !important;
     font-weight: 500 !important;
@@ -53,6 +53,7 @@
 
 .dropdownSectionOuterContainer {
     margin-bottom: 100px;
+    width: 100%;
 }
 
 .Button{

@@ -23,21 +23,21 @@ export default function CompareInfoContainer({ selectedPrograms }) {
       window.removeEventListener('resize', handleWindowResize)
     }
   }, [])
-  var columnWidth = 6
-  if (windowSize[0] < 967) {
+  var columnWidth = 5.5
+  if (windowSize[0] < 867) {
     columnWidth = 12
   }
   if (selectedPrograms && selectedPrograms.length === 2) {
     console.log(selectedPrograms)
     return (
-      <Grid container>
-        <Grid className={styles.outerContainer} item xs={columnWidth} container>
+      <Grid container className={styles.outerContainer}>
+        <Grid  item xs={columnWidth} container className={styles.programBox}>
           <AddProgramButton 
           buttonTitle={'Program 1'} 
           selectedProgram={selectedPrograms[0]}
           />
         </Grid>
-        <Grid item xs={columnWidth} container className={styles.outerContainer}>
+        <Grid item xs={columnWidth} container className={styles.programBox}>
           <AddProgramButton 
           buttonTitle={'Program 2'} 
           selectedProgram={selectedPrograms[1]}
@@ -47,11 +47,11 @@ export default function CompareInfoContainer({ selectedPrograms }) {
     )
   } else {
     return (
-      <Grid container>
-        <Grid className={styles.outerContainer} item xs={columnWidth} container>
+      <Grid container className={styles.outerContainer}>
+        <Grid  item xs={columnWidth} container className={styles.programBox}>
           <AddProgramButton buttonTitle={'Program 1'} />
         </Grid>
-        <Grid item xs={columnWidth} container className={styles.outerContainer}>
+        <Grid item xs={columnWidth} container className={styles.programBox} >
           <AddProgramButton buttonTitle={'Program 2'} />
         </Grid>
       </Grid>
