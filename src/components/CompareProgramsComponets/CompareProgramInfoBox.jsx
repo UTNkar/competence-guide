@@ -45,8 +45,8 @@ function CompareProgramInfoBox(props) {
   }
 
   // Adjust layout based on screen width
-  var typeColumnWidth = 6
-  if (windowSize[0] < 967) {
+  var typeColumnWidth = 5.5
+  if (windowSize[0] < 867) {
     typeColumnWidth = 12
   }
 
@@ -98,7 +98,12 @@ function CompareProgramInfoBox(props) {
       </Grid>
       {iframes !== undefined
         ? iframes.map((frame, index) => {
-            return frame
+            return  (
+              <div key={index}>
+                <h3>{frame.props.title}</h3>
+                {frame}
+              </div>
+            );
           })
         : ''}
     </Paper>

@@ -25,7 +25,7 @@ export default function FilteredProgramBoxes(props) {
   var columnWidth = 12
   var boxesRendered
 
-  if (windowSize[0] > 767) {
+  if (windowSize[0] > 867) {
     columnWidth = 5.5
     // Convenient for alphabetical order from top to bottom
     const firstRow = props.propgramBoxes.filter((e, i) => i % 2 !== 0)
