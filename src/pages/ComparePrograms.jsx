@@ -1,6 +1,7 @@
 //MUI
 import { Container } from '@mui/material'
 import { useLocation } from 'react-router-dom';
+import BackButton from '../components/BackButton'
 
 //Custom components
 import CompareProgramHeroSection from '../components/CompareProgramsComponets/CompareProgramHeroSection'
@@ -13,6 +14,7 @@ function ComparePrograms() {
   return (
     <Container className="pageContainer">
       <CompareProgramHeroSection />
+      <BackButton />
       <CompareInfoContainer selectedPrograms={selectedPrograms} />
     </Container>
   )
