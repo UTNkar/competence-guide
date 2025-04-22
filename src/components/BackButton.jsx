@@ -6,7 +6,7 @@ const BackButton = () => {
   const navigate = useNavigate();
 
   return (
-    <Grid  className={styles.buttonContainer}>
+    <Grid  className={`${styles.backButtonContainer} ${styles.buttonContainer}`}>
             <Button
               variant='contained'
               className={styles.button}

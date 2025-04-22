@@ -1,10 +1,10 @@
 //MUI
-import { Grid, Typography, Link } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import styles from '../../css/Misc/heroSection.module.css'
 
 export default function CompareProgramHeroSection() {
   return (
-    <Grid container className={styles.heroSection}>
+    <Box container className={styles.heroSection}>
       <Grid container item xs={12}>
         <Grid item xs={6}>
           <h1>
@@ -20,6 +20,6 @@ export default function CompareProgramHeroSection() {
 
         </p>
       </Grid>
-    </Grid>
+    </Box>
   )
 }

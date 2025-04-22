@@ -34,7 +34,6 @@ const HomeHeroSection = () => {
           </h1>
         </Grid>
       </Grid>
-
     </Grid>
   )
 }

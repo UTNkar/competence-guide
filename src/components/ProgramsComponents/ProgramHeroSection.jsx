@@ -1,11 +1,11 @@
 // MUI
-import { Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 
 import styles from '../../css/Misc/heroSection.module.css'
 
 const ProgramHeroSection = () => {
   return (
-    <Grid container item xs={12}>
+    <Box container item xs={12}>
       <Grid item xs={12} className={styles.heroSection}>
         <h1 >
           Hitta kompetens
@@ -20,7 +20,7 @@ const ProgramHeroSection = () => {
             jämföra med varandra, och sedan gå vidare till "Jämföra program" där du får se enbart de två sida vid sida. 
           </p>
       </Grid>
-    </Grid>
+    </Box>
   )
 }
 

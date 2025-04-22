@@ -8,6 +8,9 @@
     text-align: center;
     flex-wrap: wrap;
 }
+.backButtonContainer {
+    margin-bottom: 30px;
+}
 
 .buttonWrapper{
     display: flex !important;
