@@ -1,4 +1,6 @@
 import styles from "../css/FooterNavbarComponents/footer.module.css"
+import LanguageSwitch from "./LanguageSwitch"
+
 
 // Preferably MUI components should be used but this is stolen from utns website
 
@@ -71,7 +73,8 @@ const FooterCol = ({children}) => {
     )
 }
 
-const SocialLinksFooter = () => {
+const SocialLinksFooter = (props) => {
+
     return (
         <FooterCol>
             <FooterHeading>Länkar</FooterHeading>
@@ -86,7 +89,11 @@ const SocialLinksFooter = () => {
             <FooterLinks><br/></FooterLinks>  
             <FooterSubheading>Språk</FooterSubheading>     
             <div className={`${styles.spacer} ${styles.less}`}></div>   
-            <div>
+            <LanguageSwitch 
+                language = {props.language}
+                passLanguageChange={props.passLanguageChange}
+            />
+            {/* <div>
                 <div role="list">
                     <div role="listitem">
                         <a hreflang="sv" href="/" aria-current="page" >Svenska</a>
@@ -95,7 +102,7 @@ const SocialLinksFooter = () => {
                         <a hreflang="en-US" href="/en">English</a>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </FooterCol>
     )
 }
@@ -135,12 +142,15 @@ const OperatingHoursFooter = () => {
     )
 }
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <FooterWrapper>
             <FooterLogo />
             <FooterInfo>
-                <SocialLinksFooter />
+                <SocialLinksFooter 
+                    language={props.language}
+                    passLanguageChange={props.passLanguageChange}
+                />
                 <ContactInfoFooter />
                 <OperatingHoursFooter />
             </FooterInfo>
