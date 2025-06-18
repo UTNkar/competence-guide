@@ -27,7 +27,7 @@ def create_json(csvFilePath, jsonFilePath):
     encoding = 'utf-8-sig'  
 
     with open(csvFilePath, encoding = encoding) as csvf:
-        csvReader = csv.DictReader(csvf, restkey="keywords")
+        csvReader = csv.DictReader(csvf, delimiter=';', restkey="keywords")
         for rows in csvReader:
             #grab JSON keys
             key = rows['Program']
@@ -41,7 +41,7 @@ def create_json(csvFilePath, jsonFilePath):
 if __name__ == "__main__":
     original_file = input(r'Enter the path of the csv file: ')
     cleaned_file = r'cleaned_' + original_file
-    output_file = r'../assets/programInformation.json'
+    output_file = r'../assets/programmesInformation.json'
 
     clean_trailing_commas(original_file, cleaned_file)
     create_json(cleaned_file, output_file)
