@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
+import { useParams } from 'react-router-dom';
+
 //MUI
 import {Checkbox, Paper, Grid, Button, Link } from '@mui/material'
 
@@ -20,15 +22,38 @@ function ProgramInfoBox(props) {
     }
   })
 
-  const name = props.name
+  const { lang } = useParams();
+  const typeToIndexMap = {
+    msc_engineer: 0,
+    engineer: 1,
+    bachelor: 2,
+    master: 3,
+  };
+  const localizedLabels = {
+   bachelor: lang === 'en' ? 'Bachelor' : 'Kandidat',
+   master: 'Master', // assuming 'Master' stays the same
+   engineer: lang === 'en' ? 'BSc in engineering' : 'Högskoleingenjör',
+   msc_engineer: lang === 'en' ? 'MSc in engineering' : 'Civilingenjör'
+  };
+
+  // console.log('ProgramInfoBox props:', props);
+  const name = props.data.Program
   const url = props.data.url
   const length = props.data.length
   const description = props.data.description
   const type = props.data.type
+  const typeLabel = localizedLabels[type] || type;
   const credits = props.data.credits
   const iframes = props.iframes
   const isSelected = props.isSelected
   const onSelectProgram = props.onSelectProgram
+
+    // key={elem.name} 
+    // name={elem.name} 
+    // data={elem.info} 
+    // iframes={iframe}
+    // onSelectProgram={handleSelectProgram}
+    // isSelected={isSelected} />;
 
   // Toggle short/long description
   const handleExtendedDescription = () => {
@@ -52,7 +77,7 @@ var isLong = name.length > 20
         </Grid>
         <Grid item xs={isLong ? 12 : 7}  >
           <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration`: `${styles.typeAndLength} without_decoration`}>
-            {type}
+            {typeLabel}
           </h2>
           <h2 className={isLong ? `${styles.typeAndLength} ${styles.typeAndLengthLong} without_decoration` : `${styles.typeAndLength} without_decoration ${styles.noMargin}`}>
             {length} år - {credits} hp

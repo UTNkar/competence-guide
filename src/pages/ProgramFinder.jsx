@@ -1,21 +1,19 @@
 // Custom components
-import ProgramHeroSection from '../components/ProgramsComponents/ProgramHeroSection'
 import FilterArea from '../components/ProgramsComponents/FilterArea'
-import BackButton from '../components/BackButton'
 import HeroSection from '../components/HeroSection'
+import { useI18n } from '../utils/i18n/i18nContext';
+
 
 // MUI
 import { Container } from '@mui/material'
 
 function ProgramFinder() {
+  const t  = useI18n();
   return (
     <Container className="pageContainer">
       <HeroSection
-        title="Hitta kompetens"
-        description={`Här kan du läsa om alla program på Teknisk-Natuvetenskapliga fakulteten. 
-      Du kan välja att filtrera på typ av program, specifika kompetenser eller båda.
-      Du kan även välja att markera två stycken program som du är intresserad av att 
-      jämföra med varandra, och sedan gå vidare till "Jämföra program" där du får se enbart de två sida vid sida.`}
+        title={t.Programs.title}
+        description={t.Programs.description}
         description2=""
         is_home={false}/>
       <FilterArea />

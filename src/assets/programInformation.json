@@ -2,7 +2,7 @@
     "Byggteknik": {
         "id": "12",
         "Program": "Byggteknik",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Vill du vara med och bygga framtidens hållbara samhälle där nya byggnader designas klimatsmart och gamla byggs om istället för att rivas? I takt med städers förtätning och miljonprogrammets behov av upprustning ökar behovet av byggingenjörer med kunskaper i hållbar och energieffektiv byggteknik. Högskoleingenjörsprogrammet i byggteknik ger dig en utbildning baserad på den kunskap och teknik som efterfrågas av näringsliv och samhälle.",
@@ -21,7 +21,7 @@
     "Elektroteknik": {
         "id": "13",
         "Program": "Elektroteknik",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Vill du bidra till att fossila bränslen ersätts med förnybara energikällor, bygga ut elkraften eller jobba för en hållbar utveckling av elbilar? Det kan bli verklighet om du läser till högskoleingenjör i elektroteknik. Som elektroingenjör förstår du hur tekniken fungerar och hur den kan användas för att skapa morgondagens produkter. Det är eftertraktat i en bransch med stort behov av kompetens både i Sverige och utomlands.",
@@ -35,7 +35,7 @@
     "Energisystem": {
         "id": "3",
         "Program": "Energisystem",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Vill du vara med och utveckla framtidens energilösningar och skapa möjligheter för ett hållbart samhälle? På civilingenjörsprogrammet i energisystem får du breda kunskaper om energi-, klimat- och miljöfrågor och de färdigheter du behöver för att leda utvecklingen inom energiområdet mot en hållbar framtid. De stora och viktiga förändringar som behöver genomföras inom energisystemet gör att du blir mycket attraktiv på arbetsmarknaden.",
@@ -52,7 +52,7 @@
     "Industriell ekonomi": {
         "id": "4",
         "Program": "Industriell ekonomi",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Vill du vara med och skapa framtidens industri, med intelligenta maskiner, hållbara produkter och tjänster, och effektiva lösningar? Vill du utveckla nya innovativa koncept, ha världen som arbetsmarknad och samtidigt få en framtidssäker yrkesexamen? Ta första steget till en mångsidig och spännande karriär genom att läsa Civilingenjörsprogrammet i industriell ekonomi.",
@@ -67,7 +67,7 @@
     "Informationsteknologi": {
         "id": "5",
         "Program": "Informationsteknologi",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Programmerad teknik finns överallt. Som civilingenjör i informationsteknologi kan du utveckla smarta energilösningar, digitala verktyg för e-hälsa eller lättanvända datorer. Du kan arbeta inom det område som känns mest meningsfullt för dig, med tillämpningar som får stor betydelse för andra människor och samhället i stort. Programmet ger dig en hett eftertraktad kompetens att jobba med IT på många olika sätt, inom många olika områden.",
@@ -86,7 +86,7 @@
     "Kemiteknik": {
         "id": "6",
         "Program": "Kemiteknik",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Civilingenjörsprogrammet i kemiteknik vid Uppsala universitet är en utbildning för dig som gillar kemi och teknik. Utbildningens två inriktningar, läkemedel och material, ger dig möjlighet till en karriär inom utveckling och/eller tillverkning av dessa. Båda områdena är viktiga för människors hälsa, miljön och samhällets utveckling.",
@@ -103,7 +103,7 @@
     "Miljö- och vattenteknik": {
         "id": "7",
         "Program": "Miljö- och vattenteknik",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "För att skapa ett hållbart samhälle måste vi hushålla med jordens resurser, satsa på ny kunskap, använda nya synsätt och skapa innovativa tekniska lösningar. Hur kan vi utveckla teknik för att lösa dagens och morgondagens utmaningar kring vatten och miljö? På Civilingenjörsprogrammet i miljö- och vattenteknik får du den kunskap och de färdigheter du behöver för att leda utvecklingen i miljö- och vattensektorn och angränsande områden.",
@@ -121,7 +121,7 @@
     "Molekylär bioteknik": {
         "id": "8",
         "Program": "Molekylär bioteknik",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Vill du utveckla banbrytande teknik som förbättrar människors liv? Civilingenjörsprogrammet i molekylär bioteknik ger dig kunskaper om hur biologiska system och analys av biologiska data kan användas för att skapa innovativa lösningar för utveckling av läkemedel, livsmedel och bränslen. Kombinationen av ingenjörskunskaper och biologi gör dig eftertraktad på arbetsmarknaden. Som bioteknikingenjör löser du problem inom exempelvis miljö, hälsa och hållbar produktion.",
@@ -136,7 +136,7 @@
     "System i teknik och samhälle": {
         "id": "9",
         "Program": "System i teknik och samhälle",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Vill du vara med och påverka den snabba teknologiska förändringen i en positiv riktning för hela samhället? Vill du kunna förstå, förklara och nyttja samspelet mellan teknik och samhällsutveckling, samt se var människan och miljön står i detta, i en värld som ställer helt nya krav på vårt framtida samhällssystem? Välkommen till ett unikt framtidsinriktat civilingenjörsprogram med blicken riktad mot de stora frågorna!",
@@ -153,7 +153,7 @@
     "Teknisk fysik": {
         "id": "10",
         "Program": "Teknisk fysik",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Vill du ha stor frihet i din framtida yrkesroll, välj då Civilingenjörsprogrammet i teknisk fysik! Programmet ger dig både breda och djupa kunskaper i matematik, fysik och teknik. Den stora friheten i val av kurser ger dig möjlighet till specialisering för att ta dig an framtidens teknik- och samhällsutmaningar. En vanlig karriärväg är att du börjar som specialist för att senare få en roll som exempelvis projektledare, forskningschef eller VD.",
@@ -167,7 +167,7 @@
     "Teknisk fysik med materialvetenskap": {
         "id": "11",
         "Program": "Teknisk fysik med materialvetenskap",
-        "type": "Civilingenjör",
+        "type": "msc_engineer",
         "length": "5",
         "credits": "300",
         "description": "Material behövs överallt och sätter de yttersta gränserna för all teknik. Materialvetenskap är en nyckelkompetens vid omställningen till ett hållbart samhälle. Kunskap om material behövs för att utveckla allt ifrån nya biomaterial till att ta fram alternativ till de sällsynta jordartsmetaller som används i modern batteri- och energiteknik. Eftersom nästan alla teknikföretag behöver materialvetare är arbetsmarknaden efter examen mycket god.",
@@ -180,10 +180,10 @@
             ""
         ]
     },
-    "hållbar utveckling i industriell teknik": {
+    "Hållbar utveckling i industriell teknik": {
         "id": "14",
         "Program": "Hållbar utveckling i industriell teknik",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Vill du hjälpa till att utveckla en mer hållbar industri? Tycker du om att leda andra och vill vara med och påverka framtidens näringsliv? Då är högskoleingenjörsprogrammet i hållbar utveckling i industriell teknik definitivt ett alternativ för dig. På programmet lär du dig bland annat om digitalisering, förändringsarbete och hållbar utveckling, detta i ett nära samarbete med möjliga framtida arbetsgivare.",
@@ -194,10 +194,10 @@
             ""
         ]
     },
-    "kärnkraftteknik": {
+    "Kärnkraftteknik": {
         "id": "15",
         "Program": "Kärnkraftteknik",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Är du intresserad av storskalig avancerad energiteknik med stor betydelse för det svenska samhället? Då finns Högskoleingenjörsprogrammet i kärnkraftteknik för dig. Utbildningen ger dig möjlighet att arbeta som ingenjör inom kärnkraftindustrin eller någon av dess många underleverantörer, med goda möjligheter till utveckling och karriär. Programmet är ettårigt och du ska tidigare ha läst minst två år på ett högskole- eller civilingenjörsprogram.",
@@ -214,7 +214,7 @@
     "Maskin": {
         "id": "16",
         "Program": "Maskin",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Maskiningenjörer behövs överallt där fysiska produkter konstrueras och tillverkas. På Högskoleingenjörsprogrammet i maskinteknik vid Uppsala universitet får du lära dig hela processen i att utveckla ny teknik från idé till färdig produkt. Du lär dig också att förverkliga dina idéer genom att arbeta med produktutveckling. Som färdig högskoleingenjör i maskinteknik kan du jobba med att utveckla morgondagens produkter inom tillverkande teknikföretag.",
@@ -232,7 +232,7 @@
     "Medicin teknik": {
         "id": "17",
         "Program": "Medicinsk teknik",
-        "type": "Högskoleingenjör",
+        "type": "engineer",
         "length": "3",
         "credits": "180",
         "description": "Vill du utveckla morgondagens medicintekniska produkter som kan rädda liv, ställa tidig diagnos och underlätta för att rätt behandling sätts in? Lockar en snabbt växande och tvärvetenskaplig bransch, samtidigt som du vill bidra till förbättrad hälsa och sjukvård? Då kan Högskoleingenjörsprogrammet i medicinsk teknik vara något för dig.",
@@ -245,7 +245,7 @@
     "Biologi": {
         "id": "18",
         "Program": "Biologi",
-        "type": "Kandidat",
+        "type": "bachelor",
         "length": "3",
         "credits": "180",
         "description": "Biologi omfattar allt från ekologi och miljö till molekylärbiologi och genetik. Det som kännetecknar biologer från Uppsala universitet är den breda kompetensen. Med ett av landets största utbud av kurser inom biologi och molekylärbiologi väljer du själv vilken sorts biolog du vill bli. Hos oss får du en utbildning som omfattar djupa faktakunskaper, förmåga att lösa problem och kommunicera, tänka analytiskt och arbeta vetenskapligt.",
@@ -281,7 +281,7 @@
     "Fysik - Fysik": {
         "id": "20",
         "Program": "Fysik - Fysik",
-        "type": "Kandidat",
+        "type": "bachelor",
         "length": "3",
         "credits": "180",
         "description": "Vill du förstå naturens lagar och processer? Beräkna krafterna som håller ihop en atomkärna eller som verkar på en golfboll vid utslaget? Kandidatprogrammet i fysik ger dig stabila kunskaper i fysik och de matematiska verktyg du behöver. Uppsala universitets unika miljö med världsledande forskning och kompetens inom de flesta av fysikens områden gör att du kan fördjupa dig utifrån dina intressen.",
@@ -298,7 +298,7 @@
     "Geovetenskap": {
         "id": "21",
         "Program": "Geovetenskap",
-        "type": "Kandidat",
+        "type": "bachelor",
         "length": "3",
         "credits": "180",
         "description": "Upptäck jordens dynamik och historia. Hos oss lär du dig om berg och mineral, livets utveckling, luften, klimatet och jordens naturresurser. Utbildningen blandar teori och praktik och i många kurser bedrivs undervisningen i fält. Efter utbildningen kan du arbeta med samhällsplanering, miljöutredningar, klimatfrågor, mineral- och vattenresurser eller inom turism- eller informationsyrken. Arbetsmarknaden är god.",
@@ -314,7 +314,7 @@
     "Kemi": {
         "id": "22",
         "Program": "Kemi",
-        "type": "Kandidat",
+        "type": "bachelor",
         "length": "3",
         "credits": "180",
         "description": "För dig som har fantasi, nyfikenhet och kreativitet har kemiämnet många spännande områden att erbjuda. Nya ämnen skapas varje dag i hopp om att hitta smartare material, nya mediciner och att få nya insikter om hur naturen fungerar. Från det senaste cancerläkemedlet till innovativ datorteknologi, från utveckling av alternativa energikällor till studier av avlägsna galaxer. Kemi är en central och spännande vetenskap, läs kandidatprogrammet i kemi vid Uppsala universitet!",
@@ -329,10 +329,10 @@
             ""
         ]
     },
-    "ledarskap – kvalitet – förbättring": {
+    "Ledarskap – kvalitet – förbättring": {
         "id": "23",
         "Program": "Ledarskap – kvalitet – förbättring",
-        "type": "Kandidat",
+        "type": "bachelor",
         "length": "3",
         "credits": "180",
         "description": "Vill du leda och utveckla framtidens företag och organisationer utifrån ett långsiktigt hållbarhetsperspektiv? Kandidatprogrammet i ledarskap – kvalitet – förbättring ger dig kunskaper och verktyg inom ledarskap och verksamhetsutveckling. Du får studera utveckling utifrån både social, ekologisk och ekonomisk hållbarhet. Utbildningen har ett långsiktigt perspektiv på verksamhetsutveckling där vinster inte uppstår genom andra intressenters förluster.",
@@ -547,7 +547,7 @@
             ""
         ]
     },
-    "Fysik  för hållbar energi och komplexa system": {
+    "Fysik för hållbar energi och komplexa system": {
         "id": "40",
         "Program": "Fysik för hållbar energi och komplexa system",
         "type": "Master",

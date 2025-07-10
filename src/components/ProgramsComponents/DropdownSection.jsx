@@ -1,16 +1,23 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
+import { useParams } from 'react-router-dom';
 
 //MUI
 import { Grid } from '@mui/material'
-
+import { useI18n } from '../../utils/i18n/i18nContext'
 //Custom components
 import CheckboxDropdown from './CheckboxDropdown'
 
 // Section where the two dropdown menus are kept
 
 export default function FilterArea(props) {
+
+
   // Keep track of window size
+  const t = useI18n(); 
+
+
+
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -51,8 +58,8 @@ export default function FilterArea(props) {
       <Grid item  xs={dropdownWidth}>
         <CheckboxDropdown 
           onItemChecked={handleTypeCheck}
-          label='Typ av program'
-          items={['Civilingenjör', 'Kandidat', 'Högskoleingenjör', 'Master']}
+          label={t.Programs.DropdownType.label}
+          items={[t.Programs.DropdownType.engineerMsc, t.Programs.DropdownType.engineer, t.Programs.DropdownType.candidate, t.Programs.DropdownType.master]}
         />
       </Grid>
       <Grid item  xs={dropdownWidth}>

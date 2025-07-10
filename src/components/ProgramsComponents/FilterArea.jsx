@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/ProgramsComponents/programComponents.module.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useI18n } from '../../utils/i18n/i18nContext';
+
 
 
 //Custom components
@@ -9,19 +11,15 @@ import FilteredProgramBoxes from './FilteredProgramBoxes'
 import DropdownSection from './DropdownSection'
 
 import programInformation from "../../assets/programInformation.json"
+import programmesInformation from "../../assets/programmesInformation.json"
 import iFrames from '../../assets/iFrames'
 
 //MUI
 import { Grid, Button } from '@mui/material'
 
+
 var allPrograms = []
 
-for (const [key, value] of Object.entries(programInformation)) {
-  var obj = {};
-  obj["info"] = value;
-  obj["name"] = key;
-  allPrograms.push(obj);
-}
 
 const FilterArea = (props) => {
   // windowsize
@@ -29,12 +27,32 @@ const FilterArea = (props) => {
   //   window.innerWidth,
   //   window.innerHeight,
   // ])
-
+  const t = useI18n();
   const navigate = useNavigate();
+  const { lang } = useParams();
+
+
+
+  const selectedProgramInformation = lang === 'sv'
+    ? programInformation
+    : programmesInformation
+
+
+  for (const [key, value] of Object.entries(selectedProgramInformation)) {
+    var obj = {};
+    obj["info"] = value;
+    // obj.info.type = labelToTypeMap[value.type];
+
+    obj["name"] = key;
+
+    allPrograms.push(obj);
+  }
+
+
 
   const handleCompare = () => {
     //const [program1, program2] = selectedPrograms;
-    navigate(`/compare`, {state: {selectedPrograms}});
+    navigate(`/${lang}/compare`, {state: {selectedPrograms}});
   };
 
   const [renderedProgramBoxes, setRenderedProgramBoxes] = useState(allPrograms)
@@ -68,6 +86,8 @@ const FilterArea = (props) => {
     professions: [],
   })
 
+
+
   useEffect(() => {
     // Filter shown programs based on filters
     const filteredPrograms = allPrograms.filter((program) => {
@@ -75,7 +95,11 @@ const FilterArea = (props) => {
       const professionsSelected = checkedItems.professions
       const keywords = program.info.keywords
       const type = program.info.type
+      // console.log(type)
+      // console.log(program.info)
+      // console.log(typesSelected)
 
+      // const typesSelectedValues = typesSelected.map(label => labelToTypeMap[label]);
       if (typesSelected.length === 0 && professionsSelected.length === 0) {
         return true
       } else if (typesSelected.length === 0) {
@@ -86,7 +110,7 @@ const FilterArea = (props) => {
         )
       } else if (professionsSelected.length === 0) {
         // filter by selected types of programs only
-        return typesSelected.includes(type)
+        return typesSelected.includes(type);
       } else {
         return (
           professionsSelected.filter((value) => keywords.includes(value))
@@ -98,7 +122,6 @@ const FilterArea = (props) => {
     setRenderedProgramBoxes(filteredPrograms)
   }, [checkedItems])
 
-  
   const programBoxes = renderedProgramBoxes.map((elem) => {
     const iframe = iFrames[elem.name];
     const isSelected = selectedPrograms.includes(elem.name);
@@ -124,7 +147,6 @@ const FilterArea = (props) => {
         <FilteredProgramBoxes propgramBoxes={programBoxes} />
       </Grid>
       <Grid className={styles.stickyBtn} item xs={12}>
-       
           <Button
               className={styles.Button}
               variant="contained"
@@ -132,7 +154,7 @@ const FilterArea = (props) => {
               onClick={handleCompare}
               fullWidth             
               >
-              Jämför Utbildningar
+              {t.Programs.compare}
           </Button>
       </Grid>
     </Grid>

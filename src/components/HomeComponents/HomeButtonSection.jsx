@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import styles from '../../css/HomeComponents/homeButtonSection.module.css'
+import { useNavigate, useParams } from 'react-router-dom';
+import { useI18n } from '../../utils/i18n/i18nContext';
+
 
 // MUI
 import { Grid, Button} from '@mui/material'
@@ -8,6 +11,14 @@ import { Grid, Button} from '@mui/material'
 
 
 const HomeButtonSection = () => {
+
+  const navigate = useNavigate();
+  const { lang } = useParams();
+  const t  = useI18n();
+  const handleClick = (to) => {
+    const path = to.startsWith('/') ? `/${lang}${to}` : `/${lang}/${to}`;
+    navigate(path);
+  };
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -37,18 +48,18 @@ const HomeButtonSection = () => {
             <Button
               variant='contained'
               className={styles.button}
-              href='/programs'
+              onClick={() => handleClick("programs")}
             >
-              Hitta kompetens
+              {t.Home.competence}
             </Button>
           </Grid>
           <Grid item xs={buttonColumnWidth}>
             <Button 
               variant='contained' 
               className={`${styles.button} ${styles.buttonSecondary}`} 
-              href='/compare'
+              onClick={() => handleClick("compare")}
             >
-              Jämför program
+              {t.Home.compare}
             </Button>
           </Grid>
         </Grid>

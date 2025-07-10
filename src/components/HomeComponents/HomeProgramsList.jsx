@@ -1,22 +1,44 @@
 import { useState, useEffect, Fragment } from 'react'
 import styles from '../../css/HomeComponents/homeProgramsList.module.css'
 import "../../global.css"
+import { useParams } from 'react-router-dom';
 //MUI
 import { Grid, List, ListItem, ListItemText } from '@mui/material'
 
 //Program data
 import programInformation from "../../assets/programInformation.json";
+import programmesInformation from "../../assets/programmesInformation.json";
 
 // Component for the 4 colums of programs on the homescreen
 // Columns are rendered differently depending on page width
 
 const HomeProgramsList = () => {
+  const { lang } = useParams();
+  const selectedProgramInformation = lang === 'sv'
+    ? programInformation
+    : programmesInformation
+
+
+  const typeToIndexMap = {
+    msc_engineer: 0,
+    engineer: 1,
+    bachelor: 2,
+    master: 3,
+  };
+  const localizedLabels = {
+   bachelor: lang === 'en' ? 'Bachelor' : 'Kandidat',
+   master: 'Master', // assuming 'Master' stays the same
+   engineer: lang === 'en' ? 'BSc in engineering' : 'Högskoleingenjör',
+   msc_engineer: lang === 'en' ? 'MSc in engineering' : 'Civilingenjör'
+  };
+  console.log(lang)
+  
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
   ])
 
-  useEffect(() => {
+  useEffect(() => { 
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight])
     }
@@ -29,32 +51,36 @@ const HomeProgramsList = () => {
   })
 
   const listContent = [
-    { header: 'Civilingenjör', listItems: [] },
-    { header: 'Högskoleingenjör', listItems: [] },
-    { header: 'Kandidat', listItems: [] },
-    { header: 'Master', listItems: [] },
+    { header: localizedLabels.msc_engineer, listItems: [] },
+    { header: localizedLabels.engineer, listItems: [] },
+    { header: localizedLabels.bachelor, listItems: [] },
+    { header: localizedLabels.master, listItems: [] },
     { header: ' ', listItems: [] },
     { header: ' ', listItems: [] },
   ]
-
-  for (const [key, value] of Object.entries(programInformation)) {
-    var index;
-    switch (value.type) {
-      case 'Civilingenjör':
-        index = 0
-        break
-      case 'Högskoleingenjör':
-        index = 1
-        break
-      case 'Kandidat':
-        index = 2
-        break
-      default:
-        // "Master"
-        index = 3
-    }
-    listContent[index].listItems.push(key)
+  for (const [key, value] of Object.entries(selectedProgramInformation)) {
+    const index = typeToIndexMap[value.type] ?? 3;
+    listContent[index].listItems.push(value.Program);
   }
+
+  // for (const [key, value] of Object.entries(selectedProgramInformation)) {
+  //   var index;
+  //   switch (value.type) {
+  //     case MscEngineer:
+  //       index = 0
+  //       break
+  //     case engineer:
+  //       index = 1
+  //       break
+  //     case candidate:
+  //       index = 2
+  //       break
+  //     default:
+  //       // "Master"
+  //       index = 3
+  //   }
+  //   listContent[index].listItems.push(key)
+  // }
 
  
   
@@ -88,11 +114,11 @@ const HomeProgramsList = () => {
     var verticalBar = ''
 
     // Cases when vericalBar should be horizontal or removed
-    if (column.header !== 'Master') {
+    if (column.header !== localizedLabels.master) {
       if (programColumnWidth > 11) {
         verticalBar = <div className={styles.horizontalBar}></div>
       } else if (
-        column.header === 'Högskoleingenjör' &&
+        column.header === localizedLabels.engineer &&
         programColumnWidth > 3 &&
         programColumnWidth < 6
       ) {

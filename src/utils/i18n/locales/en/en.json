@@ -1,7 +1,26 @@
 {
+    "Misc" :{
+        "back":"Back"
+    },
     "Home": {
         "title": "Competence Guide",
         "description1": "Welcome to the UTN Competence Guide. On this page, you can look up which programs at the Faculty of Science and Technology at Uppsala University lead to which skills and competencies. The Competence Guide has been developed by the student union in dialogue with representatives from the university. The aim is to provide future employers with a good overview of the educational programs offered by Uppsala University in the fields of technology and natural sciences.",
-        "description2": "You can choose to either search for a specific competence or compare two different programs with each other and see what competencies they lead to."
+        "description2": "You can choose to either search for a specific competence or compare two different programs with each other and see what competencies they lead to.",
+        "competence" : "Discover competencies",
+        "compare" : "Compare program"
+    },
+    "Programs": {
+        "title": "Discover competencies",
+        "description":"Here you can read about all the programs at the Faculty of Science and Technology. You can choose to filter by type of program, specific competencies, or both. You can also choose to mark two programs you are interested in comparing, and then proceed to \"Compare programs\" to see them side by side.",
+        "type" : "Type of program",
+        "competences" : "competencies",
+        "compare" : "Compare programs",
+        "DropdownType" : {
+            "label" : "Type of program",
+            "engineerMsc" : "M.Sc Engineer",
+            "engineer" : "Engineer",
+            "candidate" : "Candidate",
+            "master" : "Master"
+        }
     }
 }

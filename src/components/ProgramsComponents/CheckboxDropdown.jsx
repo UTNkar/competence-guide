@@ -46,7 +46,6 @@ export default function MultipleSelectChip(props) {
   }
 
   const names = props.items
-
   const handleChange = (event) => {
     const {
       target: { value },

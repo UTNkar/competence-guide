@@ -1,7 +1,25 @@
 {
+    "Misc" :{
+        "back":"Tillbaka"
+    },
     "Home": {
         "title": "Kompetensguide",
         "description1": "Välkommen till UTNs kompetensguide. På den här sidan kan du slå upp vilka program på Teknisk-Natuvetenskapliga fakulteten vid Uppsala Universitet som leder till vilka färdigehter och kompetenser. Kompetensguiden är framtagen av kåren i dialog med företrädare från universitetet. Syftet är att erbjuda framtida arbetsgivare en bra bild över de utbildningsprogram Uppsala universitet erbjuder inom teknik och naturvetenskap.",
-        "description2": "Du kan välja att antingen leta efter en specifik kompetens eller jämföra två olika program med varandra och se vad de leder till för kompetenser."
+        "description2": "Du kan välja att antingen leta efter en specifik kompetens eller jämföra två olika program med varandra och se vad de leder till för kompetenser.",
+        "competence" : "Hitta kompetens",
+        "compare" : "Jämför program"
+    },
+    "Programs": {
+        "title": "Hitta kompetens",
+        "description": "Här kan du läsa om alla program på Teknisk-Natuvetenskapliga fakulteten. Du kan välja att filtrera på typ av program, specifika kompetenser eller båda. Du kan även välja att markera två stycken program som du är intresserad av att jämföra med varandra, och sedan gå vidare till \"Jämför program\" där du får se enbart de två sida vid sida.",
+        "competences" : "Kompetenser",
+        "compare" : "Jämför program",
+        "DropdownType" : {
+            "label" : "Typ av program",
+            "engineerMsc" : "Civilingenjör",
+            "engineer" : "Högskoleingenjör",
+            "candidate" : "Kandidat",
+            "master" : "Master"
+        }
     }
 }
